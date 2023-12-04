@@ -29,8 +29,8 @@ export const AboutServices = () => {
     <div className="my-8">
       <div className="max-w-[800px] mx-auto flex flex-col items-start gap-5">
         <div>
-          <span className="text-[12px]">SOBRE</span>
-          <h3 className="text-2xl font-bold">NOSOTROS</h3>
+          <span className="text-[12px]">NUESTROS</span>
+          <h3 className="text-2xl font-bold">SERVICIOS</h3>
         </div>
         <div className="flex gap-4 justify-between">
           <Card
