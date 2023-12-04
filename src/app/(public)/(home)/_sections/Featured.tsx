@@ -43,7 +43,7 @@ export const Featured = () => {
   return (
     <div className="relative py-4">
       <Bg />
-      <div className="bg-white shadow-strong rounded-[40px] p-5 flex justify-center items-center gap-[60px] max-w-[760px]	m-auto">
+      <div className="bg-white shadow-strong rounded-[40px] p-5 flex justify-center items-center gap-[60px] max-w-[800px]	m-auto">
         <Left />
         <div className="flex flex-col gap-2 items-start">
           <p>
