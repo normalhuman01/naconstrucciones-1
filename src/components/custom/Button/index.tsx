@@ -16,6 +16,6 @@ type TButtonYellowProps = TButtonProps
 export const ButtonYellow = ({ className, ...props }: TButtonYellowProps) => {
   return (
     <Button
-      className={cn("py-2 px-5 text-xl bg-yellow-500 border border-black rounded-full", className, impactFont.className)} {...props} />
+      className={cn("py-2 px-5 text-xl bg-[#FEE21B] border border-black rounded-full", className, impactFont.className)} {...props} />
   )
 }
