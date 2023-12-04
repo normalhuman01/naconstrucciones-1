@@ -30,7 +30,12 @@ export const calibriFont = localFont({
 		{
 			path: '../../public/fonts/calibri/calibri-bold.ttf',
 			weight: '700',
-			style: 'normal',
+			style: "bold",
+		},
+		{
+			path: '../../public/fonts/calibri/calibri-light.ttf',
+			weight: '100',
+			style: 'light',
 		}
 	],
 })
