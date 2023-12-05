@@ -5,15 +5,19 @@ const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <div>
       <PseudoBreadCrumbs
-        title="PRODUCTOS"
+        title="SERVICIOS"
         actions={[
           {
-            label: "EPP",
-            link: "/productos/epp",
+            label: "GENERAL",
+            link: "/servicios/general",
           },
           {
-            label: "FERRETERÍA",
-            link: "/productos/ferreteria",
+            label: "ASESORÍAS",
+            link: "/servicios/asesorias",
+          },
+          {
+            label: "PORTAFOLIO",
+            link: "/servicios/portafolio",
           },
         ]}
       />
