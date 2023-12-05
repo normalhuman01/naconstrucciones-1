@@ -128,7 +128,7 @@ export const Initial = () => {
           className="relative flex flex-col items-center justify-center text-white h-[438px] px-10"
           style={{
             ...bgStyles,
-            backgroundImage: "url(/img/home/EPP-v2.jpg)",
+            backgroundImage: "url(/img/home/EPP.jpg)",
           }}
         >
           <div className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,.2)]"></div>

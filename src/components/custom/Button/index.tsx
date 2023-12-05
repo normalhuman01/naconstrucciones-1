@@ -27,3 +27,11 @@ export const ButtonBlack = ({ className, ...props }: TButtonBlackProps) => {
       className={cn("py-2 px-5 text-xl bg-black text-white border border-black rounded-full", className, impactFont.className)} {...props} />
   )
 }
+
+type TButtonBlackMoreProps = TButtonProps
+export const TButtonBlackMore = ({ className, ...props }: TButtonBlackMoreProps) => {
+  return (
+    <ButtonBlack
+      className={cn("py-2 px-8", className, impactFont.className)} {...props} />
+  )
+}
