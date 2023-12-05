@@ -10,13 +10,15 @@ type TCard = {
 };
 const Card = ({ title, description, image, link }: TCard) => {
   return (
-    <div className="flex flex-col gap-3 items-start">
-      <div className="w-full">
-        <Image src={image} width={20} height={20} alt="service" />
-        <h4 className="text-[16px] font-bold">{title}</h4>
-        <hr className="border-dark border-1" />
+    <div className="flex flex-1 flex-col items-start justify-between gap-5 max-w-[160px]">
+      <div className="flex flex-col gap-3 items-start">
+        <div className="w-full">
+          <Image src={image} width={20} height={20} alt="service" />
+          <h4 className="text-[16px] font-bold">{title}</h4>
+          <hr className="border-dark border-1" />
+        </div>
+        <p className="text-[12px] text-justify">{description}</p>
       </div>
-      <p className="text-[12px] text-justify">{description}</p>
       <ButtonBlack className="text-[15px]">
         <Link href={link}>VER MÁS</Link>
       </ButtonBlack>
@@ -27,12 +29,12 @@ const Card = ({ title, description, image, link }: TCard) => {
 export const AboutServices = () => {
   return (
     <div className="my-8">
-      <div className="max-w-[960px] mx-auto flex flex-col items-start gap-5">
+      <div className="max-w-[960px] px-8 md:px-0 mx-auto flex flex-col items-start gap-5">
         <div>
           <span className="text-[12px]">NUESTROS</span>
           <h3 className="text-2xl font-bold">SERVICIOS</h3>
         </div>
-        <div className="flex gap-4 justify-between">
+        <div className="flex flex-wrap items-stretch w-full gap-4 justify-between md:justify-between">
           <Card
             title="INGENIERÍA"
             description="Somos reconocidos por brindar soluciones prácticas y rentables que

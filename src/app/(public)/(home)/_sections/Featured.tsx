@@ -9,7 +9,7 @@ type TBlackCircleProps = HTMLAttributes<HTMLDivElement>;
 const BlackCircle = ({ className, ...props }: TBlackCircleProps) => {
   return (
     <div
-      className={cn("w-[260px] h-[260px] rounded-full bg-[#262626]", className)}
+      className={cn("w-[140px] md:w-[260px] h-[140px] md:h-[260px] rounded-full bg-[#262626]", className)}
       {...props}
     ></div>
   );
@@ -24,7 +24,7 @@ const Left = () => {
         width={320}
         height={320}
         alt="boot"
-        className="absolute top-[-60px] min-w-[320px] h-[320px]"
+        className="absolute top-[-20px] md:top-[-60px] w-[200px] md:min-w-[320px] md:h-[320px]"
       />
     </div>
   );
@@ -41,15 +41,15 @@ const Bg = () => {
 
 export const Featured = () => {
   return (
-    <div className="relative py-4">
+    <div className="relative py-4 px-5">
       <Bg />
-      <div className="bg-white shadow-strong rounded-[40px] p-5 flex justify-center items-center gap-[60px] max-w-[960px]	m-auto">
+      <div className="bg-white shadow-strong rounded-[40px] p-5 flex justify-center items-center gap-4 md:gap-[60px] max-w-[960px]	m-auto">
         <Left />
         <div className="flex flex-col gap-2 items-start">
           <p>
             <strong
               className={cn(
-                "text-[44px] leading-[0] font-bold text-white",
+                "text-xl md:text-[44px] leading-[0] font-bold text-white",
                 arialBlackFont.className
               )}
               style={{ WebkitTextStroke: "1px black" }}
@@ -68,7 +68,7 @@ export const Featured = () => {
             <br />
             <strong
               className={cn(
-                "text-[40.5px] leading-[36px] font-bold text-white",
+                "text-xl md:text-[40.5px] leading-[36px] font-bold text-white",
                 arialBlackFont.className
               )}
               style={{ WebkitTextStroke: "1px black" }}

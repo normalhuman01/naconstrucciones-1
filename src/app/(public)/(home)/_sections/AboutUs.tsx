@@ -2,14 +2,14 @@ import Image from "next/image";
 
 export const AboutUs = () => {
   return (
-    <div className="my-8">
+    <div className="my-8 px-8">
       <div className="max-w-[960px] mx-auto flex flex-col items-start gap-5">
         <div>
           <span className="text-[12px]">SOBRE</span>
           <h3 className="text-2xl font-bold">NOSOTROS</h3>
         </div>
-        <div className="flex gap-4">
-          <div className="flex-1 bg-dark text-white p-10 pb-14 relative">
+        <div className="flex flex-wrap gap-4">
+          <div className="flex-1 min-w-[280px] bg-dark text-white p-10 pb-14 relative">
             <h4 className="font-bold mb-4 text-lg">MISIÓN</h4>
             <p>
               Nuestra misión es transformar ideas en realidades sólidas y
@@ -25,7 +25,7 @@ export const AboutUs = () => {
               className="absolute bottom-0 right-[28px]"
             />
           </div>
-          <div className="flex-1 bg-dark text-white p-10 pb-14 relative">
+          <div className="flex-1 min-w-[280px] bg-dark text-white p-10 pb-14 relative">
             <h4 className="font-bold mb-4 text-lg">VISIÓN</h4>
             <p>
               Nos vemos como líderes de referencia en la industria de la

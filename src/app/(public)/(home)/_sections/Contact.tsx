@@ -10,14 +10,14 @@ const phone = [
 
 export const Contact = () => {
   return (
-    <div className="my-8">
+    <div className="my-8 px-5">
       <div className="max-w-[960px] mx-auto flex flex-col items-start gap-5">
         <div className="flex justify-between items-end w-full">
           <div>
             <span className="text-[12px]">NUESTRO</span>
             <h3 className="text-2xl font-bold">CONTACTO</h3>
           </div>
-          <div className="flex gap-6 mb-[7px]">
+          <div className="flex gap-3 md:gap-6 mb-[7px]">
             <Link href="#">
               <Image src="/img/icons/fb.png" width={24} height={24} alt="FB" />
             </Link>
@@ -47,7 +47,7 @@ export const Contact = () => {
             </Link>
           </div>
         </div>
-        <div className="flex justify-between w-full">
+        <div className="flex flex-wrap justify-between w-full">
           <p className="text-[14px]">
             <strong>TELÉFONO</strong>
             <br />

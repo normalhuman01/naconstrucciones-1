@@ -12,7 +12,7 @@ type TCard = {
 const Card = ({ title, description, link, image }: TCard) => {
   const router = useRouter();
   return (
-    <article className="max-w-[240px] shadow-strong rounded-3xl overflow-hidden">
+    <article className="max-w-[180px] md:max-w-[240px] shadow-strong rounded-3xl overflow-hidden">
       <header className="bg-white flex justify-center items-center">
         <Image src={image} alt={title} width={200} height={200} />
       </header>
@@ -27,7 +27,7 @@ const Card = ({ title, description, link, image }: TCard) => {
 
 export const Products = () => {
   return (
-    <div className="flex justify-center gap-3 bg-cgray p-5">
+    <div className="flex justify-center flex-wrap gap-3 bg-cgray p-5">
       <Card
         title="Botas Full Plus"
         description="Zapato de Seguridad"
