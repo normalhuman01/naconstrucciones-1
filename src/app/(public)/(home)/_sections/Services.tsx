@@ -21,7 +21,7 @@ const Card = ({
 }: TCard) => {
   const [isFlipped, setIsFlipped] = useState(false);
   return (
-    <div className={cn("max-w-[220px]", className)}>
+    <div className={cn("md:max-w-[220px] w-full", className)}>
       <div
         className="h-[330px] text-white"
         onMouseEnter={() => setIsFlipped(true)}
