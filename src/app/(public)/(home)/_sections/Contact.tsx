@@ -11,7 +11,7 @@ const phone = [
 export const Contact = () => {
   return (
     <div className="my-8">
-      <div className="max-w-[800px] mx-auto flex flex-col items-start gap-5">
+      <div className="max-w-[960px] mx-auto flex flex-col items-start gap-5">
         <div className="flex justify-between items-end w-full">
           <div>
             <span className="text-[12px]">NUESTRO</span>

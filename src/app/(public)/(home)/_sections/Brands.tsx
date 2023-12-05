@@ -25,7 +25,7 @@ const responsive = {
 
 export const Brands = () => {
   return (
-    <div>
+    <div className="my-8">
       <Carousel customTransition="all 5s linear" ssr responsive={responsive} infinite arrows={false} autoPlay>
         <Image src="/img/brands/3m.png" width={120} height={120} alt="brand" />
         <Image
