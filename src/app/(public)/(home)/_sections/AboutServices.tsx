@@ -1,6 +1,7 @@
 import { ButtonBlack, ButtonYellow } from "@/components/custom";
 import Image from "next/image";
 import Link from "next/link";
+import { Header } from "../_components/Header";
 
 type TCard = {
   title: string;
@@ -30,10 +31,7 @@ export const AboutServices = () => {
   return (
     <div className="my-8">
       <div className="max-w-[960px] px-8 lg:px-0 mx-auto flex flex-col items-start gap-5">
-        <div>
-          <span className="text-[12px]">NUESTROS</span>
-          <h3 className="text-2xl font-bold">SERVICIOS</h3>
-        </div>
+        <Header top="NUESTROS" main="SERVICIOS" />
         <div className="flex flex-wrap items-stretch w-full gap-4 justify-between md:justify-between">
           <Card
             title="INGENIERÍA"

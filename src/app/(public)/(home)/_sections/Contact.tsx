@@ -1,6 +1,7 @@
 import { config } from "@/config";
 import Image from "next/image";
 import Link from "next/link";
+import { Header } from "../_components/Header";
 
 const phone = [
   config.phone.toString().slice(0, 3),
@@ -13,10 +14,7 @@ export const Contact = () => {
     <div className="my-8 px-5">
       <div className="max-w-[960px] mx-auto flex flex-col items-start gap-5">
         <div className="flex justify-between items-end w-full">
-          <div>
-            <span className="text-[12px]">NUESTRO</span>
-            <h3 className="text-2xl font-bold">CONTACTO</h3>
-          </div>
+          <Header top="NUESTRO" main="CONTACTO" />
           <div className="flex gap-3 md:gap-6 mb-[7px]">
             <Link href="#">
               <Image src="/img/icons/fb.png" width={24} height={24} alt="FB" />

@@ -27,31 +27,33 @@ const Card = ({ title, description, link, image }: TCard) => {
 
 export const Products = () => {
   return (
-    <div className="flex justify-center flex-wrap gap-3 bg-cgray p-5">
-      <Card
-        title="Botas Full Plus"
-        description="Zapato de Seguridad"
-        link="#"
-        image="/img/products/boot.png"
-      />
-      <Card
-        title="Botas Full Plus"
-        description="Zapato de Seguridad"
-        link="#"
-        image="/img/products/boot.png"
-      />
-      <Card
-        title="Botas Full Plus"
-        description="Zapato de Seguridad"
-        link="#"
-        image="/img/products/boot.png"
-      />
-      <Card
-        title="Botas Full Plus"
-        description="Zapato de Seguridad"
-        link="#"
-        image="/img/products/boot.png"
-      />
+    <div className="bg-cgray p-5 pb-[64px]">
+      <div className="max-w-[960px] mx-auto w-full flex justify-between flex-wrap gap-3 ">
+        <Card
+          title="Botas Full Plus"
+          description="Zapato de Seguridad"
+          link="#"
+          image="/img/products/boot.png"
+        />
+        <Card
+          title="Botas Full Plus"
+          description="Zapato de Seguridad"
+          link="#"
+          image="/img/products/boot.png"
+        />
+        <Card
+          title="Botas Full Plus"
+          description="Zapato de Seguridad"
+          link="#"
+          image="/img/products/boot.png"
+        />
+        <Card
+          title="Botas Full Plus"
+          description="Zapato de Seguridad"
+          link="#"
+          image="/img/products/boot.png"
+        />
+      </div>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 export const Hero = () => {
   return (
-    <div className="text-center my-8 max-w-[960px] mx-auto px-5">
+    <div className="text-center my-8 max-w-[960px] mx-auto px-5 py-[64px]">
       <span>SOMOS EXPERTOS EN SERVICIOS DE</span>
       <h3 className="mb-6 mt-2 text-3xl font-bold">
         INGENIERÍA, CONSTRUCCIÓN Y <br /> MANTENIMIENTO
