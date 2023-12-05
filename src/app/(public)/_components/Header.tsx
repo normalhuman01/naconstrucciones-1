@@ -1,13 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
-
-const BtnSearch = () => {
-  return (
-    <div>
-      Lupa
-    </div>
-  )
-}
+import { BtnSearch } from "./BtnSearch";
+import { BtnTools } from "./BtnTools";
 
 export const Header = () => {
   return (
@@ -19,8 +13,9 @@ export const Header = () => {
         <Link href="/servicios">SERVICIOS</Link>
         <Link href="/contacto">CONTACTO</Link>
       </div>
-      <div>
+      <div className="flex gap-2">
         <BtnSearch />
+        <BtnTools />
       </div>
     </header>
   )
