@@ -134,7 +134,7 @@ export const Initial = () => {
           <div className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,.2)]"></div>
           <div className="flex flex-col items-end justify-center text-right max-w-[960px] w-full">
             <span className="z-10">Especialidad</span>
-            <h2 className="z-10 text-[60px] font-light" style={{ textShadow: "0px 2px 2px rgba(0, 0, 0, 0.5)" }}>EPP's</h2>
+            <h2 className="z-10 text-[60px] font-light" style={{ textShadow: "0px 2px 2px rgba(0, 0, 0, 0.5)" }}>EPP{`'`}s</h2>
             <p className="z-10">
               Creamos desde cero con visión <br /> y precisión técnica
             </p>
