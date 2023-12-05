@@ -4,6 +4,7 @@ import { Products } from "../_components/Products";
 import { CardCategories } from "../_components/CardCategories";
 import { Header } from "../_sections/Header";
 import { Brands } from "../_sections/Brands";
+import { HeroRight } from "@/components/custom/HeroRight";
 
 type TPageProps = {
   params: {
@@ -45,6 +46,14 @@ const Page = async ({ params, ...props }: TPageProps) => {
 
   return (
     <>
+      <HeroRight
+        top="Equipos de"
+        image="/img/products/epp-hero-bg.png"
+        title1="PROTECCIÓN"
+        title2="PERSONAL"
+        description="Equipo laboral para la salud y seguridad en el trabajo para la industria y el sitio de construcción"
+        className="mb-10"
+      />
       <div className="max-w-[960px] m-auto flex flex-col items-center">
         <Header />
 
