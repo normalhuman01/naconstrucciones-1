@@ -54,7 +54,7 @@ export const BtnTools = () => {
         <div className="w-[12px] h-[12px] bg-[black]"></div>
         <div className="w-[12px] h-[12px] bg-[black]"></div>
       </div>
-      {isOpen && <div className="top-0 left-0 z-[10000] fixed flex justify-center items-center w-full h-[100vh] bg-dark text-white">
+      {isOpen && <div className="top-0 left-0 z-[10000] fixed p-3 flex justify-center items-center w-full h-[100vh] bg-dark text-white">
         <div className="max-w-[960px] mx-auto relative flex justify-center items-center w-full">
           <div className="flex gap-9 items-stretch overflow-hidden max-h-[90vh] w-full">
             <div className="flex flex-col gap-2 items-start">
@@ -77,8 +77,8 @@ export const BtnTools = () => {
 
             </div>
           </div>
-          <IoClose onClick={() => setIsOpen(false)} className="text-[3rem] text-white absolute top-5 right-5 cursor-pointer" />
         </div>
+        <IoClose onClick={() => setIsOpen(false)} className="text-[3rem] text-white absolute top-3 md:top-5 right-3 md:right-5 cursor-pointer" />
       </div>}
     </>
 

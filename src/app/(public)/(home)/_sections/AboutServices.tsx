@@ -29,7 +29,7 @@ const Card = ({ title, description, image, link }: TCard) => {
 export const AboutServices = () => {
   return (
     <div className="my-8">
-      <div className="max-w-[960px] px-8 md:px-0 mx-auto flex flex-col items-start gap-5">
+      <div className="max-w-[960px] px-8 lg:px-0 mx-auto flex flex-col items-start gap-5">
         <div>
           <span className="text-[12px]">NUESTROS</span>
           <h3 className="text-2xl font-bold">SERVICIOS</h3>

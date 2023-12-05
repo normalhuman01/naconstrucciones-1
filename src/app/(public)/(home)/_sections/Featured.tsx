@@ -79,11 +79,11 @@ export const Featured = () => {
           <p className="flex flex-col">
             <strong
               className={cn(
-                "max-w-[280px] font-bold text-[20px] leading-5",
+                "max-w-[320px] font-bold text-[20px] leading-5",
                 calibriFont.className
               )}
             >
-              Zapatilla de Seguridad Conquest Stone High Puma
+              Zapatilla Conquest Stone High Puma
             </strong>
             <span
               className={cn("font-light text-[18px]", calibriFont.className)}

@@ -9,7 +9,7 @@ export const BtnSearch = () => {
   return (
     <div className="flex items-center gap-1">
       {
-        open && <Input className="max-w-[220px] border-dark" value={search} onChange={(e) => setSearch(e.target.value)} />
+        open && <Input className="max-w-[172px] lg:max-w-[210px] border-dark" value={search} onChange={(e) => setSearch(e.target.value)} />
       }
       <div onClick={() => {
         open && !search && setOpen(!open);
