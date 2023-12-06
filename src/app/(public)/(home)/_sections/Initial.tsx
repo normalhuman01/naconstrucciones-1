@@ -47,10 +47,11 @@ const Top = ({
         backgroundImage: "transparent",
         display: "inline-block",
         WebkitTextStroke: ".5px white",
+        textShadow: "0px 1px 1px rgba(0, 0, 0, 0.5)",
         ...style,
       }}
       className={cn(
-        "z-10 text-3xl font-bold ml-[5px]",
+        "z-10 text-[24px] leading-[3rem] font-bold ml-[5px]",
         impactFont.className,
         className
       )}
@@ -66,12 +67,12 @@ const Title = ({
   return (
     <h2
       className={cn(
-        "z-10 text-[40px] md:text-[60px] leading-[3.5rem]",
+        "z-10 text-[40px] font-[100] md:text-[75px] leading-[3.5rem]",
         abadiFont.className,
         className
       )}
       style={{
-        textShadow: "0px 2px 2px rgba(0, 0, 0, 0.5)",
+        textShadow: "0px 4px 3px rgba(0, 0, 0, 0.7)",
         fontWeight: 300,
         ...style,
       }}
@@ -89,6 +90,7 @@ const Description = ({
     <p
       style={{ textShadow: "0 2px 2px rgb(0, 0, 0, 0.5)", ...style }}
       className={cn(
+        "mt-3",
         "font-bold z-10 text-[20px] leading-6",
         calibriFont.className,
         className
@@ -148,6 +150,7 @@ export const Initial = () => {
           style={{
             ...bgStyles,
             backgroundImage: "url(/img/home/PROYECTOS.jpg)",
+            backgroundPositionY: "-2rem",
           }}
         >
           <div className="bg-[rgba(117,117,117,0.35)] w-full h-full absolute top-0 left-0"></div>
@@ -158,7 +161,7 @@ export const Initial = () => {
             <Description>
               Creamos desde cero con visión <br /> y precisión técnica
             </Description>
-            <ButtonBlack className="text-[15px] z-10 mt-8 border-white">
+            <ButtonBlack className="text-[20px] z-10 mt-8 border-white">
               CONSULTAR
             </ButtonBlack>
           </div>
@@ -177,7 +180,7 @@ export const Initial = () => {
           <Description>
             Creamos desde cero con visión <br /> y precisión técnica
           </Description>
-          <ButtonBlack className="text-[15px] z-10 mt-8 border-white">
+          <ButtonBlack className="text-[20px] z-10 mt-8 border-white">
             CONSULTAR
           </ButtonBlack>
         </div>
@@ -195,7 +198,7 @@ export const Initial = () => {
           <Description>
             Creamos desde cero con visión <br /> y precisión técnica
           </Description>
-          <ButtonBlack className="text-[15px] z-10 mt-8 border-white">
+          <ButtonBlack className="text-[20px] z-10 mt-8 border-white">
             CONSULTAR
           </ButtonBlack>
         </div>
@@ -205,6 +208,7 @@ export const Initial = () => {
           style={{
             ...bgStyles,
             backgroundImage: "url(/img/home/EXCAVACION.png)",
+            backgroundPositionY: "60%"
           }}
         >
           <div className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,.2)]"></div>
@@ -214,7 +218,7 @@ export const Initial = () => {
             <Description>
               Creamos desde cero con visión <br /> y precisión técnica
             </Description>
-            <ButtonBlack className="text-[15px] z-10 mt-8 border-white">
+            <ButtonBlack className="text-[20px] z-10 mt-8 border-white">
               CONSULTAR
             </ButtonBlack>
           </div>
@@ -234,7 +238,7 @@ export const Initial = () => {
             <Description>
               Creamos desde cero con visión <br /> y precisión técnica
             </Description>
-            <ButtonBlack className="text-[15px] z-10 mt-8 border-white">
+            <ButtonBlack className="text-[20px] z-10 mt-8 border-white">
               CONSULTAR
             </ButtonBlack>
           </div>
@@ -254,7 +258,7 @@ export const Initial = () => {
             <Description>
               Creamos desde cero con visión <br /> y precisión técnica
             </Description>
-            <ButtonBlack className="text-[15px] z-10 mt-8 border-white">
+            <ButtonBlack className="text-[20px] z-10 mt-8 border-white">
               CONSULTAR
             </ButtonBlack>
           </div>
