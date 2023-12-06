@@ -2,13 +2,13 @@ import { abadiFont, impactFont } from "@/lib/fonts";
 import { TButtonBlackMore } from "..";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { HTMLAttributes } from "react";
+import { HTMLAttributes, ReactNode } from "react";
 
 type THeroRightProps = {
   top: string;
   title1: string;
   title2: string;
-  description: string;
+  description: ReactNode;
   image: string;
   link?: string;
 } & HTMLAttributes<HTMLDivElement>;
@@ -31,7 +31,7 @@ export const HeroRight = ({
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        ...style
+        ...style,
       }}
       {...props}
     >
