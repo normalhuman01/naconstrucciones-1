@@ -1,7 +1,11 @@
 import { TProductEmbedded } from "@/types";
 import { ProductCard } from "./ProductCard";
 
-export const Products = ({ products }: { products: TProductEmbedded[] }) => {
+export const ProductsCard = ({
+  products,
+}: {
+  products: TProductEmbedded[];
+}) => {
   return (
     <>
       <div className="grid grid-cols-4 gap-x-5 gap-y-8 my-5">

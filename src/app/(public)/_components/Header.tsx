@@ -34,7 +34,6 @@ const CustomLink = ({
 };
 
 export const Header = () => {
-  const pathname = usePathname();
   return (
     <header className="top-0 sticky z-[9999] bg-white shadow-md">
       <div className="max-w-[960px] mx-auto py-5 px-8 lg:px-0 flex justify-between items-center">

@@ -1,4 +1,6 @@
+import { ProductsCard } from "@/components/custom/ProductsCard";
 import { WP_URL } from "@/data";
+import { redirect } from "next/navigation";
 import React from "react";
 
 type TResultsProps = {
@@ -8,13 +10,22 @@ type TResultsProps = {
 };
 
 const Page = async ({ searchParams: { search } }: TResultsProps) => {
+  if (!search) {
+    return (
+      redirect("/productos/epp/zapato-de-seguridad")
+    );
+  }
   const products = await fetch(WP_URL + `/epp?_embed&search=${search}`).then(
     (res) => res.json()
   );
   return (
-    <div>
-      <h1>Results</h1>
-      <pre>{JSON.stringify(products, null, 2)}</pre>
+    <div className="mt-5 mb-12">
+      <h1 className="text-3xl text-center my-10">Resultados para "{search}"</h1>
+      <div>
+        <div className="max-w-[960px] mx-auto">
+          <ProductsCard products={products} />
+        </div>
+      </div>
     </div>
   );
 };

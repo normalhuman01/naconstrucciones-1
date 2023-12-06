@@ -1,13 +1,12 @@
 import { WP_URL } from "@/data";
 import { TProductCategory, TProductEmbedded } from "@/types";
-import { Products } from "../_components/Products";
 import { CardCategories } from "../_components/CardCategories";
 import { Header } from "../_sections/Header";
 import { Brands } from "../_sections/Brands";
 import { HeroRight } from "@/components/custom/HeroRight";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { calibriFont } from "@/lib/fonts";
+import { ProductsCard } from "@/components/custom/ProductsCard";
 
 const BtnPage = ({
   page,
@@ -81,7 +80,7 @@ const Page = async ({ params, ...props }: TPageProps) => {
 
         <CardCategories categories={categories} category={category} />
 
-        <Products products={products} />
+        <ProductsCard products={products} />
 
         <div className="flex gap-3 my-10">
           {
