@@ -1,58 +1,27 @@
-"use client";
-import { ButtonYellow } from "@/components/custom";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { config } from "@/config";
+import { CardProduct } from "../_components/CardProduct";
 
-type TCard = {
-  title: string;
-  description: string;
-  link: string;
-  image: string;
-};
-const Card = ({ title, description, link, image }: TCard) => {
-  const router = useRouter();
-  return (
-    <article className="max-w-[180px] md:max-w-[240px] shadow-strong rounded-3xl overflow-hidden">
-      <header className="bg-white flex justify-center items-center">
-        <Image src={image} alt={title} width={200} height={200} />
-      </header>
-      <main className="p-5 bg-dark text-white flex items-center flex-col gap-3">
-        <h3 className="font-bold"> {title} </h3>
-        <p> {description} </p>
-        <ButtonYellow className="text-black" onClick={() => router.push(link)}>CONSEGUIR</ButtonYellow>
-      </main>
-    </article>
-  );
+type TProductsProps = {
+  products: {
+    title: string;
+    description: string;
+    image: string;
+  }[];
 };
 
-export const Products = () => {
+export const Products = ({ products }: TProductsProps) => {
   return (
     <div className="bg-cgray p-5 pb-[64px]">
       <div className="max-w-[960px] mx-auto w-full flex justify-between flex-wrap gap-3 ">
-        <Card
-          title="Botas Full Plus"
-          description="Zapato de Seguridad"
-          link="#"
-          image="/img/products/boot.png"
-        />
-        <Card
-          title="Botas Full Plus"
-          description="Zapato de Seguridad"
-          link="#"
-          image="/img/products/boot.png"
-        />
-        <Card
-          title="Botas Full Plus"
-          description="Zapato de Seguridad"
-          link="#"
-          image="/img/products/boot.png"
-        />
-        <Card
-          title="Botas Full Plus"
-          description="Zapato de Seguridad"
-          link="#"
-          image="/img/products/boot.png"
-        />
+        {products.map((product) => (
+          <CardProduct
+            key={product.title}
+            title={product.title}
+            description={product.description}
+            link={`https://wa.me/+51${config.phone}?text=Hola,%20me%20interesa%20el%20siguiente%20producto:%20${product.title}`}
+            image={product.image}
+          />
+        ))}
       </div>
     </div>
   );
