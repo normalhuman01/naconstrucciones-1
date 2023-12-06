@@ -24,7 +24,7 @@ export const ProductCard = ({
             className="w-full h-full"
             style={{
               backgroundImage: `url(${mediaUrl})`,
-              backgroundSize: "cover",
+              backgroundSize: "contain",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
             }}
