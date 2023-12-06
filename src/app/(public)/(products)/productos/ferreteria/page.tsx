@@ -7,6 +7,7 @@ import {
   impactFont,
 } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const Page = () => {
   return (
@@ -18,7 +19,35 @@ const Page = () => {
         title2="GENERAL"
         description="¡Equipa tu proyecto con nuestra ferretería de calidad superior!"
       />
-      <div className="flex flex-col gap-7 items-center p-5 my-5">
+      <div className="flex flex-col gap-7 items-center p-5 my-5 relative">
+        <Image
+          src="/img/products/ferreteria/wincha.jpg"
+          className="absolute left-[calc(10%)] lg:left-[calc(16%)] xl:left-[calc(30%)] translate-x-[-50%]"
+          width={160}
+          height={160}
+          alt="Wincha"
+        />
+        <Image
+          src="/img/products/ferreteria/alicate.png"
+          className="absolute bottom-[10%] left-[calc(10%)] lg:left-[calc(12%)] xl:bottom-[20%] xl:left-[calc(22%)] translate-x-[-50%]"
+          width={260}
+          height={260}
+          alt="Alicate"
+        />
+        <Image
+          src="/img/products/ferreteria/tornillos.png"
+          className="absolute right-[-5%] lg:right-0 xl:right-[calc(15%)] translate-x-[-50%]"
+          width={140}
+          height={140}
+          alt="Tornillos"
+        />
+        <Image
+          src="/img/products/ferreteria/martillo.png"
+          className="absolute bottom-[10%] right-0 xl:bottom-[20%] xl:right-[calc(12%)] translate-x-[-50%]"
+          width={170}
+          height={170}
+          alt="Martillo"
+        />
         <p
           className={cn(
             "text-center max-w-[500px] underline text-[20px] leading-6",
