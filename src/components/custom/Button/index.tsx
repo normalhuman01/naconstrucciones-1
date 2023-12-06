@@ -2,7 +2,9 @@ import { impactFont } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import { HTMLAttributes } from "react"
 
-type TButtonProps = HTMLAttributes<HTMLButtonElement>
+type TButtonProps = HTMLAttributes<HTMLButtonElement> & {
+  type?: "button" | "submit" | "reset"
+}
 export const Button = ({ className, ...props }: TButtonProps) => {
   return (
     <button
