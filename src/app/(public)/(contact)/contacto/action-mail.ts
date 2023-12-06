@@ -2,6 +2,7 @@
 import { TState } from '@/types/form'
 import { z } from "zod"
 import nodemailer from "nodemailer"
+import { revalidatePath } from 'next/cache'
 
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST!,
@@ -42,10 +43,7 @@ export const sendMail = async (_prevState: TState, formData: FormData) => {
 
   const data = parsed.data
 
-  const to = Array.from(new Set([
-    "darwin97.va@gmail.com",
-    ...process.env.SMTP_TO!.split(",").map((e) => e.trim().toLowerCase()),
-  ])).join(",");
+  const to = Array.from(new Set(process.env.SMTP_TO!.split(",").map((e) => e.trim().toLowerCase()))).join(",");
 
   console.log(to, "<--to")
 
@@ -64,6 +62,12 @@ export const sendMail = async (_prevState: TState, formData: FormData) => {
   })
 
   console.log(result)
+
+  if (result.rejected.length > 0) {
+    return {
+      message: "Error al enviar",
+    }
+  }
 
   return {
     message: "Enviado",

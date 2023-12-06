@@ -5,6 +5,7 @@ import { BtnSubmit } from "./btn-submit"
 import { Input } from "./input"
 import { TState } from "@/types/form"
 import { sendMail } from "../action-mail"
+import { useRef } from "react"
 
 const initialState: TState = {
   message: null,
@@ -12,9 +13,13 @@ const initialState: TState = {
 
 export const Form = () => {
   const [state, formAction] = useFormState(sendMail, initialState)
+  const formRef = useRef<HTMLFormElement>(null);
 
   return (
-    <form className="flex flex-col items-end gap-2 w-full max-w-[600px]" action={formAction}>
+    <form ref={formRef} className="flex flex-col items-end gap-2 w-full max-w-[600px]" action={(formData) => {
+      formAction(formData)
+      formRef.current?.reset();
+    }}>
       <Input placeholder="Nombre" required name="name" />
       <Input placeholder="Email" required name="email" />
       <Input placeholder="Teléfono" required name="phone" />
@@ -28,7 +33,7 @@ export const Form = () => {
         required
       ></textarea>
       <BtnSubmit />
-      <p aria-live="polite" className="sr-only">
+      <p aria-live="polite">
         {state?.message}
       </p>
     </form>
