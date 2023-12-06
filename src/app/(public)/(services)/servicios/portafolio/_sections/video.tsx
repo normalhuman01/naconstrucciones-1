@@ -7,7 +7,7 @@ export const Video = () => {
       <h3
         className={cn("text-[32px] font-bold mb-5", arialBlackFont.className)}
       >
-        VIDEOS
+        VIDEO
       </h3>
       <video src="/video/video-demo.webm" width={670} height={370} controls></video>
       <p className="mt-3">El encanto de lo simple y funcional</p>
