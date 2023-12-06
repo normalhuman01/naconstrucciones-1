@@ -2,7 +2,8 @@
 import { ButtonBlack } from "@/components/custom";
 import { abadiFont, calibriFont, impactFont } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
-import React, { HTMLAttributes } from "react";
+import Image from "next/image";
+import React, { HTMLAttributes, useRef, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 const responsive = {
@@ -87,18 +88,63 @@ const Description = ({
   return (
     <p
       style={{ textShadow: "0 2px 2px rgb(0, 0, 0, 0.5)", ...style }}
-      className={cn("font-bold z-10 text-[20px] leading-6", calibriFont.className, className)}
+      className={cn(
+        "font-bold z-10 text-[20px] leading-6",
+        calibriFont.className,
+        className
+      )}
       {...props}
     />
   );
 };
 
-export const Initial = () => {
+const ButtonGroup = ({ carousel }: { carousel: Carousel | null }) => {
   return (
-    <div>
-      <Carousel responsive={responsive} ssr infinite autoPlay>
+    <>
+      <div
+        onClick={() => carousel?.previous(1)}
+        className="absolute cursor-pointer top-[50%] translate-y-[-50%] left-[30px] text-white w-[30px] h-[30px]  z-10"
+      >
+        <Image
+          src="/img/icons/arrow-left.png"
+          alt="arrow left"
+          width={30}
+          height={30}
+        />
+      </div>
+
+      <div
+        onClick={() => carousel?.next(1)}
+        className="absolute cursor-pointer top-[50%] translate-y-[-50%] right-[30px] text-white w-[30px] h-[30px]  z-10"
+      >
+        <Image
+          src="/img/icons/arrow-right.png"
+          alt="arrow right"
+          width={30}
+          height={30}
+        />
+      </div>
+    </>
+  );
+};
+
+export const Initial = () => {
+  const [carousel, setCarousel] = useState<null | Carousel>(null);
+  return (
+    <div className="relative">
+      <Carousel
+        ref={setCarousel}
+        responsive={responsive}
+        ssr
+        infinite
+        autoPlay
+        renderButtonGroupOutside={true}
+        customButtonGroup={<ButtonGroup carousel={carousel} />}
+        customLeftArrow={<></>}
+        customRightArrow={<></>}
+      >
         <div
-          className="relative flex flex-col items-center justify-center text-white h-[438px] px-10"
+          className="relative flex flex-col items-center justify-center text-white h-[520px] px-10"
           style={{
             ...bgStyles,
             backgroundImage: "url(/img/home/PROYECTOS.jpg)",
@@ -119,7 +165,7 @@ export const Initial = () => {
         </div>
 
         <div
-          className="relative flex flex-col items-center justify-center text-white text-center h-[438px] px-10"
+          className="relative flex flex-col items-center justify-center text-white text-center h-[520px] px-10"
           style={{
             ...bgStyles,
             backgroundImage: "url(/img/home/REMODELACION.jpg)",
@@ -137,7 +183,7 @@ export const Initial = () => {
         </div>
 
         <div
-          className="relative flex flex-col items-center justify-center text-white text-center h-[438px] px-10"
+          className="relative flex flex-col items-center justify-center text-white text-center h-[520px] px-10"
           style={{
             ...bgStyles,
             backgroundImage: "url(/img/home/AMPLIACION.jpg)",
@@ -155,7 +201,7 @@ export const Initial = () => {
         </div>
 
         <div
-          className="relative flex flex-col items-center justify-center text-white h-[438px] px-10"
+          className="relative flex flex-col items-center justify-center text-white h-[520px] px-10"
           style={{
             ...bgStyles,
             backgroundImage: "url(/img/home/EXCAVACION.png)",
@@ -175,7 +221,7 @@ export const Initial = () => {
         </div>
 
         <div
-          className="relative flex flex-col items-center justify-center text-white h-[438px] px-10"
+          className="relative flex flex-col items-center justify-center text-white h-[520px] px-10"
           style={{
             ...bgStyles,
             backgroundImage: "url(/img/home/DEMOLICION.png)",
@@ -195,7 +241,7 @@ export const Initial = () => {
         </div>
 
         <div
-          className="relative flex flex-col items-center justify-center text-white h-[438px] px-10"
+          className="relative flex flex-col items-center justify-center text-white h-[520px] px-10"
           style={{
             ...bgStyles,
             backgroundImage: "url(/img/home/EPP.jpg)",
