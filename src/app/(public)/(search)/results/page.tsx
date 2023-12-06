@@ -18,7 +18,7 @@ const Page = async ({ searchParams: { search } }: TResultsProps) => {
   );
   return (
     <div className="mt-5 mb-12">
-      <h1 className="text-3xl text-center my-10">Resultados para "{search}"</h1>
+      <h1 className="text-3xl text-center my-10">Resultados para {'"'}{search}{'"'}</h1>
       <div>
         <div className="max-w-[960px] mx-auto">
           <ProductsCard products={products} />
