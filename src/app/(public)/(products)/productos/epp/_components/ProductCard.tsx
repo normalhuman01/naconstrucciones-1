@@ -30,8 +30,7 @@ export const ProductCard = ({
         </header>
         <main className="px-5">
           <h4 className="font-bold text-xl">{title}</h4>
-          <p>{content}</p>
-          {/* <p dangerouslySetInnerHTML={{ __html: content }}></p> */}
+          <p dangerouslySetInnerHTML={{ __html: content }}></p>
         </main>
       </div>
       <footer className="px-5 pb-4">

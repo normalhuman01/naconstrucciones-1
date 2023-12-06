@@ -1,6 +1,8 @@
 "use client";
 import { ButtonBlack } from "@/components/custom";
-import React from "react";
+import { abadiFont, calibriFont, impactFont } from "@/lib/fonts";
+import { cn } from "@/lib/utils";
+import React, { HTMLAttributes } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 const responsive = {
@@ -29,6 +31,68 @@ const bgStyles = {
   backgroundPosition: "center",
 };
 
+const Top = ({
+  className,
+  style,
+  ...props
+}: HTMLAttributes<HTMLSpanElement>) => {
+  return (
+    <span
+      style={{
+        color: "transparent",
+        backgroundClip: "text",
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent",
+        backgroundImage: "transparent",
+        display: "inline-block",
+        WebkitTextStroke: ".5px white",
+        ...style,
+      }}
+      className={cn(
+        "z-10 text-3xl font-bold ml-[5px]",
+        impactFont.className,
+        className
+      )}
+      {...props}
+    />
+  );
+};
+const Title = ({
+  className,
+  style,
+  ...props
+}: HTMLAttributes<HTMLDivElement>) => {
+  return (
+    <h2
+      className={cn(
+        "z-10 text-[40px] md:text-[60px] leading-[3.5rem]",
+        abadiFont.className,
+        className
+      )}
+      style={{
+        textShadow: "0px 2px 2px rgba(0, 0, 0, 0.5)",
+        fontWeight: 300,
+        ...style,
+      }}
+      {...props}
+    />
+  );
+};
+
+const Description = ({
+  className,
+  style,
+  ...props
+}: HTMLAttributes<HTMLParagraphElement>) => {
+  return (
+    <p
+      style={{ textShadow: "0 2px 2px rgb(0, 0, 0, 0.5)", ...style }}
+      className={cn("font-bold z-10 text-[20px] leading-6", calibriFont.className, className)}
+      {...props}
+    />
+  );
+};
+
 export const Initial = () => {
   return (
     <div>
@@ -40,17 +104,19 @@ export const Initial = () => {
             backgroundImage: "url(/img/home/PROYECTOS.jpg)",
           }}
         >
+          <div className="bg-[rgba(117,117,117,0.35)] w-full h-full absolute top-0 left-0"></div>
           <div className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,.2)]"></div>
           <div className="flex flex-col items-start justify-center max-w-[960px] w-full">
-            <span className="z-10">Especialidad</span>
-            <h2 className="z-10 text-[40px] md:text-[60px] font-light" style={{ textShadow: "0px 2px 2px rgba(0, 0, 0, 0.5)" }}>PROYECTOS</h2>
-            <p className="z-10">
+            <Top>Especialidad</Top>
+            <Title>PROYECTOS</Title>
+            <Description>
               Creamos desde cero con visión <br /> y precisión técnica
-            </p>
-            <ButtonBlack className="text-[15px] z-10 mt-8 border-white">CONSULTAR</ButtonBlack>
+            </Description>
+            <ButtonBlack className="text-[15px] z-10 mt-8 border-white">
+              CONSULTAR
+            </ButtonBlack>
           </div>
         </div>
-
 
         <div
           className="relative flex flex-col items-center justify-center text-white text-center h-[438px] px-10"
@@ -60,14 +126,15 @@ export const Initial = () => {
           }}
         >
           <div className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,.2)]"></div>
-          <span className="z-10">Especialidad</span>
-          <h2 className="z-10 text-[40px] md:text-[60px] font-light" style={{ textShadow: "0px 2px 2px rgba(0, 0, 0, 0.5)" }}>REMODELACIÓN</h2>
-          <p className="z-10">
+          <Top>Especialidad</Top>
+          <Title>REMODELACIÓN</Title>
+          <Description>
             Creamos desde cero con visión <br /> y precisión técnica
-          </p>
-          <ButtonBlack className="text-[15px] z-10 mt-8 border-white">CONSULTAR</ButtonBlack>
+          </Description>
+          <ButtonBlack className="text-[15px] z-10 mt-8 border-white">
+            CONSULTAR
+          </ButtonBlack>
         </div>
-
 
         <div
           className="relative flex flex-col items-center justify-center text-white text-center h-[438px] px-10"
@@ -77,14 +144,15 @@ export const Initial = () => {
           }}
         >
           <div className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,.2)]"></div>
-          <span className="z-10">Especialidad</span>
-          <h2 className="z-10 text-[40px] md:text-[60px] font-light" style={{ textShadow: "0px 2px 2px rgba(0, 0, 0, 0.5)" }}>AMPLIACIONES</h2>
-          <p className="z-10">
+          <Top>Especialidad</Top>
+          <Title>AMPLIACIONES</Title>
+          <Description>
             Creamos desde cero con visión <br /> y precisión técnica
-          </p>
-          <ButtonBlack className="text-[15px] z-10 mt-8 border-white">CONSULTAR</ButtonBlack>
+          </Description>
+          <ButtonBlack className="text-[15px] z-10 mt-8 border-white">
+            CONSULTAR
+          </ButtonBlack>
         </div>
-
 
         <div
           className="relative flex flex-col items-center justify-center text-white h-[438px] px-10"
@@ -95,16 +163,17 @@ export const Initial = () => {
         >
           <div className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,.2)]"></div>
           <div className="flex flex-col items-end justify-center text-right max-w-[960px] w-full">
-            <span className="z-10">Especialidad</span>
-            <h2 className="z-10 text-[40px] md:text-[60px] font-light" style={{ textShadow: "0px 2px 2px rgba(0, 0, 0, 0.5)" }}>EXCAVACIONES</h2>
-            <p className="z-10">
+            <Top>Especialidad</Top>
+            <Title>EXCAVACIONES</Title>
+            <Description>
               Creamos desde cero con visión <br /> y precisión técnica
-            </p>
-            <ButtonBlack className="text-[15px] z-10 mt-8 border-white">CONSULTAR</ButtonBlack>
+            </Description>
+            <ButtonBlack className="text-[15px] z-10 mt-8 border-white">
+              CONSULTAR
+            </ButtonBlack>
           </div>
         </div>
 
-        
         <div
           className="relative flex flex-col items-center justify-center text-white h-[438px] px-10"
           style={{
@@ -114,15 +183,16 @@ export const Initial = () => {
         >
           <div className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,.2)]"></div>
           <div className="flex flex-col items-start justify-center max-w-[960px] w-full">
-            <span className="z-10">Especialidad</span>
-            <h2 className="z-10 text-[40px] md:text-[60px] font-light" style={{ textShadow: "0px 2px 2px rgba(0, 0, 0, 0.5)" }}>DEMOLICIONES</h2>
-            <p className="z-10">
+            <Top>Especialidad</Top>
+            <Title>DEMOLICIONES</Title>
+            <Description>
               Creamos desde cero con visión <br /> y precisión técnica
-            </p>
-            <ButtonBlack className="text-[15px] z-10 mt-8 border-white">CONSULTAR</ButtonBlack>
+            </Description>
+            <ButtonBlack className="text-[15px] z-10 mt-8 border-white">
+              CONSULTAR
+            </ButtonBlack>
           </div>
         </div>
-        
 
         <div
           className="relative flex flex-col items-center justify-center text-white h-[438px] px-10"
@@ -133,12 +203,14 @@ export const Initial = () => {
         >
           <div className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,.2)]"></div>
           <div className="flex flex-col items-end justify-center text-right max-w-[960px] w-full">
-            <span className="z-10">Especialidad</span>
-            <h2 className="z-10 text-[40px] md:text-[60px] font-light" style={{ textShadow: "0px 2px 2px rgba(0, 0, 0, 0.5)" }}>EPP{`'`}s</h2>
-            <p className="z-10">
+            <Top>Especialidad</Top>
+            <Title>EPP{`'`}s</Title>
+            <Description>
               Creamos desde cero con visión <br /> y precisión técnica
-            </p>
-            <ButtonBlack className="text-[15px] z-10 mt-8 border-white">CONSULTAR</ButtonBlack>
+            </Description>
+            <ButtonBlack className="text-[15px] z-10 mt-8 border-white">
+              CONSULTAR
+            </ButtonBlack>
           </div>
         </div>
       </Carousel>

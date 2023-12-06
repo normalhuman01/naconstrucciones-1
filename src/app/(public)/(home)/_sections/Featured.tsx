@@ -18,13 +18,21 @@ const BlackCircle = ({ className, ...props }: TBlackCircleProps) => {
 const Left = () => {
   return (
     <div className="relative">
-      <BlackCircle />
-      <Image
+      {/* <BlackCircle /> */}
+      {/* <Image
         src={bootImage.src}
         width={320}
         height={320}
         alt="boot"
         className="absolute top-[-20px] md:top-[-60px] w-[200px] md:min-w-[320px] md:h-[320px]"
+      /> */}
+      <Image
+        src={"/img/home/boot-circle.png"}
+        width={350}
+        height={305}
+        alt="boot"
+        className="scale-90"
+        // className="absolute bottom-[20px] opacity-[.1] blur-sm filter backdrop-blur-5 dark w-[200px] md:min-w-[320px] md:h-[40px]"
       />
     </div>
   );

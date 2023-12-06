@@ -1,5 +1,5 @@
 import { abadiFont, impactFont } from "@/lib/fonts";
-import { TButtonBlackMore } from "..";
+import { ButtonBlackMore } from "..";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { HTMLAttributes, ReactNode } from "react";
@@ -63,9 +63,9 @@ export const HeroRight = ({
           {description}
         </p>
         <Link href={link}>
-          <TButtonBlackMore className="relative top-[-5px] border-white">
+          <ButtonBlackMore className="relative top-[-5px] border-white">
             VER MÁS
-          </TButtonBlackMore>
+          </ButtonBlackMore>
         </Link>
       </div>
     </div>

@@ -1,7 +1,9 @@
-import { ButtonBlack, ButtonYellow } from "@/components/custom";
+import { ButtonBlack, ButtonBlackMore, ButtonYellow } from "@/components/custom";
 import Image from "next/image";
 import Link from "next/link";
 import { Header } from "../_components/Header";
+import { cn } from "@/lib/utils";
+import { calibriFont } from "@/lib/fonts";
 
 type TCard = {
   title: string;
@@ -11,18 +13,18 @@ type TCard = {
 };
 const Card = ({ title, description, image, link }: TCard) => {
   return (
-    <div className="flex flex-1 flex-col items-start justify-between gap-5 max-w-[160px]">
+    <div className="flex flex-1 flex-col items-start justify-between gap-5 max-w-[220px]">
       <div className="flex flex-col gap-3 items-start">
         <div className="w-full">
           <Image src={image} width={20} height={20} alt="service" />
           <h4 className="text-[16px] font-bold">{title}</h4>
           <hr className="border-dark border-1" />
         </div>
-        <p className="text-[12px] text-justify">{description}</p>
+        <p className={cn("text-[16px] text-justify leading-5", calibriFont.className)}>{description}</p>
       </div>
-      <ButtonBlack className="text-[15px]">
+      <ButtonBlackMore className="text-[15px]">
         <Link href={link}>VER MÁS</Link>
-      </ButtonBlack>
+      </ButtonBlackMore>
     </div>
   );
 };
@@ -30,7 +32,7 @@ const Card = ({ title, description, image, link }: TCard) => {
 export const AboutServices = () => {
   return (
     <div className="my-8">
-      <div className="max-w-[960px] px-8 lg:px-0 mx-auto flex flex-col items-start gap-5">
+      <div className="max-w-[960px] px-8 lg:px-0 mx-auto flex flex-col items-start gap-3">
         <Header top="NUESTROS" main="SERVICIOS" />
         <div className="flex flex-wrap items-stretch w-full gap-4 justify-between md:justify-between">
           <Card

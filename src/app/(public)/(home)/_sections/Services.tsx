@@ -1,6 +1,6 @@
 "use client";
 import { ButtonYellow } from "@/components/custom";
-import { arialBlackFont } from "@/lib/fonts";
+import { arialBlackFont, calibriFont } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { HTMLAttributes, ReactNode, useState } from "react";
@@ -11,12 +11,7 @@ type TCard = Omit<HTMLAttributes<HTMLDivElement>, "title" | "description"> & {
   description: string | ReactNode;
   image: string;
 };
-const Card = ({
-  title,
-  description,
-  image,
-  className = "",
-}: TCard) => {
+const Card = ({ title, description, image, className = "" }: TCard) => {
   const [isFlipped, setIsFlipped] = useState(false);
   return (
     <div className={cn("max-w-[220px] w-full mb-5 md:mb-auto", className)}>
@@ -25,20 +20,33 @@ const Card = ({
         onMouseEnter={() => setIsFlipped(true)}
         onMouseLeave={() => setIsFlipped(false)}
       >
-        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal" cardStyles={{ front: { width: "100%" } }}>
-          <div className="max-w-[220px] w-[220px] h-[274px] md:h-[330px] flex justify-center items-center" style={{
-            backgroundImage: `url(${image})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}>
-          </div>
-          <div className="bg-dark max-w-[220px] h-[274px] md:h-[330px] flex justify-center items-center px-5 text-center text-[14px]">
+        <ReactCardFlip
+          isFlipped={isFlipped}
+          flipDirection="horizontal"
+          cardStyles={{ front: { width: "100%" } }}
+        >
+          <div
+            className="max-w-[220px] w-[220px] h-[274px] md:h-[330px] flex justify-center items-center"
+            style={{
+              backgroundImage: `url(${image})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          ></div>
+          <div
+            className={cn(
+              "bg-dark max-w-[220px] h-[274px] md:h-[330px] flex justify-center items-center px-5 text-center text-[18px]",
+              calibriFont.className
+            )}
+          >
             {description}
           </div>
         </ReactCardFlip>
       </div>
-      <h4 className="text-[20px] leading-5 mt-2">{title}</h4>
+      <h4 className={cn("text-[26px] leading-5 mt-2", calibriFont.className)}>
+        {title}
+      </h4>
     </div>
   );
 };
@@ -61,9 +69,7 @@ const Group = ({ children }: { children: ReactNode }) => {
         </p>
       </div>
 
-      <div className="flex flex-row gap-4">
-        {children}
-      </div>
+      <div className="flex flex-row gap-4">{children}</div>
 
       <div className="hidden md:flex flex-col gap-4 items-end mt-[140px]">
         <p className="leading-5">
@@ -82,8 +88,8 @@ const Group = ({ children }: { children: ReactNode }) => {
         <ButtonYellow className="text-[15px]">VER MÁS</ButtonYellow>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export const Services = () => {
   return (

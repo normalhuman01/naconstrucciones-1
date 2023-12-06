@@ -47,7 +47,7 @@ export const Benefits = () => {
         <span className={cn("text-[18px] font-light", calibriFont.className)}>ventas@naconstrucciones.com</span>
       </div>
       <div className="w-[240px] h-[193px] relative">
-        <Image src="/img/others/delivery-packages.png" width={272} height={250} alt="" className="max-w-[272px] relative bottom-0 right-0" />
+        <Image src="/img/others/delivery-packages.png" width={264} height={232} alt="" className="max-w-[272px] relative bottom-0 right-0" />
       </div>
     </div>
   );

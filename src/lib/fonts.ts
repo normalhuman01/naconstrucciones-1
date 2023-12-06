@@ -46,6 +46,11 @@ export const abadiFont = localFont({
     {
       path: '../../public/fonts/abadi/AbadiMT-ExtraLight.ttf',
       weight: '100',
+      style: 'lighter',
+    },
+    {
+      path: '../../public/fonts/abadi/AbadiMT-Light.ttf',
+      weight: '300',
       style: 'light',
     },
     {

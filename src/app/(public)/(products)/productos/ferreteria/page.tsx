@@ -1,4 +1,4 @@
-import { ButtonBlack, TButtonBlackMore } from "@/components/custom";
+import { ButtonBlack } from "@/components/custom";
 import { HeroRight } from "@/components/custom/HeroRight";
 import {
   abadiFont,

@@ -7,21 +7,23 @@ const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 3000 },
-    items: 8,
+    items: 9,
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 8,
+    items: 9,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
-    items: 8,
+    items: 9,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
-    items: 8,
+    items: 9,
   },
 };
+
+const array = Array.from({ length: 26 }, (_, i) => i + 1);
 
 export const BrandsCarousel = () => {
   return (
@@ -33,73 +35,17 @@ export const BrandsCarousel = () => {
         arrows={false}
         autoPlay
       >
-        <Image src="/img/brands/3m.png" width={120} height={120} alt="brand" />
-        <Image
-          src="/img/brands/ansell.jpg"
-          width={120}
-          height={120}
-          alt="brand"
-        />
-        <Image
-          src="/img/brands/bullard.png"
-          width={120}
-          height={120}
-          alt="brand"
-        />
-        <Image
-          src="/img/brands/clute.png"
-          width={120}
-          height={120}
-          alt="brand"
-        />
-        <Image
-          src="/img/brands/deltaplus.png"
-          width={120}
-          height={120}
-          alt="brand"
-        />
-        <Image
-          src="/img/brands/edelbrock.png"
-          width={120}
-          height={120}
-          alt="brand"
-        />
-        <Image
-          src="/img/brands/forte.png"
-          width={120}
-          height={120}
-          alt="brand"
-        />
-        <Image
-          src="/img/brands/fullrisk.png"
-          width={120}
-          height={120}
-          alt="brand"
-        />
-        <Image
-          src="/img/brands/haws.png"
-          width={120}
-          height={120}
-          alt="brand"
-        />
-        <Image
-          src="/img/brands/howard-leight.png"
-          width={120}
-          height={120}
-          alt="brand"
-        />
-        <Image
-          src="/img/brands/kleenguard.png"
-          width={120}
-          height={120}
-          alt="brand"
-        />
-        <Image
-          src="/img/brands/libus.png"
-          width={120}
-          height={120}
-          alt="brand"
-        />
+        {array.map((i) => (
+          <div key={i} className="flex h-full items-center">
+            <Image
+              src={`/img/brands/logos/${i}.jpg`}
+              width={170}
+              height={60}
+              alt="brand"
+              className="w-[170px] h-[60px] object-contain"
+            />
+          </div>
+        ))}
       </Carousel>
     </div>
   );
