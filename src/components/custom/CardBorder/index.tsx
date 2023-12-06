@@ -22,7 +22,7 @@ export const CardBorder = ({
   headerClassName,
 }: TCardProps) => {
   return (
-    <div className="flex flex-col gap-5 justify-between rounded-3xl shadow-xl overflow-hidden">
+    <div className="flex flex-col gap-5 justify-between rounded-3xl shadow-xl overflow-hidden w-full max-w-[300px]">
       <div>
         <header
           className={cn("bg-[#E9E6E5] h-[254px] relative p-5", headerClassName)}

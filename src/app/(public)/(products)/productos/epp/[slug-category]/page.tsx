@@ -12,7 +12,11 @@ const BtnPage = ({
   page,
   currentPage,
   slugCategory,
-}: { page: number; currentPage: number; slugCategory: string }) => {
+}: {
+  page: number;
+  currentPage: number;
+  slugCategory: string;
+}) => {
   return (
     <Link href={`/productos/epp/${slugCategory}?page=${page}#products`}>
       <div
@@ -24,8 +28,8 @@ const BtnPage = ({
         {page}
       </div>
     </Link>
-  )
-}
+  );
+};
 
 type TPageProps = {
   params: {
@@ -54,7 +58,7 @@ const Page = async ({ params, ...props }: TPageProps) => {
 
   const products = (await fetch(
     WP_URL +
-    `/epp?_embed&page=${page}&per_page=${per_page}&product_category=${category?.id}`
+      `/epp?_embed&page=${page}&per_page=${per_page}&product_category=${category?.id}`
   ).then((res) => {
     metaProducts.total = Number(res.headers.get("X-Wp-Total"));
     metaProducts.totalPages = Number(res.headers.get("X-Wp-Totalpages"));
@@ -83,16 +87,14 @@ const Page = async ({ params, ...props }: TPageProps) => {
         <ProductsCard products={products} />
 
         <div className="flex gap-3 my-10">
-          {
-            Array.from({ length: metaProducts.totalPages }, (_, i) => (
-              <BtnPage
-                key={i}
-                page={i + 1}
-                currentPage={Number(page)}
-                slugCategory={slug}
-              />
-            ))
-          }
+          {Array.from({ length: metaProducts.totalPages }, (_, i) => (
+            <BtnPage
+              key={i}
+              page={i + 1}
+              currentPage={Number(page)}
+              slugCategory={slug}
+            />
+          ))}
         </div>
       </div>
       <Brands className="my-10 flex flex-col gap-10 items-stretch" />
@@ -103,3 +105,9 @@ const Page = async ({ params, ...props }: TPageProps) => {
 export default Page;
 
 export const dynamic = "force-dynamic";
+
+export const metadata = {
+  title: "Equipos de Protección Personal | N&A Construcciones",
+  description:
+    "Equipos de Protección Personal para la salud y seguridad en el trabajo para la industria y el sitio de construcción",
+};

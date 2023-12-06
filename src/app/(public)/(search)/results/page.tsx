@@ -11,9 +11,7 @@ type TResultsProps = {
 
 const Page = async ({ searchParams: { search } }: TResultsProps) => {
   if (!search) {
-    return (
-      redirect("/productos/epp/zapato-de-seguridad")
-    );
+    return redirect("/productos/epp/zapato-de-seguridad");
   }
   const products = await fetch(WP_URL + `/epp?_embed&search=${search}`).then(
     (res) => res.json()
@@ -31,3 +29,9 @@ const Page = async ({ searchParams: { search } }: TResultsProps) => {
 };
 
 export default Page;
+
+export const metadata = {
+  title: "Resultados | N&A Construcciones",
+  description:
+    "Tenemos los mejores productos para usted. Nuestro trabajo nos respalda y nos hace crecer. Conectamos espacios y personas.",
+};

@@ -27,3 +27,9 @@ const Page = () => {
 };
 
 export default Page;
+
+export const metadata = {
+  title: "Portafolio | N&A Construcciones",
+  description:
+    "Nuestro trabajo nos respalda y nos hace crecer. Conectamos espacios y personas.",
+};

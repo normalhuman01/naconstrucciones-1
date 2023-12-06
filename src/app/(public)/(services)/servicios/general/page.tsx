@@ -1,7 +1,19 @@
 import { HeroRight } from "@/components/custom/HeroRight";
 import { Cards } from "./_sections/cards";
+import { TServiceEmbedded } from "@/types/servicio";
+import { WP_URL } from "@/data";
 
-const Page = () => {
+const Page = async () => {
+  const services = (await fetch(WP_URL + `/servicio?_embed&per_page=100`).then(
+    (res) => res.json()
+  )) as TServiceEmbedded[];
+
+  const items = services.map((item) => ({
+    title: item.title.rendered,
+    description: item.content.rendered,
+    image: item._embedded["wp:featuredmedia"][0].source_url,
+  }));
+
   return (
     <>
       <HeroRight
@@ -11,9 +23,15 @@ const Page = () => {
         title2="MANTENIMIENTO"
         description="Contamos con una amplia gama y variedad de servicios relacionados con el área de construcción industrial, urbana, edificaciones y obras de infraestructura."
       />
-      <Cards />
+      <Cards cards={items} />
     </>
   );
 };
 
 export default Page;
+
+
+export const metadata = {
+  title: "Servicios de construcción y mantenimiento | N&A Construcciones",
+  description: "Contamos con una amplia gama y variedad de servicios relacionados con el tamaño de construcción industrial, urbana, edificaciones y obras de infraestructura.",
+}

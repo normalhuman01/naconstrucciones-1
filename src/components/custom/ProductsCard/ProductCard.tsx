@@ -2,6 +2,7 @@ import { ButtonBlack } from "@/components/custom";
 import { config } from "@/config";
 import { TProductEmbedded } from "@/types";
 import Link from "next/link";
+import { load } from "cheerio";
 
 export const ProductCard = ({
   product: {
@@ -14,6 +15,7 @@ export const ProductCard = ({
 }) => {
   const mediaUrl =
     _embedded["wp:featuredmedia"][0]!.media_details.sizes.full.source_url;
+  const strContent = load(content).text();
   return (
     <div className="flex flex-col gap-5 justify-between rounded-3xl shadow-xl overflow-hidden">
       <div>
@@ -30,7 +32,7 @@ export const ProductCard = ({
         </header>
         <main className="px-5">
           <h4 className="font-bold text-xl">{title}</h4>
-          <p dangerouslySetInnerHTML={{ __html: content }}></p>
+          <p>{strContent}</p>
         </main>
       </div>
       <footer className="px-5 pb-4">

@@ -30,3 +30,9 @@ const Page = () => {
 };
 
 export default Page;
+
+export const metadata = {
+  title: "Contacto | N&A Construcciones",
+  description:
+    "En N&A INGENIERÍA Y CONSTRUCCIONES contamos con amplia experiencia en desarrollar y gestionar proyectos de diseño, arquitectura y construcción. Para más información, contáctanos.",
+};

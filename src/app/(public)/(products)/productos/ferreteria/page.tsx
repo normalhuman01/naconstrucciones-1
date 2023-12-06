@@ -90,3 +90,9 @@ const Page = () => {
 };
 
 export default Page;
+
+export const metadata = {
+  title: "Ferreteria | N&A Construcciones",
+  description:
+    "Herramientas manuales y más para construcción, bricolaje y más. Todo en un solo lugar para que construyas con confianza.",
+};

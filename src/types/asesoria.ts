@@ -1,6 +1,6 @@
 import { Content, Embedded, GUID, TProductLinks, WhatsappLink } from "./other";
 
-export interface TProductEmbedded {
+export interface TAdvisoryEmbedded {
   id: number;
   date: Date;
   date_gmt: Date;
