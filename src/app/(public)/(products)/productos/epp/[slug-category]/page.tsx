@@ -5,6 +5,28 @@ import { CardCategories } from "../_components/CardCategories";
 import { Header } from "../_sections/Header";
 import { Brands } from "../_sections/Brands";
 import { HeroRight } from "@/components/custom/HeroRight";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { calibriFont } from "@/lib/fonts";
+
+const BtnPage = ({
+  page,
+  currentPage,
+  slugCategory,
+}: { page: number; currentPage: number; slugCategory: string }) => {
+  return (
+    <Link href={`/productos/epp/${slugCategory}?page=${page}#products`}>
+      <div
+        className={cn(
+          "w-[33px] h-[33px] flex justify-center items-center border-black border-[1px] cursor-pointer",
+          currentPage === page ? "bg-black text-white" : "bg-white"
+        )}
+      >
+        {page}
+      </div>
+    </Link>
+  )
+}
 
 type TPageProps = {
   params: {
@@ -33,7 +55,7 @@ const Page = async ({ params, ...props }: TPageProps) => {
 
   const products = (await fetch(
     WP_URL +
-      `/epp?_embed&page=${page}&per_page=${per_page}&product_category=${category?.id}`
+    `/epp?_embed&page=${page}&per_page=${per_page}&product_category=${category?.id}`
   ).then((res) => {
     metaProducts.total = Number(res.headers.get("X-Wp-Total"));
     metaProducts.totalPages = Number(res.headers.get("X-Wp-Totalpages"));
@@ -60,8 +82,21 @@ const Page = async ({ params, ...props }: TPageProps) => {
         <CardCategories categories={categories} category={category} />
 
         <Products products={products} />
+
+        <div className="flex gap-3 my-10">
+          {
+            Array.from({ length: metaProducts.totalPages }, (_, i) => (
+              <BtnPage
+                key={i}
+                page={i + 1}
+                currentPage={Number(page)}
+                slugCategory={slug}
+              />
+            ))
+          }
+        </div>
       </div>
-      <Brands />
+      <Brands className="my-10 flex flex-col gap-10 items-stretch" />
     </>
   );
 };

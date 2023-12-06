@@ -1,11 +1,12 @@
 import { BrandsCarousel } from "@/components/custom/BrandsCarousel";
 import { arialBlackFont } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
+import { HTMLAttributes } from "react";
 
-export const Brands = () => {
+export const Brands = ({ ...props }: HTMLAttributes<HTMLDivElement>) => {
   return (
-    <>
-      <div className="max-w-[960px] mx-auto my-10">
+    <div {...props}>
+      <div className="max-w-[960px] mx-auto my-10 w-full">
         <div
           className={cn(
             "text-center w-full text-[24px]",
@@ -23,6 +24,6 @@ export const Brands = () => {
       </div>
 
       <BrandsCarousel />
-    </>
+    </div>
   );
 };
