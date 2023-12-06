@@ -1,4 +1,6 @@
 import { ButtonYellow } from "@/components/custom";
+import { calibriFont } from "@/lib/fonts";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -16,8 +18,8 @@ export const CardProduct = ({ title, description, link, image }: TCard) => {
       </header>
       <main className="p-5 bg-dark text-white flex items-center justify-between flex-col gap-3 flex-1">
         <div className="text-center">
-          <h3 className="font-bold"> {title} </h3>
-          <p> {description} </p>
+          <h3 className={cn("font-bold text-[19px] h-[5.5rem]", calibriFont.className)}> {title} </h3>
+          <p className={cn("font-light text-[19px]", calibriFont.className)}> {description} </p>
         </div>
         <Link href={link} target="_blank">
           <ButtonYellow className="text-black">CONSEGUIR</ButtonYellow>

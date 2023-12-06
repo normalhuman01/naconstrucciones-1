@@ -15,7 +15,7 @@ export const Benefits = () => {
             className="object-contain"
           />
         </div>
-        <h3 className="font-bold text-[16px] whitespace-nowrap">Seguridad en tus Compras</h3>
+        <h3 className={cn("font-bold text-[19px] whitespace-nowrap", calibriFont.className)}>Seguridad en tus Compras</h3>
         <p className="text-[14px]">
           Contamos con certificado para todas tus compras
         </p>
@@ -30,8 +30,8 @@ export const Benefits = () => {
             className="object-contain"
           />
         </div>
-        <h3 className="font-bold text-[16px]">Asesoría personalizada</h3>
-        <p className="text-[14px]">
+        <h3 className={cn("font-bold text-[19px] whitespace-nowrap", calibriFont.className)}>Asesoría personalizada</h3>
+        <p className={cn("text-[14px]", calibriFont.className)}>
           Un ejecutivo de cuentas y un staff de cotizadores te acompañarán en tu
           compra
         </p>

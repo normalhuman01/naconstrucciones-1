@@ -161,7 +161,7 @@ export const Initial = () => {
             <Description>
               Creamos desde cero con visión <br /> y precisión técnica
             </Description>
-            <ButtonBlack className="text-[20px] z-10 mt-8 border-white">
+            <ButtonBlack className="text-[20px] z-10 mt-10 border-white">
               CONSULTAR
             </ButtonBlack>
           </div>
@@ -180,7 +180,7 @@ export const Initial = () => {
           <Description>
             Creamos desde cero con visión <br /> y precisión técnica
           </Description>
-          <ButtonBlack className="text-[20px] z-10 mt-8 border-white">
+          <ButtonBlack className="text-[20px] z-10 mt-10 border-white">
             CONSULTAR
           </ButtonBlack>
         </div>
@@ -198,7 +198,7 @@ export const Initial = () => {
           <Description>
             Creamos desde cero con visión <br /> y precisión técnica
           </Description>
-          <ButtonBlack className="text-[20px] z-10 mt-8 border-white">
+          <ButtonBlack className="text-[20px] z-10 mt-10 border-white">
             CONSULTAR
           </ButtonBlack>
         </div>
@@ -218,7 +218,7 @@ export const Initial = () => {
             <Description>
               Creamos desde cero con visión <br /> y precisión técnica
             </Description>
-            <ButtonBlack className="text-[20px] z-10 mt-8 border-white">
+            <ButtonBlack className="text-[20px] z-10 mt-10 border-white">
               CONSULTAR
             </ButtonBlack>
           </div>
@@ -238,7 +238,7 @@ export const Initial = () => {
             <Description>
               Creamos desde cero con visión <br /> y precisión técnica
             </Description>
-            <ButtonBlack className="text-[20px] z-10 mt-8 border-white">
+            <ButtonBlack className="text-[20px] z-10 mt-10 border-white">
               CONSULTAR
             </ButtonBlack>
           </div>
@@ -258,7 +258,7 @@ export const Initial = () => {
             <Description>
               Creamos desde cero con visión <br /> y precisión técnica
             </Description>
-            <ButtonBlack className="text-[20px] z-10 mt-8 border-white">
+            <ButtonBlack className="text-[20px] z-10 mt-10 border-white">
               CONSULTAR
             </ButtonBlack>
           </div>

@@ -14,7 +14,7 @@ import { load } from "cheerio";
 
 const Page = async () => {
   const products = (await fetch(
-    WP_URL + `/epp?_embed&page=${1}&per_page=${4}`
+    WP_URL + `/epp?_embed&page=${2}&per_page=${4}`
   ).then((res) => res.json())) as TProductEmbedded[];
 
   return (
