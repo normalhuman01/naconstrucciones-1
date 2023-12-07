@@ -12,7 +12,7 @@ type TProductsProps = {
 export const Products = ({ products }: TProductsProps) => {
   return (
     <div className="bg-cgray p-5 pb-[64px]">
-      <div className="max-w-[1120px] mx-auto w-full flex justify-between flex-wrap gap-3 ">
+      <div className="max-w-[1120px] mx-auto w-full flex justify-between flex-wrap gap-1 ">
         {products.map((product) => (
           <CardProduct
             key={product.title}

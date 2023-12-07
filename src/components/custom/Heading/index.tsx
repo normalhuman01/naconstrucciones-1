@@ -1,10 +1,16 @@
 import { arialBlackFont } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
+import { HTMLAttributes } from "react";
 
-export const Heading = ({ top, main }: { top: string; main: string }) => {
+export const Heading = ({
+  top,
+  main,
+  className,
+  ...props
+}: { top?: string; main: string } & HTMLAttributes<HTMLDivElement>) => {
   return (
-    <div className="leading-none">
-      <span className="text-[16px] font-light">{top}</span>
+    <div className={cn("leading-none", className)} {...props}>
+      {top && <span className="text-[16px] font-light">{top}</span>}
       <h3 className={cn("text-[32px] font-bold", arialBlackFont.className)}>
         {main}
       </h3>

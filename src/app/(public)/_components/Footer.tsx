@@ -1,46 +1,49 @@
 import { config } from "@/config";
+import { calibriFont } from "@/lib/fonts";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 export const Footer = () => {
   return (
     <footer className="bg-[#2F2F2F] text-white">
-      <div className="max-w-[1120px] mx-auto flex flex-col gap-4 items-center py-3">
-        <Image
+      <div className="max-w-[1120px] mx-auto flex flex-col items-center py-3">
+        <img
           src="/img/logo/logo-cuadrado-gris.jpg"
-          width={130}
-          height={100}
+          width={220}
+          height={160}
           alt=""
+          className="my-3"
         />
         <div className="w-full flex flex-wrap justify-around text-[12px] text-center font-light">
-          <div className="flex flex-col items-center w-[160px] md:w-[240px]">
-            <Image
+          <div className="flex flex-col items-center w-[160px] md:w-[320px]">
+            <img
               src="/img/icons/phone.png"
-              width={24}
-              height={24}
+              width={46}
+              height={46}
               alt="phone"
             />
-            <span>+51 {config.phoneGroupedBy3}</span>
+            <span className={cn("text-[19px] font-light", calibriFont.className)}>+51 {config.phoneGroupedBy3}</span>
           </div>
-          <div className="flex flex-col items-center w-[160px] md:w-[240px]">
-            <Image
+          <div className="flex flex-col items-center w-[160px] md:w-[320px]">
+            <img
               src="/img/icons/mark.png"
-              width={24}
-              height={24}
+              width={46}
+              height={46}
               alt="address"
             />
-            <span>{config.address}</span>
+            <span className={cn("text-[19px] font-light", calibriFont.className)}>{config.address}</span>
           </div>
-          <div className="flex flex-col items-center w-[160px] md:w-[240px]">
-            <Image
+          <div className="flex flex-col items-center w-[160px] md:w-[320px]">
+            <img
               src="/img/icons/mail.png"
-              width={36}
-              height={24}
+              width={64}
+              height={46}
               alt="mail"
             />
-            <span>{config.email}</span>
+            <span className={cn("text-[19px] font-light", calibriFont.className)}>{config.email}</span>
           </div>
         </div>
-        <Image src="/img/icons/redes.png" width={120} height={30} alt="" />
+        <img src="/img/icons/redes.png" width={180} height={60} alt="" className="mt-8 mb-3" />
       </div>
       <hr className="bg-white" />
       <div className="max-w-[1120px] px-5 lg:px-0 mx-auto flex justify-between py-1 text-[12px] text-[#7F7F7F]">

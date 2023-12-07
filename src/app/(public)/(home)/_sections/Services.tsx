@@ -14,9 +14,9 @@ type TCard = Omit<HTMLAttributes<HTMLDivElement>, "title" | "description"> & {
 const Card = ({ title, description, image, className = "" }: TCard) => {
   const [isFlipped, setIsFlipped] = useState(false);
   return (
-    <div className={cn("max-w-[220px] w-full mb-5 md:mb-auto", className)}>
+    <div className={cn("max-w-[260px] w-full mb-5 md:mb-auto", className)}>
       <div
-        className="h-[274px] md:h-[330px] text-white"
+        className="h-[286px] md:h-[400px] text-white"
         onMouseEnter={() => setIsFlipped(true)}
         onMouseLeave={() => setIsFlipped(false)}
       >
@@ -26,7 +26,7 @@ const Card = ({ title, description, image, className = "" }: TCard) => {
           cardStyles={{ front: { width: "100%" } }}
         >
           <div
-            className="max-w-[220px] w-[220px] h-[274px] md:h-[330px] flex justify-center items-center"
+            className="max-w-[260px] w-[260px] h-[286px] md:h-[400px] flex justify-center items-center"
             style={{
               backgroundImage: `url(${image})`,
               backgroundSize: "cover",
@@ -36,7 +36,7 @@ const Card = ({ title, description, image, className = "" }: TCard) => {
           ></div>
           <div
             className={cn(
-              "bg-dark max-w-[220px] h-[274px] md:h-[330px] flex justify-center items-center px-5 text-center text-[18px]",
+              "bg-dark max-w-[260px] h-[286px] md:h-[400px] flex justify-center items-center px-5 text-center text-[18px]",
               calibriFont.className
             )}
           >
@@ -44,7 +44,7 @@ const Card = ({ title, description, image, className = "" }: TCard) => {
           </div>
         </ReactCardFlip>
       </div>
-      <h4 className={cn("text-[26px] leading-5 mt-2", calibriFont.className)}>
+      <h4 className={cn("text-[28px] leading-5 mt-2", calibriFont.className)}>
         {title}
       </h4>
     </div>
@@ -53,17 +53,17 @@ const Card = ({ title, description, image, className = "" }: TCard) => {
 
 const Group = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="flex flex-col md:flex-row gap-4 justify-center md:my-10">
+    <div className="flex flex-col md:flex-row gap-4 justify-center mb-[124px]">
       <div className="hidden md:block md:mt-[140px]">
         <p className="leading-5">
           <span
-            className={cn("text-[20px] text-white", arialBlackFont.className)}
+            className={cn("text-[28px] text-white", arialBlackFont.className)}
             style={{ WebkitTextStroke: ".75px black" }}
           >
             SERVICIOS
           </span>
           <br />
-          <span className={cn("text-[20px]", arialBlackFont.className)}>
+          <span className={cn("text-[28px]", arialBlackFont.className)}>
             SERVICIOS
           </span>
         </p>
@@ -74,18 +74,18 @@ const Group = ({ children }: { children: ReactNode }) => {
       <div className="hidden md:flex flex-col gap-4 items-end mt-[140px]">
         <p className="leading-5">
           <span
-            className={cn("text-[20px] text-white", arialBlackFont.className)}
+            className={cn("text-[28px] text-white", arialBlackFont.className)}
             style={{ WebkitTextStroke: ".75px black" }}
           >
             GENERALES
           </span>
           <br />
-          <span className={cn("text-[20px]", arialBlackFont.className)}>
+          <span className={cn("text-[28px]", arialBlackFont.className)}>
             GENERALES
           </span>
         </p>
 
-        <ButtonYellow className="text-[15px]">VER MÁS</ButtonYellow>
+        <ButtonYellow>VER MÁS</ButtonYellow>
       </div>
     </div>
   );
@@ -129,7 +129,7 @@ export const Services = () => {
           <Card
             title="Sistema de climatización y aire acondicionado"
             description="Diseño , suministro , instalación y mantenimiento."
-            image="/img/services/climatizacion.jpg"
+            image="/img/services/climatizacion.webp"
             className="md:mb-10"
           />
           <Card
@@ -180,7 +180,7 @@ export const Services = () => {
             <Card
               title="Sistema de climatización y aire acondicionado"
               description="Diseño , suministro , instalación y mantenimiento."
-              image="/img/services/climatizacion.jpg"
+              image="/img/services/climatizacion.webp"
               className="md:mb-10"
             />
             <Card

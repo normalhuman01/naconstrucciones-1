@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { BtnSearch } from "./BtnSearch";
 import { BtnTools } from "./BtnTools";
 import { CustomLink } from "./CustomLink";
@@ -6,15 +5,13 @@ import { WP_URL } from "@/data";
 import { TProductCategory } from "@/types";
 
 export const Header = async () => {
-  const categories = (
-    (await fetch(WP_URL + "/product_category").then((res) =>
-      res.json()
-    )) as TProductCategory[]
-  ).reverse();
+  const categories = (await fetch(
+    WP_URL + "/product_category?per_page=100"
+  ).then((res) => res.json())) as TProductCategory[];
 
   return (
     <header className="top-0 sticky z-[9999] bg-white shadow-md">
-      <div className="max-w-[1120px] mx-auto py-5 px-8 xl:px-0 flex justify-between items-center">
+      <div className="max-w-[1120px] mx-auto pt-7 pb-4 px-8 xl:px-0 flex justify-between items-center">
         <img
           src="/img/logo/logo-largo.jpg"
           width={240}
