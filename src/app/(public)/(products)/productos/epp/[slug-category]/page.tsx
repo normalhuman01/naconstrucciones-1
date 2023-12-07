@@ -79,7 +79,7 @@ const Page = async ({ params, ...props }: TPageProps) => {
         description="Equipo laboral para la salud y seguridad en el trabajo para la industria y el sitio de construcción"
         className="mb-10"
       />
-      <div className="max-w-[960px] m-auto flex flex-col items-center">
+      <div className="max-w-[1120px] m-auto flex flex-col items-center">
         <Header />
 
         <CardCategories categories={categories} category={category} />

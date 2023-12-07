@@ -8,7 +8,7 @@ export const ProductsCard = ({
 }) => {
   return (
     <>
-      <div className="grid grid-cols-4 gap-x-5 gap-y-8 my-5">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-x-5 gap-y-8 my-5 px-8">
         {products.map((product) => {
           return <ProductCard key={product.id} product={product} />;
         })}

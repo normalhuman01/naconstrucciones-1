@@ -27,7 +27,7 @@ const responsive = {
 export const RectangleCarousel = () => {
   return (
     <div className="bg-[#E9E6E5] py-10">
-      <div className="max-w-[960px] m-auto">
+      <div className="max-w-[1120px] m-auto">
         <div className="flex items-center justify-around">
           <ol className="flex gap-2 items-center">
             <li className="cursor-pointer flex justify-center items-center text-[20px] w-[40px] h-[40px] rounded-full border-black border-[1px] bg-white">

@@ -8,7 +8,7 @@ const Page = () => {
   return (
     <>
       <ContactSection hiddeTop />
-      <div className="max-w-[960px] p-5 lg:p-0 mx-auto flex flex-wrap justify-between my-10">
+      <div className="max-w-[1120px] p-5 lg:p-0 mx-auto flex flex-wrap justify-between my-10">
         <div className="flex flex-col justify-between">
           <p className={cn("flex flex-col leading-8", calibriFont.className)}>
             <span className="text-[18px]">¿TIENES UN NUEVO</span>

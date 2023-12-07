@@ -1,48 +1,26 @@
-"use client";
 import Image from "next/image";
-import Link from "next/link";
 import { BtnSearch } from "./BtnSearch";
 import { BtnTools } from "./BtnTools";
-import { usePathname } from "next/navigation";
-import { cn } from "@/lib/utils";
-import { calibriFont } from "@/lib/fonts";
+import { CustomLink } from "./CustomLink";
+import { WP_URL } from "@/data";
+import { TProductCategory } from "@/types";
 
-const CustomLink = ({
-  href,
-  title,
-  className,
-}: {
-  href: string;
-  title: string;
-  className?: string;
-}) => {
-  const pathname = usePathname();
-  const isActive = href === "/" ? pathname === href : pathname.includes(href);
-  return (
-    <Link
-      href={href}
-      className={cn(
-        "text-[20px]",
-        isActive ? "text-black" : "text-[#767171]",
-        calibriFont.className,
-        className
-      )}
-    >
-      {title}
-    </Link>
-  );
-};
+export const Header = async () => {
+  const categories = (
+    (await fetch(WP_URL + "/product_category").then((res) =>
+      res.json()
+    )) as TProductCategory[]
+  ).reverse();
 
-export const Header = () => {
   return (
     <header className="top-0 sticky z-[9999] bg-white shadow-md">
-      <div className="max-w-[960px] mx-auto py-5 px-8 lg:px-0 flex justify-between items-center">
-        <Image
+      <div className="max-w-[1120px] mx-auto py-5 px-8 xl:px-0 flex justify-between items-center">
+        <img
           src="/img/logo/logo-largo.jpg"
-          width={200}
-          height={100}
+          width={240}
+          height={120}
           alt="Logo"
-        ></Image>
+        />
         <div className="hidden lg:flex gap-6 text">
           <CustomLink href="/" title="INICIO" />
           <CustomLink
@@ -54,7 +32,7 @@ export const Header = () => {
         </div>
         <div className="flex gap-2">
           <BtnSearch />
-          <BtnTools />
+          <BtnTools categories={categories} />
         </div>
       </div>
     </header>

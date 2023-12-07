@@ -6,7 +6,7 @@ import { HTMLAttributes } from "react";
 export const Brands = ({ ...props }: HTMLAttributes<HTMLDivElement>) => {
   return (
     <div {...props}>
-      <div className="max-w-[960px] mx-auto my-10 w-full">
+      <div className="max-w-[1120px] mx-auto my-10 w-full">
         <div
           className={cn(
             "text-center w-full text-[24px]",

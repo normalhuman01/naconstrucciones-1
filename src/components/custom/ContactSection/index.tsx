@@ -12,7 +12,7 @@ const phone = [
 export const ContactSection = ({ hiddeTop }: { hiddeTop?: boolean }) => {
   return (
     <div className="my-8 px-5">
-      <div className="max-w-[960px] mx-auto flex flex-col items-start gap-5">
+      <div className="max-w-[1120px] mx-auto flex flex-col items-start gap-5">
         <div className="flex justify-between items-end w-full">
           <Heading top={hiddeTop ? "" : "NUESTRO"} main="CONTACTO" />
           <div className="flex gap-3 md:gap-6 mb-[7px]">

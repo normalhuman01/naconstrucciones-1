@@ -1,7 +1,9 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { Fragment, HTMLAttributes, useEffect, useState } from "react";
+import { TProductCategory } from "@/types";
+import Link from "next/link";
+import { HTMLAttributes, useEffect, useState } from "react";
 import { IoClose } from "react-icons/io5";
 
 const BtnPrimary = ({ children }: HTMLAttributes<HTMLButtonElement>) => {
@@ -23,7 +25,11 @@ const linksSecondary = [
   "Otros",
 ];
 
-export const BtnTools = () => {
+export const BtnTools = ({
+  categories,
+}: {
+  categories: TProductCategory[];
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
@@ -42,21 +48,21 @@ export const BtnTools = () => {
     <>
       <div
         onClick={() => setIsOpen(!isOpen)}
-        className="flex gap-1 flex-wrap max-w-[44px] items-center justify-center cursor-pointer"
+        className="flex gap-1 flex-wrap max-w-[58px] items-center justify-center cursor-pointer"
       >
-        <div className="w-[12px] h-[12px] bg-[black]"></div>
-        <div className="w-[12px] h-[12px] bg-[black]"></div>
-        <div className="w-[12px] h-[12px] bg-[black]"></div>
-        <div className="w-[12px] h-[12px] bg-[black]"></div>
-        <div className="w-[12px] h-[12px] bg-[black]"></div>
-        <div className="w-[12px] h-[12px] bg-[black]"></div>
-        <div className="w-[12px] h-[12px] bg-[black]"></div>
-        <div className="w-[12px] h-[12px] bg-[black]"></div>
-        <div className="w-[12px] h-[12px] bg-[black]"></div>
+        <div className="w-[16px] h-[16px] bg-[black]"></div>
+        <div className="w-[16px] h-[16px] bg-[black]"></div>
+        <div className="w-[16px] h-[16px] bg-[black]"></div>
+        <div className="w-[16px] h-[16px] bg-[black]"></div>
+        <div className="w-[16px] h-[16px] bg-[black]"></div>
+        <div className="w-[16px] h-[16px] bg-[black]"></div>
+        <div className="w-[16px] h-[16px] bg-[black]"></div>
+        <div className="w-[16px] h-[16px] bg-[black]"></div>
+        <div className="w-[16px] h-[16px] bg-[black]"></div>
       </div>
       {isOpen && (
         <div className="top-0 left-0 z-[10000] fixed p-3 flex justify-center items-center w-full h-[100vh] bg-dark text-white">
-          <div className="max-w-[960px] mx-auto relative flex justify-center items-center w-full">
+          <div className="max-w-[1120px] mx-auto relative flex justify-center items-center w-full">
             <div className="flex gap-9 items-stretch overflow-hidden max-h-[90vh] w-full">
               <div className="flex flex-col gap-2 items-start">
                 {linksPrimary.map((link, index) => (
@@ -70,17 +76,24 @@ export const BtnTools = () => {
               <div className="flex flex-col">
                 <div className="text-xl">EPP</div>
                 <ul className="mb-4">
-                  {linksSecondary.map((link, index) => (
-                    <li
-                      key={index}
-                      className={cn(
-                        "ml-2 text-xl",
-                        index ? "text-[rgba(255,255,255,0.5)]" : ""
-                      )}
-                    >
-                      {link}
-                    </li>
-                  ))}
+                  {categories.map((cat, index) => {
+                    return (
+                      <li
+                        key={index}
+                        className={cn(
+                          "ml-2 text-xl",
+                          index ? "text-[rgba(255,255,255,0.5)]" : ""
+                        )}
+                      >
+                        <Link
+                          href={`/productos/epp/${cat.slug}#products`}
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {cat.name}
+                        </Link>
+                      </li>
+                    );
+                  })}
                 </ul>
                 <div className="text-xl">EPP</div>
               </div>

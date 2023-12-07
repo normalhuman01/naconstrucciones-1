@@ -12,7 +12,7 @@ export const Cards = ({
   }[];
 }) => {
   return (
-    <div className="max-w-[960px] m-auto">
+    <div className="max-w-[1120px] m-auto">
       <div className="flex gap-5 py-10 flex-wrap">
         {cards.map((card, index) => {
           const title = load(card.title).text();

@@ -4,7 +4,7 @@ import Image from "next/image";
 export const Footer = () => {
   return (
     <footer className="bg-[#2F2F2F] text-white">
-      <div className="max-w-[960px] mx-auto flex flex-col gap-4 items-center py-3">
+      <div className="max-w-[1120px] mx-auto flex flex-col gap-4 items-center py-3">
         <Image
           src="/img/logo/logo-cuadrado-gris.jpg"
           width={130}
@@ -43,7 +43,7 @@ export const Footer = () => {
         <Image src="/img/icons/redes.png" width={120} height={30} alt="" />
       </div>
       <hr className="bg-white" />
-      <div className="max-w-[960px] px-5 lg:px-0 mx-auto flex justify-between py-1 text-[12px] text-[#7F7F7F]">
+      <div className="max-w-[1120px] px-5 lg:px-0 mx-auto flex justify-between py-1 text-[12px] text-[#7F7F7F]">
         <span>
           © 2023 N&A Ingeniería y Construcciones - Todos los derechos reservados
         </span>

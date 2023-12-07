@@ -32,7 +32,7 @@ const Card = ({ title, description, image, link }: TCard) => {
 export const AboutServices = () => {
   return (
     <div className="my-8">
-      <div className="max-w-[960px] px-8 lg:px-0 mx-auto flex flex-col items-start gap-3">
+      <div className="max-w-[1120px] px-8 lg:px-0 mx-auto flex flex-col items-start gap-3">
         <Header top="NUESTROS" main="SERVICIOS" />
         <div className="flex flex-wrap items-stretch w-full gap-4 justify-between md:justify-between">
           <Card

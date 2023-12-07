@@ -94,7 +94,7 @@ const Group = ({ children }: { children: ReactNode }) => {
 export const Services = () => {
   return (
     <>
-      <div className="max-w-[960px] mx-auto flex flex-col items-center md:items-start gap-5 px-5 md:px-0">
+      <div className="max-w-[1120px] mx-auto flex flex-col items-center md:items-start gap-5 px-5 md:px-0">
         <div className="block md:hidden text-center">
           <span className="text-[12px]">NUESTROS</span>
           <h3 className="text-2xl font-bold">SERVICIOS</h3>

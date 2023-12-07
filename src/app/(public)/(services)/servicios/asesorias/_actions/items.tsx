@@ -10,7 +10,7 @@ export const Items = ({
   items: { title: string; description: string }[];
 }) => {
   return (
-    <div className="max-w-[960px] m-auto py-10">
+    <div className="max-w-[1120px] m-auto py-10">
       <div className="grid grid-cols-3 gap-4">
         {items.map((item, index) => {
           const number = index + 1;

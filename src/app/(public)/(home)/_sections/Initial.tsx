@@ -155,7 +155,7 @@ export const Initial = () => {
         >
           <div className="bg-[rgba(117,117,117,0.35)] w-full h-full absolute top-0 left-0"></div>
           <div className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,.2)]"></div>
-          <div className="flex flex-col items-start justify-center max-w-[960px] w-full">
+          <div className="flex flex-col items-start justify-center max-w-[1120px] w-full">
             <Top>Especialidad</Top>
             <Title>PROYECTOS</Title>
             <Description>
@@ -212,7 +212,7 @@ export const Initial = () => {
           }}
         >
           <div className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,.2)]"></div>
-          <div className="flex flex-col items-end justify-center text-right max-w-[960px] w-full">
+          <div className="flex flex-col items-end justify-center text-right max-w-[1120px] w-full">
             <Top>Especialidad</Top>
             <Title>EXCAVACIONES</Title>
             <Description>
@@ -232,7 +232,7 @@ export const Initial = () => {
           }}
         >
           <div className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,.2)]"></div>
-          <div className="flex flex-col items-start justify-center max-w-[960px] w-full">
+          <div className="flex flex-col items-start justify-center max-w-[1120px] w-full">
             <Top>Especialidad</Top>
             <Title>DEMOLICIONES</Title>
             <Description>
@@ -252,7 +252,7 @@ export const Initial = () => {
           }}
         >
           <div className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,.2)]"></div>
-          <div className="flex flex-col items-end justify-center text-right max-w-[960px] w-full">
+          <div className="flex flex-col items-end justify-center text-right max-w-[1120px] w-full">
             <Top>Especialidad</Top>
             <Title>EPP{`'`}s</Title>
             <Description>

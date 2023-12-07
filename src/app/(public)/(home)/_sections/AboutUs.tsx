@@ -6,7 +6,7 @@ import { Header } from "../_components/Header";
 export const AboutUs = () => {
   return (
     <div className="my-8 px-8">
-      <div className="max-w-[960px] mx-auto flex flex-col items-start gap-5">
+      <div className="max-w-[1120px] mx-auto flex flex-col items-start gap-5">
         <Header top="SOBRE" main="NOSOTROS" />
         <div className="flex flex-wrap gap-10">
           <div className="flex-1 min-w-[280px] bg-dark text-white text-justify px-[3.4rem] pt-14 pb-20 relative">
