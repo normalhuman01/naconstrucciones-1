@@ -53,7 +53,7 @@ const Card = ({ title, description, image, className = "" }: TCard) => {
 
 const Group = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="flex flex-col md:flex-row gap-4 justify-center mb-[124px]">
+    <div className="flex flex-col md:flex-row gap-4 justify-center">
       <div className="hidden md:block md:mt-[140px]">
         <p className="leading-5">
           <span
@@ -180,7 +180,7 @@ export const Services = () => {
             <Card
               title="Sistema de climatización y aire acondicionado"
               description="Diseño , suministro , instalación y mantenimiento."
-              image="/img/services/climatizacion.webp"
+              image="/img/services/climatizacion.jpg"
               className="md:mb-10"
             />
             <Card
@@ -191,7 +191,7 @@ export const Services = () => {
                 </>
               }
               description="Diseño de todo tipos de muebles hogar y oficina (Melamina y Madera)."
-              image="/img/services/carpinteria.jpg"
+              image="/img/services/melamine.jpg"
               className="md:mt-12"
             />
           </Group>

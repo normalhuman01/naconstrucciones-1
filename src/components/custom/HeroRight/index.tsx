@@ -1,4 +1,4 @@
-import { abadiFont, impactFont } from "@/lib/fonts";
+import { abadiFont, calibriFont, impactFont } from "@/lib/fonts";
 import { ButtonBlackMore } from "..";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -25,7 +25,7 @@ export const HeroRight = ({
 }: THeroRightProps) => {
   return (
     <div
-      className={cn("h-[370px]", className)}
+      className={cn("h-[400px]", className)}
       style={{
         backgroundImage: `url(${image})`,
         backgroundSize: "cover",
@@ -42,24 +42,24 @@ export const HeroRight = ({
           </span>
           <span
             className={cn(
-              "text-black leading-none text-[70px] z-10",
+              "text-black leading-none text-[40px] font-light md:text-[75px] z-10",
               abadiFont.className
             )}
-            style={{ textShadow: "0 1px 4px rgba(0, 0, 0, 0.5)" }}
+            style={{ textShadow: "0px 4px 3px rgba(0, 0, 0, 0.7)" }}
           >
             {title1}
           </span>
           <span
             className={cn(
-              "text-white leading-none text-[70px] relative top-[-25px]",
+              "text-white leading-none text-[40px] font-light md:text-[75px] relative top-[-25px]",
               abadiFont.className
             )}
-            style={{ textShadow: "0 2px 2px rgba(0, 0, 0, 0.5)" }}
+            style={{ textShadow: "0px 4px 3px rgba(0, 0, 0, 0.7)" }}
           >
             {title2}
           </span>
         </h2>
-        <p className="max-w-[305px] text-right relative top-[-25px]">
+        <p className={cn("max-w-[310px] text-right text-[19px] relative top-[-25px]", calibriFont.className)}>
           {description}
         </p>
         <Link href={link}>

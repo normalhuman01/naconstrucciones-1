@@ -22,7 +22,7 @@ const Page = () => {
       <div className="flex flex-col gap-7 items-center p-5 my-5 relative">
         <Image
           src="/img/products/ferreteria/wincha.jpg"
-          className="absolute left-[calc(10%)] lg:left-[calc(16%)] xl:left-[calc(30%)] translate-x-[-50%]"
+          className="absolute left-[calc(10%)] lg:left-[calc(16%)] xl:left-[calc(23%)] translate-x-[-50%]"
           width={160}
           height={160}
           alt="Wincha"
@@ -50,7 +50,7 @@ const Page = () => {
         />
         <p
           className={cn(
-            "text-center max-w-[500px] underline text-[20px] leading-6",
+            "text-center max-w-[500px] underline text-[19px] leading-6",
             calibriFont.className
           )}
         >
@@ -58,10 +58,10 @@ const Page = () => {
           construcción, bricolaje y más. Todo en un solo lugar para que
           construyas con confianza.
         </p>
-        <h5 className={cn("text-center text-[28px]", arialBlackFont.className)}>
+        <h5 className={cn("text-center text-[29.5px]", arialBlackFont.className)}>
           OFRECEMOS
         </h5>
-        <ol className={cn("font-bold leading-9", arialBlackFont.className)}>
+        <ol className={cn("font-bold text-[19px] leading-9", calibriFont.className)}>
           <li>
             <span className="mr-3">1.</span> Herramientas manuales y eléctricas
             para cada tarea.
@@ -83,7 +83,7 @@ const Page = () => {
             desafío.
           </li>
         </ol>
-        <ButtonBlack>CONSÚLTANOS</ButtonBlack>
+        <ButtonBlack className="mb-5">CONSÚLTANOS</ButtonBlack>
       </div>
     </>
   );

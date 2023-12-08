@@ -18,7 +18,7 @@ export const PseudoBreadCrumbs = ({
   const pathname = usePathname();
 
   const children = actions.map((action, index) => {
-    const isMatch = pathname === action.link;
+    const isMatch = pathname.includes(action.link);
     return (
       <Fragment key={index}>
         {index ? (
@@ -32,8 +32,8 @@ export const PseudoBreadCrumbs = ({
         <Link href={action.link}>
           <h2
             className={cn(
-              "text-[20px] font-light letter tracking-widest",
-              isMatch && "font-[700]",
+              "text-[21px] letter tracking-[.35rem]",
+              isMatch && "font-bold",
               calibriFont.className
             )}
           >
@@ -48,7 +48,7 @@ export const PseudoBreadCrumbs = ({
       className={cn("bg-dark text-white p-5 sticky top-[106px] z-[100]", className)}
     >
       <div className="max-w-[1120px] mx-auto flex flex-wrap gap-6 items-center">
-        <h1 className={cn("text-[20px] font-bold", arialBlackFont.className)}>
+        <h1 className={cn("text-[32px] font-bold", arialBlackFont.className)}>
           {title}
         </h1>
         {children.length && (

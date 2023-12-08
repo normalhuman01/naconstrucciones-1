@@ -1,7 +1,6 @@
 import { config } from "@/config";
 import { calibriFont } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 
 export const Footer = () => {
   return (
@@ -12,34 +11,40 @@ export const Footer = () => {
           width={220}
           height={160}
           alt=""
-          className="my-3"
+          className="mt-3 mb-7"
         />
         <div className="w-full flex flex-wrap justify-around text-[12px] text-center font-light">
           <div className="flex flex-col items-center w-[160px] md:w-[320px]">
             <img
               src="/img/icons/phone.png"
-              width={46}
-              height={46}
+              width={31}
+              height={31}
               alt="phone"
+              className="my-3"
             />
+            {/* <FaPhone fontSize={40} color="#737373" /> */}
             <span className={cn("text-[19px] font-light", calibriFont.className)}>+51 {config.phoneGroupedBy3}</span>
           </div>
           <div className="flex flex-col items-center w-[160px] md:w-[320px]">
             <img
               src="/img/icons/mark.png"
-              width={46}
-              height={46}
+              width={28}
+              height={28}
               alt="address"
+              className="my-3"
             />
+            {/* <FaMapMarkerAlt fontSize={40} color="#737373" /> */}
             <span className={cn("text-[19px] font-light", calibriFont.className)}>{config.address}</span>
           </div>
           <div className="flex flex-col items-center w-[160px] md:w-[320px]">
             <img
-              src="/img/icons/mail.png"
-              width={64}
-              height={46}
+              src="/img/icons/mail-new.png"
+              width={44}
+              height={44}
               alt="mail"
+              className="my-4"
             />
+            {/* <MdOutlineEmail fontSize={44} color="#737373" /> */}
             <span className={cn("text-[19px] font-light", calibriFont.className)}>{config.email}</span>
           </div>
         </div>

@@ -153,8 +153,6 @@ export const Initial = () => {
             backgroundPositionY: "-2rem",
           }}
         >
-          <div className="bg-[rgba(117,117,117,0.35)] w-full h-full absolute top-0 left-0"></div>
-          <div className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,.2)]"></div>
           <div className="flex flex-col items-start justify-center max-w-[1120px] w-full">
             <Top>Especialidad</Top>
             <Title>PROYECTOS</Title>
@@ -174,7 +172,6 @@ export const Initial = () => {
             backgroundImage: "url(/img/home/REMODELACION.jpg)",
           }}
         >
-          <div className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,.2)]"></div>
           <Top>Especialidad</Top>
           <Title>REMODELACIÓN</Title>
           <Description>
@@ -190,9 +187,9 @@ export const Initial = () => {
           style={{
             ...bgStyles,
             backgroundImage: "url(/img/home/AMPLIACION.jpg)",
+            backgroundPositionY: "-8rem",
           }}
         >
-          <div className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,.2)]"></div>
           <Top>Especialidad</Top>
           <Title>AMPLIACIONES</Title>
           <Description>
@@ -211,7 +208,6 @@ export const Initial = () => {
             backgroundPositionY: "60%"
           }}
         >
-          <div className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,.2)]"></div>
           <div className="flex flex-col items-end justify-center text-right max-w-[1120px] w-full">
             <Top>Especialidad</Top>
             <Title>EXCAVACIONES</Title>
@@ -231,7 +227,6 @@ export const Initial = () => {
             backgroundImage: "url(/img/home/DEMOLICION.png)",
           }}
         >
-          <div className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,.2)]"></div>
           <div className="flex flex-col items-start justify-center max-w-[1120px] w-full">
             <Top>Especialidad</Top>
             <Title>DEMOLICIONES</Title>
@@ -251,7 +246,6 @@ export const Initial = () => {
             backgroundImage: "url(/img/home/EPP.jpg)",
           }}
         >
-          <div className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,.2)]"></div>
           <div className="flex flex-col items-end justify-center text-right max-w-[1120px] w-full">
             <Top>Especialidad</Top>
             <Title>EPP{`'`}s</Title>

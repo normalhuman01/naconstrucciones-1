@@ -9,7 +9,7 @@ export const Brands = ({ ...props }: HTMLAttributes<HTMLDivElement>) => {
       <div className="max-w-[1120px] mx-auto my-10 w-full">
         <div
           className={cn(
-            "text-center w-full text-[24px]",
+            "text-center w-full text-[29.5px]",
             arialBlackFont.className
           )}
         >

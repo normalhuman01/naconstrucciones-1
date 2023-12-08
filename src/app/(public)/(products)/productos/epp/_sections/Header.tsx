@@ -9,7 +9,7 @@ export const Header = () => {
       <p className={cn("flex flex-col", "relative bottom-[-62px]")}>
         <span
           className={cn(
-            "text-[48px] leading-10 text-white",
+            "text-[60px] leading-10 text-white",
             arialBlackFont.className
           )}
           style={{ WebkitTextStroke: "1px black" }}
@@ -18,16 +18,15 @@ export const Header = () => {
         </span>
         <span
           className={cn(
-            "text-[23px] leading-10 text-black",
+            "text-[29.5px] leading-12 text-black",
             arialBlackFont.className
           )}
-          style={{ WebkitTextStroke: "1px white" }}
         >
           ¿QUÉ ESTÁS BUSCANDO?
         </span>
         <span
           className={cn(
-            "text-[48px] leading-7 text-white",
+            "text-[60.5px] leading-7 text-white",
             arialBlackFont.className
           )}
           style={{ WebkitTextStroke: "1px black" }}
@@ -35,7 +34,7 @@ export const Header = () => {
           BUSCANDO?
         </span>
       </p>
-      <div className="absolute bottom-1 right-1 border-black border-[1px] rounded-full h-[60px] w-[60px] flex justify-center items-center bg-[#FEE21B]">
+      <div className="absolute bottom-1 right-1 border-black border-[1px] rounded-full h-[44px] w-[44px] flex justify-center items-center bg-[#FEE21B]">
         <IoSearch className="text-xl" />
       </div>
     </div>

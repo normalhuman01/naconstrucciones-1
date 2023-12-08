@@ -5,6 +5,8 @@ import Link from "next/link";
 import { load } from "cheerio";
 import { FALLBACK_UPLOAD, WP_UPLOAD } from "@/data";
 import { ImageWithFallback } from "@/components/ImageWithFallback";
+import { cn } from "@/lib/utils";
+import { calibriFont } from "@/lib/fonts";
 
 export const ProductCard = ({
   product: {
@@ -28,9 +30,9 @@ export const ProductCard = ({
   }
 
   return (
-    <div className="flex flex-col gap-5 justify-between rounded-3xl shadow-xl overflow-hidden">
+    <div className="flex flex-col gap-5 justify-between rounded-3xl shadow-strong overflow-hidden">
       <div>
-        <header className="bg-[#E9E6E5] h-[254px] relative p-5">
+        <header className="bg-[#E9E6E5] h-[228px] relative p-2">
           <ImageWithFallback
             className="w-full h-full"
             src={mediaUrl}
@@ -46,9 +48,9 @@ export const ProductCard = ({
             }}
           ></div> */}
         </header>
-        <main className="px-5">
-          <h4 className="font-bold text-xl">{title}</h4>
-          <p>{strContent}</p>
+        <main className={cn("px-5 text-[19px]", calibriFont.className)}>
+          <h4 className="font-bold leading-none mt-3">{title}</h4>
+          <p className={cn("font-light")}>{strContent}</p>
         </main>
       </div>
       <footer className="px-5 pb-4">

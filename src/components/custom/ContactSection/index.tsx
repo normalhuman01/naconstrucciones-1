@@ -11,7 +11,7 @@ export const ContactSection = ({ hiddeTop }: { hiddeTop?: boolean }) => {
       <div className="max-w-[1120px] mx-auto flex flex-col items-start">
         <div className="flex justify-between items-end w-full">
           <Heading main="CONTACTO" className="mb-[56px]" />
-          <div className="flex gap-3 md:gap-6 mb-[39px]">
+          <div className="flex gap-3 md:gap-6 mb-[59px]">
             <Link href="#">
               <Image src="/img/icons/fb.png" width={24} height={24} alt="FB" />
             </Link>
