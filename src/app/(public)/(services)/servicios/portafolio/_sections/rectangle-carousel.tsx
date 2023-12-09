@@ -166,7 +166,7 @@ export const RectangleCarousel = ({
       <div className="flex items-center justify-center relative">
         <div
           className={cn(
-            "absolute top-0 left-[2rem]",
+            "absolute z-10 top-0 left-[2rem]",
             "text-[#262626] flex self-start mt-10 flex-col font-bold text-[32px]",
             arialBlackFont.className
           )}
@@ -201,7 +201,7 @@ export const RectangleCarousel = ({
         </Carousel>
         <div
           className={cn(
-            "absolute bottom-0 right-[2rem]",
+            "absolute z-10 bottom-0 right-[2rem]",
             "text-[#262626] flex self-end mb-10 flex-col font-bold text-[32px]",
             arialBlackFont.className
           )}
