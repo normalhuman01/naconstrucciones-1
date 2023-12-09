@@ -25,8 +25,6 @@ const responsive = {
   },
 };
 
-const links = ["SALA", "COMEDOR", "COCINA", "BAÑO", "DORMITORIO", "TERRAZA"];
-
 const ButtonGroup = ({ carousel }: { carousel: Carousel | null }) => {
   return (
     <>
@@ -61,36 +59,55 @@ const linksData = [
   {
     title: "SALA",
     images: [
-      "/img/portfolio/estancias/4.jpg",
-      "/img/portfolio/estancias/9.jpg",
-      "/img/portfolio/estancias/10.jpg",
-      "/img/portfolio/estancias/11.jpg",
-      "/img/portfolio/estancias/13.jpg",
-      "/img/portfolio/estancias/14.jpg",
-      "/img/portfolio/estancias/15.jpg",
-      "/img/portfolio/estancias/16.jpg",
-      "/img/portfolio/estancias/18.jpg",
+      "/img/portfolio/estancia/sala/1.jpg",
+      "/img/portfolio/estancia/sala/2.jpg",
+      "/img/portfolio/estancia/sala/3.jpg",
+      "/img/portfolio/estancia/sala/4.jpg",
+      "/img/portfolio/estancia/sala/5.jpg",
+      "/img/portfolio/estancia/sala/6.jpg",
+      "/img/portfolio/estancia/sala/7.jpg",
+      "/img/portfolio/estancia/sala/8.jpg",
+      "/img/portfolio/estancia/sala/9.jpg",
     ],
   },
   {
     title: "COMEDOR",
-    images: [],
+    images: [
+      "/img/portfolio/estancia/comedor/1.jpg",
+      "/img/portfolio/estancia/comedor/2.jpg",
+      "/img/portfolio/estancia/comedor/3.jpg",
+      "/img/portfolio/estancia/comedor/4.jpg",
+    ],
   },
   {
     title: "COCINA",
-    images: [],
+    images: [
+      "/img/portfolio/estancia/cocina/1.jpg",
+    ],
   },
   {
     title: "BAÑO",
-    images: [],
+    images: [
+      "/img/portfolio/estancia/bano/1.jpg",
+      "/img/portfolio/estancia/bano/2.jpg",
+    ],
   },
   {
     title: "DORMITORIO",
-    images: [],
+    images: [
+      "/img/portfolio/estancia/dormitorio/1.jpg",
+      "/img/portfolio/estancia/dormitorio/2.jpg",
+      "/img/portfolio/estancia/dormitorio/3.jpg",
+      "/img/portfolio/estancia/dormitorio/4.jpg",
+    ],
   },
   {
     title: "TERRAZA",
-    images: [],
+    images: [
+      "/img/portfolio/estancia/terraza/1.jpg",
+      "/img/portfolio/estancia/terraza/2.jpg",
+      "/img/portfolio/estancia/terraza/3.jpg",
+    ],
   },
 ];
 
@@ -99,7 +116,7 @@ export const SquareCarousel = () => {
   const [carousel, setCarousel] = useState<null | Carousel>(null);
 
   return (
-    <div className="flex items-center justify-center flex-col">
+    <div className="flex items-center justify-center flex-col mt-[60px]">
       <h3
         className={cn(
           "text-[32px] font-bold mb-[6px]",
@@ -115,64 +132,42 @@ export const SquareCarousel = () => {
           ssr
           infinite
           autoPlay
-          className="w-[346px] h-[384px]"
+          className="min-w-[346px] h-[384px]"
           renderButtonGroupOutside={true}
           customButtonGroup={<ButtonGroup carousel={carousel} />}
           customLeftArrow={<></>}
           customRightArrow={<></>}
         >
-          {
-            linksData[index].images.map((image, index) => (
-              <div
-                key={index}
-                className="w-[346px] h-[384px] m-auto"
-                style={{
-                  backgroundImage: `url("${image}")`,
-                  backgroundRepeat: "no-repeat",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              ></div>
-            ))
-          }
-          {/* <div
-            className="w-[346px] h-[384px] m-auto"
-            style={{
-              backgroundImage: `url("/img/portfolio/comedor.jpg")`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          ></div>
-          <div
-            className="w-[346px] h-[384px] m-auto"
-            style={{
-              backgroundImage: `url("/img/portfolio/comedor.jpg")`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          ></div> */}
+          {linksData[index].images.map((image, _index) => (
+            <img
+              src={image}
+              alt={linksData[index].title + "-" + _index}
+              className="h-[384px] m-auto"
+              key={index + "_" + _index}
+            />
+          ))}
         </Carousel>
       </div>
       <div
         className={cn(
-          "flex justify-between gap-8 my-3 text-[19px]",
+          "flex justify-between gap-[48px] my-3 text-[19px]",
           calibriFont.className
         )}
       >
-        {links.map((link) => (
-          <span
-            className={cn(
-              "cursor-pointer",
-              links[index] === link ? "font-bold underline" : ""
-            )}
-            key={link}
-            onClick={() => setIndex(links.indexOf(link))}
-          >
-            {link}
-          </span>
-        ))}
+        {linksData.map(({ title }, _index) => {
+          return (
+            <span
+              className={cn(
+                "cursor-pointer",
+                linksData[index].title === title ? "font-bold underline" : ""
+              )}
+              key={title}
+              onClick={() => setIndex(_index)}
+            >
+              {title}
+            </span>
+          );
+        })}
       </div>
     </div>
   );
