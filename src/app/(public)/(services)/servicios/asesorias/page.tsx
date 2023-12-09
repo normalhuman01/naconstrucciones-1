@@ -19,10 +19,14 @@ const Page = async () => {
     <>
       <HeroRight
         top="Servicios de"
-        image="/img/services/asesoria.png"
+        image="/img/services/asesorias-y-gestion-grow.jpg"
         title1="ASESORÍA Y"
         title2="GESTIÓN"
         description="Nuestro personal está capacitado para ofrecerle el mejor servicio."
+        style={{
+          backgroundPositionY: "30%",
+        }}
+        linkLabel="CONTÁCTANOS"
       />
       <Items items={items} />
       <Link href="/contacto">
@@ -42,5 +46,6 @@ export default Page;
 
 export const metadata = {
   title: "Servicios de Asesoría y Gestión | N&A Construcciones",
-  description: "Nuestro personal está capacitado para ofrecerle el mejor servicio.",
-}
+  description:
+    "Nuestro personal está capacitado para ofrecerle el mejor servicio.",
+};

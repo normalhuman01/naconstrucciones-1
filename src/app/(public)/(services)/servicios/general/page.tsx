@@ -22,6 +22,12 @@ const Page = async () => {
         title1="CONSTRUCCIÓN Y"
         title2="MANTENIMIENTO"
         description="Contamos con una amplia gama y variedad de servicios relacionados con el área de construcción industrial, urbana, edificaciones y obras de infraestructura."
+        descriptionClassName="max-w-[500px]"
+        link="/servicios/general#show_services"
+        buttonProps={{
+          id: "#show_services",
+        }}
+        linkLabel="CONTÁCTANOS"
       />
       <Cards cards={items} />
     </>
@@ -30,8 +36,8 @@ const Page = async () => {
 
 export default Page;
 
-
 export const metadata = {
   title: "Servicios de construcción y mantenimiento | N&A Construcciones",
-  description: "Contamos con una amplia gama y variedad de servicios relacionados con el tamaño de construcción industrial, urbana, edificaciones y obras de infraestructura.",
-}
+  description:
+    "Contamos con una amplia gama y variedad de servicios relacionados con el tamaño de construcción industrial, urbana, edificaciones y obras de infraestructura.",
+};

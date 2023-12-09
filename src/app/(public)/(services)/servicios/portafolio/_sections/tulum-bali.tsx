@@ -19,7 +19,7 @@ const Text = ({
 export const TulumBali = () => {
   return (
     <div className="max-w-[1120px] m-auto my-8">
-      <div className="flex items-end gap-4 relative">
+      <div className="flex items-end gap-4 justify-center relative">
         <Text text="BALI" />
         <Image
           src={"/img/portfolio/tulum-bali.jpg"}

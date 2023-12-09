@@ -15,6 +15,8 @@ const Page = () => {
         title1="ESPACIOS Y"
         title2="PERSONAS"
         description="Ponemos máxima atención en los detalles. Desde el plano a la construcción final."
+        descriptionClassName="max-w-[350px]"
+        linkLabel="CONTÁCTANOS"
       />
       <WabiSabi />
       <TulumBali />

@@ -1,4 +1,5 @@
 "use client";
+import { cn } from "@/lib/utils";
 import React, { HTMLAttributes, useEffect, useState } from "react";
 
 type TImageWithFallbackProps = HTMLAttributes<HTMLImageElement> & {
@@ -19,12 +20,10 @@ export const ImageWithFallback = ({
       img.src = src;
 
       img.onload = () => {
-        // Si la imagen principal carga correctamente, actualiza la ruta de la imagen
         setImageSrc(src);
       };
 
       img.onerror = () => {
-        // Si hay un error al cargar la imagen principal, actualiza la ruta con la imagen de respaldo
         setImageSrc(fallbackSrc);
       };
     };
@@ -33,14 +32,20 @@ export const ImageWithFallback = ({
   }, [src, fallbackSrc]);
 
   return (
-    <img
-      src={imageSrc}
-      // onError={() => {
-      //   console.log("Image Error");
-      //   handleImageError();
-      // }}
-      className="object-contain"
+    // <img
+    //   src={imageSrc}
+    //   className="object-contain"
+    //   {...props}
+    // />
+    <div
+      className={cn("w-full h-full")}
+      style={{
+        backgroundImage: `url(${imageSrc})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
       {...props}
-    />
+    ></div>
   );
 };

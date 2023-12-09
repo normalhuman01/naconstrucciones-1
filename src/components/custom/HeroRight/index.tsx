@@ -11,6 +11,10 @@ type THeroRightProps = {
   description: ReactNode;
   image: string;
   link?: string;
+  buttonProps?: HTMLAttributes<HTMLButtonElement>;
+  descriptionProps?: HTMLAttributes<HTMLParagraphElement>;
+  descriptionClassName?: string;
+  linkLabel?: string;
 } & HTMLAttributes<HTMLDivElement>;
 export const HeroRight = ({
   top,
@@ -20,6 +24,10 @@ export const HeroRight = ({
   image,
   link = "#",
   className,
+  buttonProps,
+  descriptionProps,
+  descriptionClassName,
+  linkLabel,
   style,
   ...props
 }: THeroRightProps) => {
@@ -59,12 +67,26 @@ export const HeroRight = ({
             {title2}
           </span>
         </h2>
-        <p className={cn("max-w-[310px] text-right text-[19px] relative top-[-25px]", calibriFont.className)}>
+        <p
+          {...descriptionProps}
+          className={cn(
+            "max-w-[310px] text-right text-[19px] relative top-[-25px]",
+            calibriFont.className,
+            descriptionProps?.className,
+            descriptionClassName
+          )}
+        >
           {description}
         </p>
         <Link href={link}>
-          <ButtonBlackMore className="relative top-[-5px] border-white">
-            VER MÁS
+          <ButtonBlackMore
+            {...buttonProps}
+            className={cn(
+              "relative top-[-5px] border-white",
+              buttonProps?.className
+            )}
+          >
+            {linkLabel || "VER MÁS"}
           </ButtonBlackMore>
         </Link>
       </div>

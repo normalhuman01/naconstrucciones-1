@@ -10,8 +10,8 @@ export const Items = ({
   items: { title: string; description: string }[];
 }) => {
   return (
-    <div className="max-w-[1120px] m-auto py-10">
-      <div className="grid grid-cols-3 gap-4">
+    <div className="max-w-[1120px] m-auto pt-10 mt-7 mb-[96px]">
+      <div className="grid grid-cols-3 gap-[66px] m-auto">
         {items.map((item, index) => {
           const number = index + 1;
           const isOne = number % 3 === 1;
@@ -24,19 +24,19 @@ export const Items = ({
           );
           const classNameInter = cn(isOne && "mr-10", isThree && "ml-10");
           return (
-            <div className={cn("flex flex-col gap-4", className)} key={index}>
+            <div className={cn("flex flex-col gap-4 ", className)} key={index}>
               <div
                 className={cn(
                   "inline-flex flex-col items-center",
                   classNameInter
                 )}
               >
-                <strong>{formatNumber(number)}</strong>
+                <strong className={cn("text-[18px] font-[900] mb-2", calibriFont.className)}>{formatNumber(number)}</strong>
                 <strong className="text-[50px] leading-3 mb-[2rem]">.</strong>
               </div>
               <h3
                 className={cn(
-                  "text-[15px] md:text-[20px] font-bold",
+                  "text-[15px] md:text-[26px] leading-none font-bold uppercase mb-3",
                   className,
                   arialBlackFont.className
                 )}
@@ -46,7 +46,7 @@ export const Items = ({
               ></h3>
               <p
                 className={cn(
-                  "text-[13px] md:text-[18px] leading-5 mb-4",
+                  "text-[13px] md:text-[19px] leading-5 mb-4",
                   className,
                   calibriFont.className
                 )}

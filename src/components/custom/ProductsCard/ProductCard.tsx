@@ -25,12 +25,8 @@ export const ProductCard = ({
 
   const strContent = load(content).text();
 
-  if (id === 1763) {
-    console.log(_embedded["wp:featuredmedia"][0]);
-  }
-
   return (
-    <div className="flex flex-col gap-5 justify-between rounded-3xl shadow-strong overflow-hidden">
+    <div className="flex flex-1 flex-col min-w-[245px] gap-5 justify-between rounded-3xl shadow-strong overflow-hidden">
       <div>
         <header className=" h-[228px] relative p-2">
           <ImageWithFallback
@@ -38,15 +34,6 @@ export const ProductCard = ({
             src={mediaUrl}
             fallbackSrc={fallbackMediaUrl}
           />
-          {/* <div
-            className="w-full h-full"
-            style={{
-              backgroundImage: `url(${mediaUrl})`,
-              backgroundSize: "contain",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-            }}
-          ></div> */}
         </header>
         <main className={cn("px-5 text-[19px]", calibriFont.className)}>
           <h4 className="font-bold leading-none mt-3">{title}</h4>
