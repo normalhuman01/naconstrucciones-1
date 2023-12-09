@@ -32,7 +32,7 @@ export const ProductCard = ({
   return (
     <div className="flex flex-col gap-5 justify-between rounded-3xl shadow-strong overflow-hidden">
       <div>
-        <header className="bg-[#E9E6E5] h-[228px] relative p-2">
+        <header className=" h-[228px] relative p-2">
           <ImageWithFallback
             className="w-full h-full"
             src={mediaUrl}
