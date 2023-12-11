@@ -9,7 +9,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
         actions={[
           {
             label: "EPP",
-            link: "/productos/epp",
+            link: "/productos/epp/zapato-de-seguridad",
           },
           {
             label: "FERRETERÍA",

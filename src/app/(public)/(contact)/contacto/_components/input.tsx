@@ -9,7 +9,7 @@ export const Input = ({ className, ...props }: HTMLAttributes<HTMLInputElement> 
   return (
     <input
       className={cn(
-        "border-b-[1px] font-light text-[18px] placeholder:text-[18px] placeholder:text-[rgb(118, 113, 113)] border-black outline-none w-full",
+        "border-b-[1px] font-light text-[19px] placeholder:text-[19px] placeholder:text-black border-black outline-none w-full",
         calibriFont.className,
         className
       )}

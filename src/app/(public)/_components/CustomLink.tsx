@@ -14,7 +14,12 @@ export const CustomLink = ({
   className?: string;
 }) => {
   const pathname = usePathname();
-  const isActive = href === "/" ? pathname === href : pathname.includes(href);
+  console.log();
+  const isActive =
+    href === "/"
+      ? pathname === href
+      : pathname.split("/").filter(Boolean).shift() ===
+        href.split("/").filter(Boolean).shift();
   return (
     <Link
       href={href}

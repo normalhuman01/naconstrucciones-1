@@ -12,10 +12,22 @@ import { TProductEmbedded } from "@/types";
 import { WP_URL } from "@/data";
 import { load } from "cheerio";
 
+const entryIds = [1656, 1371, 1605, 2151];
+const filter = `include[]=${entryIds.join("&include[]=")}`;
+const url = WP_URL + `/epp?_embed&?page=${1}&per_page=${4}&${filter}`;
+// const url =
+//   WP_URL + `/epp?_embed&?include=${entryIds.join(",")}&page=${1}&per_page=${4}`;
+// const url = "https://darwinv24.sg-host.com/wp-json/wp/v2/epp?_embed&?include=1656,1371,1605,2151&page=1&per_page=4"
+console.log(url);
 const Page = async () => {
-  const products = (await fetch(
-    WP_URL + `/epp?_embed&page=${2}&per_page=${4}`
-  ).then((res) => res.json())) as TProductEmbedded[];
+  const products = (await fetch(url).then((res) =>
+    res.json()
+  )) as TProductEmbedded[];
+
+  // in this sort: [1371, 1605, 2151, 1656];
+  const productsSorted = products.sort((a, b) => {
+    return entryIds.indexOf(a.id) - entryIds.indexOf(b.id);
+  });
 
   return (
     <div>
@@ -23,7 +35,7 @@ const Page = async () => {
       <BrandsCarousel />
       <Featured />
       <Products
-        products={products.map((product) => ({
+        products={productsSorted.map((product) => ({
           title: product.title.rendered,
           description: load(product.content.rendered).text(),
           image: product._embedded["wp:featuredmedia"][0].source_url,

@@ -11,7 +11,7 @@ export const CardCategories = ({
   category: TProductCategory;
 }) => {
   return (
-    <div className="inline-flex flex-wrap gap-4 gap-x-10 m-auto my-5 max-w-[794px]" id="products">
+    <div className="inline-flex flex-wrap justify-center gap-4 m-auto my-5 max-w-[794px]" id="products">
       {categories.map((_category) => (
         <Link
           href={`/productos/epp/${_category.slug}#products`}

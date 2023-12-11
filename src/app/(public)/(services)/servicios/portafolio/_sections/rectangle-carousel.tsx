@@ -50,7 +50,7 @@ const ButtonGroup = ({
           });
           carousel?.previous(1);
         }}
-        className="absolute cursor-pointer top-[172px] translate-y-[-50%] left-[40px] text-white w-[40px] h-[40px]  z-10"
+        className="absolute cursor-pointer top-[172px] translate-y-[-50%] left-[90px] text-white w-[40px] h-[40px]  z-10"
       >
         <Image
           src="/img/icons/arrow-left.png"
@@ -70,7 +70,7 @@ const ButtonGroup = ({
           });
           carousel?.next(1);
         }}
-        className="absolute cursor-pointer top-[172px] translate-y-[-50%] right-[40px] text-white w-[40px] h-[40px]  z-10"
+        className="absolute cursor-pointer top-[172px] translate-y-[-50%] right-[90px] text-white w-[40px] h-[40px]  z-10"
       >
         <Image
           src="/img/icons/arrow-right.png"

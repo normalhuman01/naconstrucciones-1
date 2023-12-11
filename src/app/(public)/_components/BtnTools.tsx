@@ -3,7 +3,7 @@
 import { cn } from "@/lib/utils";
 import { TProductCategory } from "@/types";
 import Link from "next/link";
-import { HTMLAttributes, useEffect, useState } from "react";
+import { Fragment, HTMLAttributes, useEffect, useState } from "react";
 import { IoClose } from "react-icons/io5";
 
 const BtnPrimary = ({
@@ -114,12 +114,12 @@ export const BtnTools = ({
               <div className="flex flex-col gap-2 items-start">
                 {data.map((item, index) => {
                   return (
-                    <>
+                    <Fragment key={index}>
                       {index ? <hr className="w-full bg-white" /> : null}
                       <BtnPrimary onClick={() => setMenu(index)} key={index}>
                         {item.label}
                       </BtnPrimary>
-                    </>
+                    </Fragment>
                   );
                 })}
               </div>

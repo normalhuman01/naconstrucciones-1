@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import classes from "./plants.module.css";
+import { calibriFont } from "@/lib/fonts";
 
 export const Plants = () => {
   return (
@@ -23,7 +24,7 @@ export const Plants = () => {
           alt=""
           className={cn(classes.plants)}
         />
-        <h4 className={cn("text-center mb-5 text-[15px]", classes.text)}>
+        <h4 className={cn("text-center mb-5 text-[15px]", calibriFont.className, classes.text)}>
           Plantas Arquitectónicas
         </h4>
       </div>

@@ -63,23 +63,23 @@ const Page = () => {
         </h5>
         <ol className={cn("font-bold text-[19px] leading-9", calibriFont.className)}>
           <li>
-            <span className="mr-3">1.</span> Herramientas manuales y eléctricas
+            <span className="mr-10">1</span> Herramientas manuales y eléctricas
             para cada tarea.
           </li>
           <li>
-            <span className="mr-3">2.</span> Materiales de construcción
+            <span className="mr-10">2</span> Materiales de construcción
             duraderos y confiables.
           </li>
           <li>
-            <span className="mr-3">3.</span> Suministros para proyectos de
+            <span className="mr-10">3</span> Suministros para proyectos de
             ingeniería y campo.
           </li>
           <li>
-            <span className="mr-3">4.</span> Productos de plomería, electricidad
+            <span className="mr-10">4</span> Productos de plomería, electricidad
             y saneamiento.
           </li>
           <li>
-            <span className="mr-3">5.</span> Soluciones en ferretería para cada
+            <span className="mr-10">5</span> Soluciones en ferretería para cada
             desafío.
           </li>
         </ol>

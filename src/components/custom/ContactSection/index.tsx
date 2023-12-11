@@ -42,16 +42,16 @@ export const ContactSection = ({ hiddeTop }: { hiddeTop?: boolean }) => {
           </div>
         </div>
         <div className="flex flex-wrap justify-between w-full">
-          <p className={cn("flex flex-col text-[19px]", calibriFont.className)}>
-            <strong className="leading-3">TELÉFONO</strong>
+          <p className={cn("flex flex-col font-light text-[19px]", calibriFont.className)}>
+            <strong className="leading-3 font-bold">TELÉFONO</strong>
             <span>{config.phoneGroupedBy3}</span>
           </p>
-          <p className={cn("flex flex-col text-[19px]", calibriFont.className)}>
-            <strong className="leading-3">CORREO</strong>
+          <p className={cn("flex flex-col font-light text-[19px]", calibriFont.className)}>
+            <strong className="leading-3 font-bold">CORREO</strong>
             <span>{config.email}</span>
           </p>
-          <p className={cn("flex flex-col text-[19px]", calibriFont.className)}>
-            <strong className="leading-3">OFICINAS</strong>
+          <p className={cn("flex flex-col font-light text-[19px]", calibriFont.className)}>
+            <strong className="leading-3 font-bold">OFICINAS</strong>
             <span>{config.address}</span>
           </p>
         </div>

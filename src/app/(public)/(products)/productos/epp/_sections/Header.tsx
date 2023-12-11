@@ -1,7 +1,6 @@
+import { BtnSearchCircle } from "@/app/(public)/_components/BtnSearchCircle";
 import { arialBlackFont } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
-import React from "react";
-import { IoSearch } from "react-icons/io5";
 
 export const Header = () => {
   return (
@@ -34,9 +33,10 @@ export const Header = () => {
           BUSCANDO?
         </span>
       </p>
-      <div className="absolute bottom-1 right-1 border-black border-[1px] rounded-full h-[44px] w-[44px] flex justify-center items-center bg-[#FEE21B]">
-        <IoSearch className="text-xl" />
-      </div>
+      {/* <div className="absolute bottom-1 right-1 border-black border-[1px] rounded-full h-[28px] w-[28px] flex justify-center items-center bg-[#FEE21B]">
+        <IoSearch className="text-lg" />
+      </div> */}
+      <BtnSearchCircle></BtnSearchCircle>
     </div>
   );
 };
