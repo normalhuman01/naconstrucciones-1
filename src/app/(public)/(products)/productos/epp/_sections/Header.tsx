@@ -8,7 +8,7 @@ export const Header = () => {
       <p className={cn("flex flex-col", "relative bottom-[-62px]")}>
         <span
           className={cn(
-            "text-[60px] leading-10 text-white",
+            "text-[30px] md:text-[60px] leading-10 text-white",
             arialBlackFont.className
           )}
           style={{ WebkitTextStroke: "1px black" }}
@@ -17,7 +17,7 @@ export const Header = () => {
         </span>
         <span
           className={cn(
-            "text-[29.5px] leading-12 text-black",
+            "text-[24px] md:text-[29.5px] leading-12 text-black",
             arialBlackFont.className
           )}
         >
@@ -25,7 +25,7 @@ export const Header = () => {
         </span>
         <span
           className={cn(
-            "text-[60.5px] leading-7 text-white",
+            "text-[30px] md:text-[60.5px] leading-7 text-white",
             arialBlackFont.className
           )}
           style={{ WebkitTextStroke: "1px black" }}
