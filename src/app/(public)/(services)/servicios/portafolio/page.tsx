@@ -4,6 +4,7 @@ import { TulumBali } from "./_sections/tulum-bali";
 import { SquareCarousel } from "./_sections/square-carousel";
 import { Video } from "./_sections/video";
 import { CoffeeShops } from "./_sections/coffee-shops";
+import { Group } from "./group";
 
 const Page = () => {
   return (
@@ -21,6 +22,7 @@ const Page = () => {
       <TulumBali />
       <SquareCarousel />
       <Video />
+      <Group />
       <CoffeeShops />
     </>
   );
