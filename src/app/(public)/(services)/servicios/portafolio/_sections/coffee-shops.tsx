@@ -65,8 +65,8 @@ const coffeeShops: TCoffeeShop[] = [
     title: "Tanulo Coffee",
     title1: "TANULO",
     title2: "Coffee",
-    sub1: "Tanulo",
-    sub2: "Coffee",
+    sub1: "Coffee",
+    sub2: "TANULO",
     images: [
       "/img/portfolio/coffee/tanulo/1.jpg",
       "/img/portfolio/coffee/tanulo/2.jpg",
@@ -107,8 +107,8 @@ const coffeeShops: TCoffeeShop[] = [
     title: "NOTHING HOUSE Cafe",
     title1: "NOTHING HOUSE",
     title2: "Cafe",
-    sub1: "NOTHING HOUSE",
-    sub2: "Cafe",
+    sub1: "Cafe",
+    sub2: "NOTHING HOUSE",
     images: [
       "/img/portfolio/coffee/nothing/1.jpg",
       "/img/portfolio/coffee/nothing/2.jpg",

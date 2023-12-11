@@ -125,19 +125,20 @@ export const RectangleCarousel = ({
             customRightArrow={<></>}
           >
             {coffeeShops.map((coffeeShop, _index) => (
-              <div>
+              <div key={_index}>
                 <div className="relative">
                   <div
                     className={cn(
-                      "absolute z-10 top-0 left-[2rem]",
+                      "absolute z-10 top-0 left-0",
                       "text-[#262626] flex self-start mt-10 flex-col font-bold text-[32px]",
-                      arialBlackFont.className
+                      arialBlackFont.className,
                     )}
+                    style={{ WebkitTextStroke: ".5px #E9E6E5" }}
                   >
                     <span className="leading-8 w-full mr-10">
                       {coffeeShop?.sub1}
                     </span>
-                    <span className="w-full text-right leading-8">
+                    <span className="w-full text-right pl-4 leading-8">
                       {coffeeShop?.sub2}
                     </span>
                   </div>
@@ -149,26 +150,24 @@ export const RectangleCarousel = ({
                   />
                   <div
                     className={cn(
-                      "absolute z-10 bottom-0 right-[2rem]",
+                      "absolute z-10 bottom-0 right-0",
                       "text-[#262626] flex self-end mb-10 flex-col font-bold text-[32px]",
-                      arialBlackFont.className
+                      arialBlackFont.className,
                     )}
+                    style={{ WebkitTextStroke: ".5px #E9E6E5" }}
                   >
-                    <span className="leading-8 w-full text-right text-[70px]">
+                    <span className="leading-8 w-full pl-4 text-right text-[70px]">
                       {coffeeShop?.sub2}
                     </span>
-                    <span className="w-full mr-[30px] leading-15">
+                    <span className="w-full mr-[36px] leading-15">
                       {coffeeShop?.sub1}
                     </span>
                   </div>
                 </div>
-                <div className="grid grid-cols-4 gap-2 mt-2">
-                  {[...coffeeShop.images].slice(1).map((image, _index) => (
+                <div className="grid grid-cols-4 gap-2 mt-10 px-[1px]">
+                  {coffeeShop.images.slice(1).map((image, _index) => (
                     <img src={image} alt={image} key={image} />
                   ))}
-                  {![...coffeeShop.images].slice(1).length && (
-                    <pre>{JSON.stringify(coffeeShop, null, 2)}</pre>
-                  )}
                 </div>
               </div>
             ))}
