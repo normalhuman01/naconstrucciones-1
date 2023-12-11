@@ -150,7 +150,7 @@ export const SquareCarousel = () => {
       </div>
       <div
         className={cn(
-          "flex justify-between gap-[48px] my-3 text-[19px]",
+          "flex flex-wrap justify-center md:justify-between gap-[20px] md:gap-[48px] my-3 text-[19px]",
           calibriFont.className
         )}
       >

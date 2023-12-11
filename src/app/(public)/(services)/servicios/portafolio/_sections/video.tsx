@@ -31,8 +31,8 @@ export const Video = () => {
         <video
           ref={videoRef}
           src="/video/portfolio.mp4"
-          width={670}
-          height={370}
+          width={685}
+          height={385}
           controls={isPlaying}
           onPlay={() => setIsPlaying(true)}
         ></video>

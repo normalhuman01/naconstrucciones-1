@@ -95,7 +95,7 @@ export const BtnTools = ({
     <>
       <div
         onClick={() => setIsOpen(!isOpen)}
-        className="flex gap-1 flex-wrap max-w-[44px] items-center justify-center cursor-pointer"
+        className="flex gap-1 flex-wrap w-[44px] items-center justify-center cursor-pointer"
       >
         <div className="w-[12px] h-[12px] bg-[black]"></div>
         <div className="w-[12px] h-[12px] bg-[black]"></div>

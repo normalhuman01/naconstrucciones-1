@@ -14,35 +14,34 @@ export const SeeAlso = ({
   indexCoffeShop,
 }: TSeeAlsoProps) => {
   return (
-    <div className="flex flex-col gap-8 items-center text-center mt-[60px]">
-      <header
-        className={cn("underline text-[19px] leading-5", calibriFont.className)}
-      >
-        <span className="inline-flex justify-center mb-2">VER TAMBIÉN</span>
-        <p>
-          Si hay un fenómeno que ha transformado por completo la forma de
-          entender
-          <br />
-          el ocio en el mundo, es precisamente el de las cafeterías.
-        </p>
-      </header>
-      <p className="leading-6">
+    <div className="flex flex-col gap-8 items-center text-center mt-[60px] bg-[#E9E6E5]">
+      <p className="leading-6 mt-[96px]">
         <span className={cn("text-[32px]", arialBlackFont.className)}>
-          ARQUITECTURA EN
-        </span>
-        <br />
-        <span className={cn("text-[32px]", arialBlackFont.className)}>
-          CAFETERÍAS
+          ARQUITECTURA EN CAFETERÍAS
         </span>
       </p>
+      <p className={cn("text-[19px] leading-5", calibriFont.className)}>
+        Si hay un fenómeno que ha transformado por completo la forma de entender
+        <br />
+        el ocio en el mundo, es precisamente el de las cafeterías.
+      </p>
       <ol
-        className={cn("font-bold text-[19px] text-left", calibriFont.className)}
+        className={cn(
+          "text-[19px] text-left flex lg:gap-[50px] flex-col lg:flex-row",
+          calibriFont.className
+        )}
       >
         {coffeeShops.map((shop, index) => (
-          <li key={index} onClick={() => setIndexCoffeShop(index)} className="cursor-pointer">
-            <span className="mr-[2.5rem]">{index + 1}</span>
-            <span className={cn(indexCoffeShop === index && "underline")}>
-              {shop.title}
+          <li
+            key={index}
+            onClick={() => setIndexCoffeShop(index)}
+            className="cursor-pointer text-center"
+          >
+            {/* <span className="mr-[2.5rem]">{index + 1}</span> */}
+            <span className={cn(indexCoffeShop === index && "underline", indexCoffeShop === index && "font-bold","leading-none")}>
+              {shop.title1}
+              <br />
+              {shop.title2}
             </span>
           </li>
         ))}
