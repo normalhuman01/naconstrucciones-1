@@ -138,13 +138,30 @@ export const BtnTools = ({
                     return (
                       <Fragment key={index}>
                         {index ? <hr className="w-full bg-white" /> : null}
-                        <BtnPrimary
-                          onClick={() => setMenu(index)}
-                          key={index}
-                          className="text-md md:text-xl"
-                        >
-                          {item.label}
-                        </BtnPrimary>
+                        {"links" in item ? (
+                          <BtnPrimary
+                            onClick={() => setMenu(index)}
+                            key={index}
+                            className="text-md md:text-xl"
+                          >
+                            {item.label}
+                          </BtnPrimary>
+                        ) : (
+                          <Link
+                            href={item.link}
+                            onClick={() => {
+                              setMenu(index);
+                              setIsOpen(false);
+                            }}
+                          >
+                            <BtnPrimary
+                              key={index}
+                              className="text-md md:text-xl"
+                            >
+                              {item.label}
+                            </BtnPrimary>
+                          </Link>
+                        )}
                       </Fragment>
                     );
                   })}

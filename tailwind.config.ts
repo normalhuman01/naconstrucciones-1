@@ -8,6 +8,9 @@ module.exports = {
     './src/**/*.{ts,tsx}',
 	],
   theme: {
+    backgroundPosition: {
+      'top-minus8rem': 'center -8rem',
+    },
     container: {
       center: true,
       padding: "2rem",

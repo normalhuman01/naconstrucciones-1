@@ -183,11 +183,11 @@ export const Initial = () => {
         </div>
 
         <div
-          className="relative flex flex-col items-center justify-center text-white text-center h-[520px] px-10"
+          className="relative flex flex-col items-center justify-center text-white text-center h-[520px] px-10 bg-top-minus8rem"
           style={{
             ...bgStyles,
             backgroundImage: "url(/img/home/AMPLIACION.jpg)",
-            backgroundPositionY: "-8rem",
+            // backgroundPositionY: "-8rem",
           }}
         >
           <Top>Especialidad</Top>
