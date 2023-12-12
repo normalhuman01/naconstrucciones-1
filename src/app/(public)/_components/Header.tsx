@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { BtnSearch } from "./BtnSearch";
 import { BtnTools } from "./BtnTools";
 import { CustomLink } from "./CustomLink";
@@ -12,12 +13,14 @@ export const Header = async () => {
   return (
     <header className="top-0 sticky z-[9999] bg-white shadow-md">
       <div className="max-w-[1120px] mx-auto pt-7 pb-4 px-8 xl:px-0 flex justify-between items-center">
-        <img
-          src="/img/logo/logo-largo.jpg"
-          width={240}
-          height={120}
-          alt="Logo"
-        />
+        <Link href="/" className="cursor-pointer">
+          <img
+            src="/img/logo/logo-largo.jpg"
+            width={240}
+            height={120}
+            alt="Logo"
+          />
+        </Link>
         <div className="hidden lg:flex gap-6 text">
           <CustomLink href="/" title="INICIO" />
           <CustomLink

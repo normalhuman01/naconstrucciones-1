@@ -1,0 +1,56 @@
+.container > div > div:last-child {
+  border-radius: 3% !important;
+}
+.container header {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  grid-template-columns: 15% 70% 15% !important;
+}
+.container header img {
+  width: 45px !important;
+  height: 45px !important;
+  border: none !important;
+}
+.container header > div:first-child {
+  padding-top: 0 !important;
+  padding-right: 0 !important;
+  padding-bottom: 0 !important;
+  /* max-width: 50px !important; */
+}
+.container header > div:first-child:after {
+  right: 6px !important;
+  bottom: 2px !important;
+}
+
+.container header > div:nth-child(2) {
+  padding-left: 0 !important;
+  padding-top: 0 !important;
+  padding-right: 0 !important;
+  padding-bottom: 0 !important;
+}
+.container header > div:nth-child(2) > span:last-child {
+  display: none;
+}
+
+.container header > div:last-child {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@font-face {
+  font-family: "ArialLight";
+  src: url("/fonts/arial/arial.ttf") format("truetype");
+}
+
+.container header div span {
+  font-family: ArialLight !important;
+  font-weight: 100 !important;
+}
+.container header + div > div {
+  max-width: calc(100% - 100px) !important;
+}
+
+.container footer form button {
+  display: flex;
+  justify-content: center;
+}

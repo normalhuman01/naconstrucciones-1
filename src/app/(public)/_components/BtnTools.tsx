@@ -129,7 +129,7 @@ export const BtnTools = ({
         <div className="w-[12px] h-[12px] bg-[black]"></div>
       </div>
       {isOpen && (
-        <div className="top-0 left-0 z-[10000] fixed p-3 flex justify-center items-center w-full h-[100vh] bg-dark text-white">
+        <div className="top-0 left-0 z-[10000] fixed p-3 flex justify-center items-center w-full h-[100vh] bg-[rgba(38,38,38,0.98)] text-white">
           <div className="max-w-[1120px] mx-auto relative flex justify-center items-center w-full">
             <div className="relative flex gap-6 items-stretch max-h-[90vh] w-full">
               <div className="flex flex-col gap-2 justify-between">

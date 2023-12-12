@@ -130,6 +130,8 @@ const ButtonGroup = ({ carousel }: { carousel: Carousel | null }) => {
   );
 };
 
+const classesDark = "absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,.1)] opacity-60";
+
 export const Initial = () => {
   const [carousel, setCarousel] = useState<null | Carousel>(null);
   return (
@@ -153,13 +155,14 @@ export const Initial = () => {
             backgroundPositionY: "-2rem",
           }}
         >
+          <div className={classesDark}></div>
           <div className="flex flex-col items-start justify-center max-w-[1120px] w-full">
             <Top>Especialidad</Top>
             <Title>PROYECTOS</Title>
             <Description>
               Creamos desde cero con visión <br /> y precisión técnica
             </Description>
-            <ButtonBlack className="text-[20px] z-10 mt-10 border-white">
+            <ButtonBlack className="text-[20px] z-10 mt-10 border-white" onClick={console.log}>
               CONSULTAR
             </ButtonBlack>
           </div>
@@ -172,6 +175,7 @@ export const Initial = () => {
             backgroundImage: "url(/img/home/REMODELACION.jpg)",
           }}
         >
+          <div className={classesDark}></div>
           <Top>Especialidad</Top>
           <Title>REMODELACIÓN</Title>
           <Description>
@@ -190,6 +194,7 @@ export const Initial = () => {
             // backgroundPositionY: "-8rem",
           }}
         >
+          <div className={classesDark}></div>
           <Top>Especialidad</Top>
           <Title>AMPLIACIONES</Title>
           <Description>
@@ -205,9 +210,10 @@ export const Initial = () => {
           style={{
             ...bgStyles,
             backgroundImage: "url(/img/home/EXCAVACION.png)",
-            backgroundPositionY: "60%"
+            backgroundPositionY: "60%",
           }}
         >
+          <div className={classesDark}></div>
           <div className="flex flex-col items-end justify-center text-right max-w-[1120px] w-full">
             <Top>Especialidad</Top>
             <Title>EXCAVACIONES</Title>
@@ -227,6 +233,7 @@ export const Initial = () => {
             backgroundImage: "url(/img/home/DEMOLICION.png)",
           }}
         >
+          <div className={classesDark}></div>
           <div className="flex flex-col items-start justify-center max-w-[1120px] w-full">
             <Top>Especialidad</Top>
             <Title>DEMOLICIONES</Title>
@@ -246,6 +253,7 @@ export const Initial = () => {
             backgroundImage: "url(/img/home/EPP.jpg)",
           }}
         >
+          <div className={classesDark}></div>
           <div className="flex flex-col items-end justify-center text-right max-w-[1120px] w-full">
             <Top>Especialidad</Top>
             <Title>EPP{`'`}s</Title>

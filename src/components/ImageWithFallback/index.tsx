@@ -32,20 +32,18 @@ export const ImageWithFallback = ({
   }, [src, fallbackSrc]);
 
   return (
-    // <img
-    //   src={imageSrc}
-    //   className="object-contain"
+    <div className="flex items-center justify-center max-w-full max-h-full">
+      <img src={imageSrc} className="object-contain max-w-full max-h-full" {...props} />
+    </div>
+    // <div
+    //   className={cn("w-full h-full")}
+    //   style={{
+    //     backgroundImage: `url(${imageSrc})`,
+    //     backgroundSize: "cover",
+    //     backgroundPosition: "center",
+    //     backgroundRepeat: "no-repeat",
+    //   }}
     //   {...props}
-    // />
-    <div
-      className={cn("w-full h-full")}
-      style={{
-        backgroundImage: `url(${imageSrc})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-      {...props}
-    ></div>
+    // ></div>
   );
 };

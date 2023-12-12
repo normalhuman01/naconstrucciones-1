@@ -1,5 +1,5 @@
 .container {
-  animation: animation 20s linear infinite forwards;
+  animation: animation 50s linear infinite forwards;
 }
 
 @keyframes animation {
@@ -7,6 +7,6 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-300%);
   }
 }

@@ -2,7 +2,36 @@
 import { cn } from "@/lib/utils";
 import classes from "./style.module.css";
 
-const array = Array.from({ length: 26 }, (_, i) => i + 1);
+const base = [
+  "kleenguard",
+  "bullard",
+  "3m",
+  "steelpro",
+  "clute",
+  "deltaplus",
+  "edelbrock",
+  "forte",
+  "fullrisk",
+  "msa",
+  "showa",
+  "spro",
+  "nazca",
+  "tridente",
+  "cat",
+  "portwest",
+  "howard",
+  "libus",
+  "north",
+  "segpro",
+  "panduit",
+  "haws",
+  "segusa",
+  "speakman",
+  "westland",
+  "tecseg",
+  "ansell",
+];
+const array = [...base, ...base];
 
 export const BrandsCarousel = () => {
   return (
