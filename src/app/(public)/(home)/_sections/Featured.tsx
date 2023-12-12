@@ -31,8 +31,8 @@ const Left = () => {
         alt="boot"
         className="absolute top-[-20px] md:top-[-60px] w-[200px] md:min-w-[320px] md:h-[320px]"
       /> */}
-      <Image
-        src={"/img/home/boot-circle.png"}
+      <img
+        src={"/img/home/boot_featured_circle.png"}
         width={330}
         height={305}
         alt="boot"

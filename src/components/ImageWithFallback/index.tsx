@@ -32,8 +32,8 @@ export const ImageWithFallback = ({
   }, [src, fallbackSrc]);
 
   return (
-    <div className="flex items-center justify-center max-w-full max-h-full">
-      <img src={imageSrc} className="object-contain max-w-full max-h-full" {...props} />
+    <div className="relative w-full h-full">
+      <img src={imageSrc} className="top-0 left-0 w-full h-full object-cover" {...props} />
     </div>
     // <div
     //   className={cn("w-full h-full")}

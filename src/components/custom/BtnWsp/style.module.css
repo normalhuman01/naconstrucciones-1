@@ -1,10 +1,13 @@
 .container > div > div:last-child {
-  border-radius: 3% !important;
+  border-radius: 0 !important;
+  border: 1px solid black;
 }
 .container header {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
   grid-template-columns: 15% 70% 15% !important;
+  background-color: #52891C;
+  border-bottom: 1px solid #3B3838;
 }
 .container header img {
   width: 45px !important;
@@ -41,6 +44,10 @@
   font-family: "ArialLight";
   src: url("/fonts/arial/arial.ttf") format("truetype");
 }
+@font-face {
+  font-family: "CalibriLight";
+  src: url("/fonts/calibri/calibri-light.ttf") format("truetype");
+}
 
 .container header div span {
   font-family: ArialLight !important;
@@ -50,7 +57,37 @@
   max-width: calc(100% - 100px) !important;
 }
 
+.container header + div {
+  background-color: #F5F5F5;
+  background-image: none !important;
+}
+.container header + div > div {
+  border-radius: 0 !important;
+  border: 1px solid #52891C;
+  font-family: CalibriLight !important;
+}
+.container header + div > div > span:first-child {
+  display: none !important;
+}
+.container header + div > div > span:first-child + span {
+  color: black !important;
+}
+.container header + div > div > p {
+  color: black !important;
+}
+
+
+.container footer {
+  background: #3B3838;
+  padding: .35rem 1rem;
+}
+
 .container footer form button {
   display: flex;
   justify-content: center;
+}
+
+.container footer form input {
+  border-radius: .5rem !important;
+  min-height: 30px !important;
 }

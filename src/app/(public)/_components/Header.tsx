@@ -15,7 +15,7 @@ export const Header = async () => {
       <div className="max-w-[1120px] mx-auto pt-7 pb-4 px-8 xl:px-0 flex justify-between items-center">
         <Link href="/" className="cursor-pointer">
           <img
-            src="/img/logo/logo-largo.jpg"
+            src="/img/logo/logo-large.svg"
             width={240}
             height={120}
             alt="Logo"
@@ -24,7 +24,7 @@ export const Header = async () => {
         <div className="hidden lg:flex gap-6 text">
           <CustomLink href="/" title="INICIO" />
           <CustomLink
-            href="/productos/epp/zapato-de-seguridad"
+            href="/productos/epp"
             title="PRODUCTOS"
           />
           <CustomLink href="/servicios/general" title="SERVICIOS" />

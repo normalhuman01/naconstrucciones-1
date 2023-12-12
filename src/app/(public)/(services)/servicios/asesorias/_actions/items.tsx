@@ -11,7 +11,7 @@ export const Items = ({
 }) => {
   return (
     <div className="max-w-[1120px] m-auto pt-10 mt-7 mb-[96px]">
-      <div className="grid grid-cols-3 gap-[66px] m-auto">
+      <div className="grid grid-cols-3 gap-y-[66px] gap-x-[.25rem] md:gap-x-[36px] lg:gap-x-[66px] m-auto">
         {items.map((item, index) => {
           const number = index + 1;
           const isOne = number % 3 === 1;
@@ -36,7 +36,7 @@ export const Items = ({
               </div>
               <h3
                 className={cn(
-                  "text-[15px] md:text-[26px] leading-none font-bold uppercase mb-3",
+                  "text-[13px] md:text-[19px] lg:text-[26px] leading-none font-bold uppercase mb-3",
                   className,
                   arialBlackFont.className
                 )}
@@ -46,7 +46,7 @@ export const Items = ({
               ></h3>
               <p
                 className={cn(
-                  "text-[13px] md:text-[19px] leading-5 mb-4",
+                  "text-[13px] md:text-[16px] lg:text-[19px] leading-5 mb-4",
                   className,
                   calibriFont.className
                 )}

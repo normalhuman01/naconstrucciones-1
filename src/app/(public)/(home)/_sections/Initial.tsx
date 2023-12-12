@@ -1,8 +1,10 @@
 "use client";
 import { ButtonBlack } from "@/components/custom";
+import { config } from "@/config";
 import { abadiFont, calibriFont, impactFont } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
 import React, { HTMLAttributes, useRef, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -130,7 +132,8 @@ const ButtonGroup = ({ carousel }: { carousel: Carousel | null }) => {
   );
 };
 
-const classesDark = "absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,.1)] opacity-60";
+const classesDark =
+  "absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,.1)] opacity-60";
 
 export const Initial = () => {
   const [carousel, setCarousel] = useState<null | Carousel>(null);
@@ -156,15 +159,20 @@ export const Initial = () => {
           }}
         >
           <div className={classesDark}></div>
-          <div className="flex flex-col items-start justify-center max-w-[1120px] w-full">
+          <div className="flex flex-col items-start justify-center max-w-[1120px] w-full z-20">
             <Top>Especialidad</Top>
             <Title>PROYECTOS</Title>
             <Description>
               Creamos desde cero con visión <br /> y precisión técnica
             </Description>
-            <ButtonBlack className="text-[20px] z-10 mt-10 border-white" onClick={console.log}>
-              CONSULTAR
-            </ButtonBlack>
+            <Link
+              target="_blank"
+              href={`https://wa.me/+51${config.phone}?text=Hola, me gustaría más información sobre los proyectos que realizan.`}
+            >
+              <ButtonBlack className="text-[20px] z-10 mt-10 border-white cursor-pointer">
+                CONSULTAR
+              </ButtonBlack>
+            </Link>
           </div>
         </div>
 
@@ -176,14 +184,21 @@ export const Initial = () => {
           }}
         >
           <div className={classesDark}></div>
-          <Top>Especialidad</Top>
-          <Title>REMODELACIÓN</Title>
-          <Description>
-            Creamos desde cero con visión <br /> y precisión técnica
-          </Description>
-          <ButtonBlack className="text-[20px] z-10 mt-10 border-white">
-            CONSULTAR
-          </ButtonBlack>
+          <div className="flex flex-col items-center justify-center text-center max-w-[1120px] w-full z-20">
+            <Top>Especialidad</Top>
+            <Title>REMODELACIÓN</Title>
+            <Description>
+              Creamos desde cero con visión <br /> y precisión técnica
+            </Description>
+            <Link
+              target="_blank"
+              href={`https://wa.me/+51${config.phone}?text=Hola, me gustaría más información sobre las remodelaciones que realizan.`}
+            >
+              <ButtonBlack className="text-[20px] z-10 mt-10 border-white cursor-pointer">
+                CONSULTAR
+              </ButtonBlack>
+            </Link>
+          </div>
         </div>
 
         <div
@@ -191,18 +206,24 @@ export const Initial = () => {
           style={{
             ...bgStyles,
             backgroundImage: "url(/img/home/AMPLIACION.jpg)",
-            // backgroundPositionY: "-8rem",
           }}
         >
           <div className={classesDark}></div>
-          <Top>Especialidad</Top>
-          <Title>AMPLIACIONES</Title>
-          <Description>
-            Creamos desde cero con visión <br /> y precisión técnica
-          </Description>
-          <ButtonBlack className="text-[20px] z-10 mt-10 border-white">
-            CONSULTAR
-          </ButtonBlack>
+          <div className="flex flex-col items-center justify-center text-center max-w-[1120px] w-full z-20">
+            <Top>Especialidad</Top>
+            <Title>AMPLIACIONES</Title>
+            <Description>
+              Creamos desde cero con visión <br /> y precisión técnica
+            </Description>
+            <Link
+              target="_blank"
+              href={`https://wa.me/+51${config.phone}?text=Hola, me gustaría más información sobre las AMPLIACIONES que realizan.`}
+            >
+              <ButtonBlack className="text-[20px] z-10 mt-10 border-white cursor-pointer">
+                CONSULTAR
+              </ButtonBlack>
+            </Link>
+          </div>
         </div>
 
         <div
@@ -214,15 +235,20 @@ export const Initial = () => {
           }}
         >
           <div className={classesDark}></div>
-          <div className="flex flex-col items-end justify-center text-right max-w-[1120px] w-full">
+          <div className="flex flex-col items-end justify-center text-right max-w-[1120px] w-full z-20">
             <Top>Especialidad</Top>
             <Title>EXCAVACIONES</Title>
             <Description>
               Creamos desde cero con visión <br /> y precisión técnica
             </Description>
-            <ButtonBlack className="text-[20px] z-10 mt-10 border-white">
-              CONSULTAR
-            </ButtonBlack>
+            <Link
+              target="_blank"
+              href={`https://wa.me/+51${config.phone}?text=Hola, me gustaría más información sobre las EXCAVACIONES que realizan.`}
+            >
+              <ButtonBlack className="text-[20px] z-10 mt-10 border-white cursor-pointer">
+                CONSULTAR
+              </ButtonBlack>
+            </Link>
           </div>
         </div>
 
@@ -234,15 +260,20 @@ export const Initial = () => {
           }}
         >
           <div className={classesDark}></div>
-          <div className="flex flex-col items-start justify-center max-w-[1120px] w-full">
+          <div className="flex flex-col items-start justify-center max-w-[1120px] w-full z-20">
             <Top>Especialidad</Top>
             <Title>DEMOLICIONES</Title>
             <Description>
               Creamos desde cero con visión <br /> y precisión técnica
             </Description>
-            <ButtonBlack className="text-[20px] z-10 mt-10 border-white">
-              CONSULTAR
-            </ButtonBlack>
+            <Link
+              target="_blank"
+              href={`https://wa.me/+51${config.phone}?text=Hola, me gustaría más información sobre su servicio de DEMOLICIONES.`}
+            >
+              <ButtonBlack className="text-[20px] z-10 mt-10 border-white cursor-pointer">
+                CONSULTAR
+              </ButtonBlack>
+            </Link>
           </div>
         </div>
 
@@ -254,15 +285,20 @@ export const Initial = () => {
           }}
         >
           <div className={classesDark}></div>
-          <div className="flex flex-col items-end justify-center text-right max-w-[1120px] w-full">
+          <div className="flex flex-col items-end justify-center text-right max-w-[1120px] w-full z-20">
             <Top>Especialidad</Top>
             <Title>EPP{`'`}s</Title>
             <Description>
               Creamos desde cero con visión <br /> y precisión técnica
             </Description>
-            <ButtonBlack className="text-[20px] z-10 mt-10 border-white">
-              CONSULTAR
-            </ButtonBlack>
+            <Link
+              target="_blank"
+              href={`https://wa.me/+51${config.phone}?text=Hola, me gustaría más información sobre sus EPP's.`}
+            >
+              <ButtonBlack className="text-[20px] z-10 mt-10 border-white cursor-pointer">
+                CONSULTAR
+              </ButtonBlack>
+            </Link>
           </div>
         </div>
       </Carousel>

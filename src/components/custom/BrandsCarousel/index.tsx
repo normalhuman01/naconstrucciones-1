@@ -37,9 +37,9 @@ export const BrandsCarousel = () => {
   return (
     <div className="my-8 w-full overflow-hidden">
       <div className={cn("flex gap-5 items-center", classes.container)}>
-        {array.map((i) => (
+        {array.map((i, index) => (
           <div
-            key={i}
+            key={i + "_" + index}
             className="flex h-full items-center justify-center mx-3 max-w-[500px] w-full"
           >
             <img

@@ -52,7 +52,6 @@ export const CardBorder = ({
             ></div>
           ) : (
             <ImageWithFallback
-              className="w-full h-full"
               src={image}
               fallbackSrc={fallbackImage}
             />

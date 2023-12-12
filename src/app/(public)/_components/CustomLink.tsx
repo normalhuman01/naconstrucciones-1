@@ -14,7 +14,6 @@ export const CustomLink = ({
   className?: string;
 }) => {
   const pathname = usePathname();
-  console.log();
   const isActive =
     href === "/"
       ? pathname === href

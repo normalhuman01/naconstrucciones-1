@@ -15,10 +15,7 @@ import { load } from "cheerio";
 const entryIds = [1656, 1371, 1605, 2151];
 const filter = `include[]=${entryIds.join("&include[]=")}`;
 const url = WP_URL + `/epp?_embed&?page=${1}&per_page=${4}&${filter}`;
-// const url =
-//   WP_URL + `/epp?_embed&?include=${entryIds.join(",")}&page=${1}&per_page=${4}`;
-// const url = "https://darwinv24.sg-host.com/wp-json/wp/v2/epp?_embed&?include=1656,1371,1605,2151&page=1&per_page=4"
-console.log(url);
+
 const Page = async () => {
   const products = (await fetch(url).then((res) =>
     res.json()

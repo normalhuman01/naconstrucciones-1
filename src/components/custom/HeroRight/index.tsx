@@ -43,14 +43,14 @@ export const HeroRight = ({
       }}
       {...props}
     >
-      <div className="max-w-[1120px] mx-auto flex flex-col items-end justify-center h-full">
+      <div className="max-w-[1120px] px-8 xl:px-0 mx-auto flex flex-col items-end justify-center h-full">
         <h2 className="flex flex-col items-end leading-none">
           <span className={cn("text-[24px] mb-3", impactFont.className)}>
             {top}
           </span>
           <span
             className={cn(
-              "text-black leading-none text-[40px] font-light md:text-[75px] z-10",
+              "text-black leading-none text-[40px] md:text-[75px] font-light z-10",
               abadiFont.className
             )}
             style={{ textShadow: "0px 4px 3px rgba(0, 0, 0, 0.7)" }}
@@ -59,7 +59,7 @@ export const HeroRight = ({
           </span>
           <span
             className={cn(
-              "text-white leading-none text-[40px] font-light md:text-[75px] relative top-[-25px]",
+              "text-white leading-none text-[40px] md:text-[75px] top-[-1rem] md:top-[-25px] font-light relative",
               abadiFont.className
             )}
             style={{ textShadow: "0px 4px 3px rgba(0, 0, 0, 0.7)" }}

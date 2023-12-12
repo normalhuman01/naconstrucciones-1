@@ -50,7 +50,7 @@ const ButtonGroup = ({
           });
           carousel?.previous(1);
         }}
-        className="absolute cursor-pointer top-[172px] translate-y-[-50%] left-[90px] text-white w-[40px] h-[40px]  z-10"
+        className="absolute cursor-pointer top-[172px] translate-y-[-50%] left-[1.25rem] md:left-[90px] text-white w-[40px] h-[40px]  z-10"
       >
         <Image
           src="/img/icons/arrow-left.png"
@@ -70,7 +70,7 @@ const ButtonGroup = ({
           });
           carousel?.next(1);
         }}
-        className="absolute cursor-pointer top-[172px] translate-y-[-50%] right-[90px] text-white w-[40px] h-[40px]  z-10"
+        className="absolute cursor-pointer top-[172px] translate-y-[-50%] right-[1.25rem] md:right-[90px] text-white w-[40px] h-[40px]  z-10"
       >
         <Image
           src="/img/icons/arrow-right.png"
@@ -130,7 +130,7 @@ export const RectangleCarousel = ({
                   <div
                     className={cn(
                       "absolute z-10 top-0 left-0",
-                      "text-[#262626] flex self-start mt-10 flex-col font-bold text-[32px]",
+                      "text-[#262626] flex self-start mt-10 flex-col font-bold text-[20px] md:text-[32px]",
                       arialBlackFont.className,
                     )}
                     style={{ WebkitTextStroke: ".5px #E9E6E5" }}
@@ -151,12 +151,12 @@ export const RectangleCarousel = ({
                   <div
                     className={cn(
                       "absolute z-10 bottom-0 right-0",
-                      "text-[#262626] flex self-end mb-10 flex-col font-bold text-[32px]",
+                      "text-[#262626] flex self-end mb-10 flex-col font-bold text-[20px] md:text-[32px]",
                       arialBlackFont.className,
                     )}
                     style={{ WebkitTextStroke: ".5px #E9E6E5" }}
                   >
-                    <span className="leading-8 w-full pl-4 text-right text-[70px]">
+                    <span className="leading-8 w-full pl-4 text-right text-[30px] md:text-[70px]">
                       {coffeeShop?.sub2}
                     </span>
                     <span className="w-full mr-[36px] leading-15">

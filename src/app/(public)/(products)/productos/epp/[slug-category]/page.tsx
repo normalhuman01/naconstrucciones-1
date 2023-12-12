@@ -73,7 +73,7 @@ const Page = async ({ params, ...props }: TPageProps) => {
     <>
       <HeroRight
         top="Equipos de"
-        image="/img/products/epp-hero-bg.png"
+        image="/img/products/epp.jpg"
         title1="PROTECCIÓN"
         title2="PERSONAL"
         description="Equipo laboral para la salud y seguridad en el trabajo para la industria y el sitio de construcción"
