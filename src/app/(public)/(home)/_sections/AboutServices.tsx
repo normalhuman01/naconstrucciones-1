@@ -14,13 +14,20 @@ type TCard = {
   description: string;
   image: string;
   link: string;
+  classesIcon?: string;
 };
-const Card = ({ title, description, image, link }: TCard) => {
+const Card = ({ title, description, image, link, classesIcon }: TCard) => {
   return (
     <div className="flex flex-1 flex-col items-start justify-between gap-10 max-w-[250px]">
       <div className="flex flex-col gap-3 items-start">
         <div className="w-full mb-3">
-          <img src={image} width={36} height={36} alt="service" className="mb-[12px]" />
+          <img
+            src={image}
+            width={36}
+            height={36}
+            alt="service"
+            className={cn("mb-[12px]", classesIcon)}
+          />
           <h4 className={cn("text-[21px] font-bold", calibriFont.className)}>
             {title}
           </h4>
@@ -60,18 +67,21 @@ export const AboutServices = () => {
           description="Nos encargamos del diseño, remodelación y ampliación de espacios residenciales y comerciales. Además ofrecemos asesoría para definir materiales y acabados finales."
           image="/img/icons/compas.png"
           link="/servicios/general"
+          classesIcon="mb-[13px]"
         />
         <Card
           title="CONSTRUCCIÓN"
           description="Contamos con una amplia gama y variedad de servicios relacionados con el área de construcción industrial, urbana, edificaciones y obras de infraestructura."
           image="/img/icons/pared.png"
           link="/servicios/general"
+          classesIcon="mb-[14.75px]"
         />
         <Card
           title="MANTENIMIENTO"
           description="Contamos con un personal altamente especializado y experimentado en los distintos tipos de servicios de mantenimiento que nuestros clientes requieran."
           image="/img/icons/tuercas.png"
           link="/servicios/general"
+          classesIcon="mb-[15px]"
         />
       </div>
     </div>

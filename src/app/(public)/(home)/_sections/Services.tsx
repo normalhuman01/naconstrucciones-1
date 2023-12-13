@@ -2,7 +2,6 @@
 import { ButtonYellow } from "@/components/custom";
 import { arialBlackFont, calibriFont } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import { HTMLAttributes, ReactNode, useState } from "react";
 import ReactCardFlip from "react-card-flip";
 
@@ -14,7 +13,7 @@ type TCard = Omit<HTMLAttributes<HTMLDivElement>, "title" | "description"> & {
 const Card = ({ title, description, image, className = "" }: TCard) => {
   const [isFlipped, setIsFlipped] = useState(false);
   return (
-    <div className={cn("max-w-[260px] w-full mb-5 md:mb-auto", className)}>
+    <div className={cn("max-w-[180px] md:max-w-[260px] w-full mb-5 md:mb-auto", className)}>
       <div
         className="h-[286px] md:h-[400px] text-white"
         onMouseEnter={() => setIsFlipped(true)}
@@ -26,7 +25,7 @@ const Card = ({ title, description, image, className = "" }: TCard) => {
           cardStyles={{ front: { width: "100%" } }}
         >
           <div
-            className="max-w-[260px] w-[260px] h-[286px] md:h-[400px] flex justify-center items-center"
+            className="w-[180px] max-w-[180px] md:max-w-[260px] md:w-[260px] h-[286px] md:h-[400px] flex justify-center items-center"
             style={{
               backgroundImage: `url(${image})`,
               backgroundSize: "cover",
@@ -36,7 +35,7 @@ const Card = ({ title, description, image, className = "" }: TCard) => {
           ></div>
           <div
             className={cn(
-              "bg-dark max-w-[260px] h-[286px] md:h-[400px] flex justify-center items-center px-5 text-center text-[18px]",
+              "bg-dark max-w-[180px] md:max-w-[260px] h-[286px] md:h-[400px] flex justify-center items-center px-5 text-center text-[15px] md:text-[18px]",
               calibriFont.className
             )}
           >
@@ -100,7 +99,7 @@ export const Services = () => {
           <h3 className="text-2xl font-bold">SERVICIOS</h3>
         </div>
 
-        <div className="flex md:hidden flex-wrap gap-5 items-start justify-center">
+        <div className="flex md:hidden flex-wrap gap-2 md:gap-5 items-start justify-center">
           <Card
             title="Electricidad"
             description="Sistemas eléctricos integrales, Diseño de proyecto y ejecución, Sistemas de puesta a tierra, Servicios de mantenimiento."
