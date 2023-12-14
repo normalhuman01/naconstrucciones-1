@@ -7,7 +7,7 @@ export const Plants = () => {
     <>
       <div
         className={cn(
-          "m-auto max-w-[1120px] flex justify-center flex-wrap px-8 lg:px-0 lg:flex-nowrap mt-[96px]",
+          "m-auto max-w-[1120px] flex justify-center flex-wrap px-4 lg:px-0 lg:flex-nowrap mt-[96px]",
           classes.container
         )}
       >

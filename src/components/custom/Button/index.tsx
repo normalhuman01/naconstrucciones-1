@@ -26,7 +26,7 @@ type TButtonWhiteProps = TButtonProps
 export const ButtonWhite = ({ className, ...props }: TButtonWhiteProps) => {
   return (
     <Button
-      className={cn("py-2 px-8 text-xl bg-white border border-black rounded-full", className, impactFont.className)} {...props} />
+      className={cn("py-2 px-4 text-xl bg-white border border-black rounded-full", className, impactFont.className)} {...props} />
   )
 }
 
@@ -42,6 +42,6 @@ type TButtonBlackMoreProps = TButtonProps
 export const ButtonBlackMore = ({ className, ...props }: TButtonBlackMoreProps) => {
   return (
     <ButtonBlack
-      className={cn("py-2 px-8", className, impactFont.className)} {...props} />
+      className={cn("py-2 px-4", className, impactFont.className)} {...props} />
   )
 }

@@ -13,10 +13,10 @@ export const ContactSection = ({ hiddeTop }: { hiddeTop?: boolean }) => {
           <Heading main="CONTACTO" className="mb-[56px]" />
           <div className="flex gap-3 md:gap-6 mb-[59px]">
             <Link href="#">
-              <Image src="/img/icons/fb.png" width={24} height={24} alt="FB" />
+              <Image className="w-[20px] md:w-[24px]" src="/img/icons/fb.png" width={24} height={24} alt="FB" />
             </Link>
             <Link href="#">
-              <Image
+              <Image className="w-[20px] md:w-[24px]"
                 src="/img/icons/insta.png"
                 width={24}
                 height={24}
@@ -24,7 +24,7 @@ export const ContactSection = ({ hiddeTop }: { hiddeTop?: boolean }) => {
               />
             </Link>
             <Link href="#">
-              <Image
+              <Image className="w-[20px] md:w-[24px]"
                 src="/img/icons/twitter.png"
                 width={24}
                 height={24}
@@ -32,7 +32,7 @@ export const ContactSection = ({ hiddeTop }: { hiddeTop?: boolean }) => {
               />
             </Link>
             <Link href="#">
-              <Image
+              <Image className="w-[20px] md:w-[24px]"
                 src="/img/icons/tiktok.png"
                 width={24}
                 height={24}

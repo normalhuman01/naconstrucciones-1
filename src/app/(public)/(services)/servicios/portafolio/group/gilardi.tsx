@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 export const GilardiOld = () => {
   return (
-    <div className="max-w-[1120px] m-auto flex justify-between items-stretch flex-wrap px-8 lg:px-0">
+    <div className="max-w-[1120px] m-auto flex justify-between items-stretch flex-wrap px-4 lg:px-0">
       <div
         className={cn(
           "flex flex-col justify-between m-auto w-full h-full",
@@ -55,7 +55,7 @@ export const Gilardi = () => {
         className="mt-[40px] w-full"
         alt=""
       />
-      <div className="w-full max-w-[1120px] px-8 xl:px-0 absolute flex justify-end mt-[1rem] text-left top-0 left-[50%] translate-x-[-50%]">
+      <div className="w-full max-w-[1120px] px-4 xl:px-0 absolute flex justify-end mt-[1rem] text-left top-0 left-[50%] translate-x-[-50%]">
         <div className="leading-none m-auto w-full text-right">
           <div>
             <h3

@@ -43,7 +43,7 @@ export const HeroRight = ({
       }}
       {...props}
     >
-      <div className="max-w-[1120px] px-8 xl:px-0 mx-auto flex flex-col items-end justify-center h-full">
+      <div className="max-w-[1120px] px-4 xl:px-0 mx-auto flex flex-col items-end justify-center h-full">
         <h2 className="flex flex-col items-end leading-none">
           <span className={cn("text-[24px] mb-3", impactFont.className)}>
             {top}

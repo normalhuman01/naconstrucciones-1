@@ -1,11 +1,11 @@
-import { arialBlackFont, calibriFont } from "@/lib/fonts";
+import { calibriFont } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { Header } from "../_components/Header";
 
 export const AboutUs = () => {
   return (
-    <div className="px-8 mb-[124px]">
+    <div className="px-4 mb-[124px]">
       <div className="max-w-[1120px] mx-auto flex flex-col items-start gap-5">
         <Header top="SOBRE" main="NOSOTROS" hiddenTop className="mb-8" />
         <div className="flex flex-wrap gap-10">

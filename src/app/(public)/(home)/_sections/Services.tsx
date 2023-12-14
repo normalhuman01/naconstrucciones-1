@@ -2,6 +2,7 @@
 import { ButtonYellow } from "@/components/custom";
 import { arialBlackFont, calibriFont } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 import { HTMLAttributes, ReactNode, useState } from "react";
 import ReactCardFlip from "react-card-flip";
 
@@ -9,11 +10,45 @@ type TCard = Omit<HTMLAttributes<HTMLDivElement>, "title" | "description"> & {
   title: string | ReactNode;
   description: string | ReactNode;
   image: string;
+  showLabel?: string;
 };
-const Card = ({ title, description, image, className = "" }: TCard) => {
+const Card = ({
+  title,
+  description,
+  image,
+  className = "",
+  showLabel = "",
+}: TCard) => {
   const [isFlipped, setIsFlipped] = useState(false);
   return (
-    <div className={cn("max-w-[180px] md:max-w-[260px] w-full mb-5 md:mb-auto", className)}>
+    <div
+      className={cn(
+        "max-w-[155px] md:max-w-[260px] w-full mb-5 md:mb-auto",
+        className
+      )}
+    >
+      {showLabel && (
+        <p className="leading-5">
+          <span
+            className={cn(
+              "text-[20px] md:text-[28px] text-white",
+              arialBlackFont.className
+            )}
+            style={{ WebkitTextStroke: ".75px black" }}
+          >
+            {showLabel}
+          </span>
+          <br />
+          <span
+            className={cn(
+              "text-[20px] md:text-[28px]",
+              arialBlackFont.className
+            )}
+          >
+            {showLabel}
+          </span>
+        </p>
+      )}
       <div
         className="h-[286px] md:h-[400px] text-white"
         onMouseEnter={() => setIsFlipped(true)}
@@ -25,7 +60,7 @@ const Card = ({ title, description, image, className = "" }: TCard) => {
           cardStyles={{ front: { width: "100%" } }}
         >
           <div
-            className="w-[180px] max-w-[180px] md:max-w-[260px] md:w-[260px] h-[286px] md:h-[400px] flex justify-center items-center"
+            className="w-[155px] max-w-[155px] md:max-w-[260px] md:w-[260px] h-[286px] md:h-[400px] flex justify-center items-center"
             style={{
               backgroundImage: `url(${image})`,
               backgroundSize: "cover",
@@ -35,7 +70,7 @@ const Card = ({ title, description, image, className = "" }: TCard) => {
           ></div>
           <div
             className={cn(
-              "bg-dark max-w-[180px] md:max-w-[260px] h-[286px] md:h-[400px] flex justify-center items-center px-5 text-center text-[15px] md:text-[18px]",
+              "bg-dark max-w-[155px] md:max-w-[260px] h-[286px] md:h-[400px] flex justify-center items-center px-2 md:px-5 text-center text-[15px] md:text-[18px]",
               calibriFont.className
             )}
           >
@@ -43,10 +78,53 @@ const Card = ({ title, description, image, className = "" }: TCard) => {
           </div>
         </ReactCardFlip>
       </div>
-      <h4 className={cn("text-[28px] leading-5 mt-2", calibriFont.className)}>
+      <h4
+        className={cn(
+          "text-[20px] md:text-[28px] leading-5 mt-2",
+          calibriFont.className
+        )}
+      >
         {title}
       </h4>
     </div>
+  );
+};
+
+const TextWhite = ({
+  children,
+  className,
+  ...props
+}: HTMLAttributes<HTMLSpanElement>) => {
+  return (
+    <span
+      className={cn(
+        "text-[20px] md:text-[28px] text-white",
+        arialBlackFont.className,
+        className
+      )}
+      style={{ WebkitTextStroke: ".75px black" }}
+      {...props}
+    >
+      {children}
+    </span>
+  );
+};
+const TextBlack = ({
+  children,
+  className,
+  ...props
+}: HTMLAttributes<HTMLSpanElement>) => {
+  return (
+    <span
+      className={cn(
+        "text-[20px] md:text-[28px]",
+        arialBlackFont.className,
+        className
+      )}
+      {...props}
+    >
+      {children}
+    </span>
   );
 };
 
@@ -84,7 +162,9 @@ const Group = ({ children }: { children: ReactNode }) => {
           </span>
         </p>
 
-        <ButtonYellow>VER MÁS</ButtonYellow>
+        <Link href="/servicios/general">
+          <ButtonYellow>VER MÁS</ButtonYellow>
+        </Link>
       </div>
     </div>
   );
@@ -93,41 +173,108 @@ const Group = ({ children }: { children: ReactNode }) => {
 export const Services = () => {
   return (
     <>
-      <div className="max-w-[1120px] mx-auto flex flex-col items-center md:items-start gap-5 px-5 md:px-0">
-        <div className="block md:hidden text-center">
+      <div className="max-w-[1120px] mx-auto flex flex-col items-center md:items-start px-0 md:px-0">
+        <div className="block md:hidden text-center mb-[10px]">
           <span className="text-[12px]">NUESTROS</span>
-          <h3 className="text-2xl font-bold">SERVICIOS</h3>
+          <h3 className="hidden md:block text-2xl font-bold">SERVICIOS</h3>
+        </div>
+
+        <div className="md:hidden grid grid-cols-2 gap-0 leading-none mb-5">
+          <TextBlack className="inline-block text-right pr-1">
+            SERVICIOS
+          </TextBlack>
+          <TextBlack className="relative top-[100%]">GENERALES</TextBlack>
+          <TextWhite className="inline-block text-right pr-1">
+            SERVICIOS
+          </TextWhite>
+          <TextWhite className="relative top-[100%]">GENERALES</TextWhite>
         </div>
 
         <div className="flex md:hidden flex-wrap gap-2 md:gap-5 items-start justify-center">
           <Card
             title="Electricidad"
-            description="Sistemas eléctricos integrales, Diseño de proyecto y ejecución, Sistemas de puesta a tierra, Servicios de mantenimiento."
+            description={
+              <>
+                <ul className="text-left pl-3">
+                  <li className="pl-2 list-disc">Sistemas electricos integrales</li>
+                  <li className="pl-2 list-disc">Diseño de proyecto y ejecución</li>
+                  <li className="pl-2 list-disc">Sistemas de puesta a tierra</li>
+                  <li className="pl-2 list-disc">Servicios de mantenimiento</li>
+                </ul>
+              </>
+            }
             image="/img/services/electricidad.jpg"
             className="md:mb-10"
           />
           <Card
             title="Gasfitería"
-            description="Instalación de griferías, Instalación de Equipos sanitarios, Desatoros en red de desagüe, Mantenimiento y Limpieza de cisternas y tanques elevados, Mantenimiento de bombas."
+            description={
+              <>
+                {/* "Instalación de griferías, Instalación de Equipos sanitarios, Desatoros en red de desagüe, Mantenimiento y Limpieza de cisternas y tanques elevados, Mantenimiento de bombas." */}
+                <ul className="text-left pl-3">
+                  <li className="pl-2 list-disc">Instalación de griferías</li>
+                  <li className="pl-2 list-disc">Instalación de Equipos sanitarios</li>
+                  <li className="pl-2 list-disc">Desatoros en red de desagüe</li>
+                  <li className="pl-2 list-disc">
+                    Mantenimiento y Limpieza de cisternas y tanques elevados
+                  </li>
+                  <li className="pl-2 list-disc">Mantenimiento de bombas</li>
+                </ul>
+              </>
+            }
             image="/img/services/gasfiteria.jpg"
-            className="md:mt-12"
+            className="mt-12"
           />
           <Card
             title="Pintura"
-            description="Pintado de viviendas, empresas , residencias ,departamentos y oficinas, Empastado de paredes en Casco gris, Mantenimiento de paredes salitres e impermeabilización."
+            // description="Pintado de viviendas, empresas , residencias ,departamentos y oficinas, Empastado de paredes en Casco gris, Mantenimiento de paredes salitres e impermeabilización."
+            description={
+              <>
+                <ul className="text-left pl-3">
+                  <li className="pl-2 list-disc">
+                    Pintado de viviendas, empresas , residencias ,departamentos
+                    y oficinas
+                  </li>
+                  <li className="pl-2 list-disc">Empastado de paredes en Casco gris</li>
+                  <li className="pl-2 list-disc">
+                    Mantenimiento de paredes salitres e impermeabilización
+                  </li>
+                </ul>
+              </>
+            }
             image="/img/services/pintura.jpg"
             className="md:mb-10"
           />
           <Card
             title="Drywall"
-            description="Desarrollo sistema drywall, Instalación de cielo raso, Instalación de baldosas acústicas, Cobertura policarbonato, Instalación de tabiquerías de interiores y exteriores."
+            // description="Desarrollo sistema drywall, Instalación de cielo raso, Instalación de baldosas acústicas, Cobertura policarbonato, Instalación de tabiquerías de interiores y exteriores."
+            description={
+              <>
+                <ul className="text-left pl-3">
+                  <li className="pl-2 list-disc">Desarrollo sistema drywall</li>
+                  <li className="pl-2 list-disc">Instalación de cielo raso</li>
+                  <li className="pl-2 list-disc">Instalación de baldosas acústicas</li>
+                  <li className="pl-2 list-disc">Cobertura policarbonato</li>
+                  <li className="pl-2 list-disc">Instalación de tabiquerías de interiores y exteriores</li>
+                </ul>
+              </>
+            }
             image="/img/services/drywall.jpg"
-            className="md:mt-12"
+            className="mt-12"
           />
 
           <Card
             title="Sistema de climatización y aire acondicionado"
-            description="Diseño , suministro , instalación y mantenimiento."
+            // description="Diseño , suministro , instalación y mantenimiento."
+            description={
+              <>
+                <ul className="text-left pl-3">
+                  <li className="pl-2 list-disc">Diseño</li>
+                  <li className="pl-2 list-disc">Suministro</li>
+                  <li className="pl-2 list-disc">Instalación y mantenimiento</li>
+                </ul>
+              </>
+            }
             image="/img/services/climatizacion.webp"
             className="md:mb-10"
           />
@@ -138,9 +285,15 @@ export const Services = () => {
                 Melamine
               </>
             }
-            description="Diseño de todo tipos de muebles hogar y oficina (Melamina y Madera)."
+            description={
+              <>
+                <ul className="text-left pl-3">
+                  <li className="pl-2 list-disc">Diseño de todo tipos de muebles hogar y oficina (Melamina y Madera)</li>
+                </ul>
+              </>
+            }
             image="/img/services/carpinteria.jpg"
-            className="md:mt-12"
+            className="mt-12"
           />
         </div>
 
@@ -148,13 +301,35 @@ export const Services = () => {
           <Group>
             <Card
               title="Electricidad"
-              description="Sistemas eléctricos integrales, Diseño de proyecto y ejecución, Sistemas de puesta a tierra, Servicios de mantenimiento."
+              description={
+                <>
+                  <ul className="text-left pl-3">
+                    <li className="pl-2 list-disc">Sistemas electricos integrales</li>
+                    <li className="pl-2 list-disc">Diseño de proyecto y ejecución</li>
+                    <li className="pl-2 list-disc">Sistemas de puesta a tierra</li>
+                    <li className="pl-2 list-disc">Servicios de mantenimiento</li>
+                  </ul>
+                </>
+              }
               image="/img/services/electricidad.jpg"
               className="md:mb-10"
             />
             <Card
               title="Gasfitería"
-              description="Instalación de griferías, Instalación de Equipos sanitarios, Desatoros en red de desagüe, Mantenimiento y Limpieza de cisternas y tanques elevados, Mantenimiento de bombas."
+              description={
+                <>
+                  {/* "Instalación de griferías, Instalación de Equipos sanitarios, Desatoros en red de desagüe, Mantenimiento y Limpieza de cisternas y tanques elevados, Mantenimiento de bombas." */}
+                  <ul className="text-left pl-3">
+                    <li className="pl-2 list-disc">Instalación de griferías</li>
+                    <li className="pl-2 list-disc">Instalación de Equipos sanitarios</li>
+                    <li className="pl-2 list-disc">Desatoros en red de desagüe</li>
+                    <li className="pl-2 list-disc">
+                      Mantenimiento y Limpieza de cisternas y tanques elevados
+                    </li>
+                    <li className="pl-2 list-disc">Mantenimiento de bombas</li>
+                  </ul>
+                </>
+              }
               image="/img/services/gasfiteria.jpg"
               className="md:mt-12"
             />
@@ -163,13 +338,36 @@ export const Services = () => {
           <Group>
             <Card
               title="Pintura"
-              description="Pintado de viviendas, empresas , residencias ,departamentos y oficinas, Empastado de paredes en Casco gris, Mantenimiento de paredes salitres e impermeabilización."
+              description={
+                <>
+                  <ul className="text-left pl-3">
+                    <li className="pl-2 list-disc">
+                      Pintado de viviendas, empresas , residencias ,departamentos
+                      y oficinas
+                    </li>
+                    <li className="pl-2 list-disc">Empastado de paredes en Casco gris</li>
+                    <li className="pl-2 list-disc">
+                      Mantenimiento de paredes salitres e impermeabilización
+                    </li>
+                  </ul>
+                </>
+              }
               image="/img/services/pintura.jpg"
               className="md:mb-10"
             />
             <Card
               title="Drywall"
-              description="Desarrollo sistema drywall, Instalación de cielo raso, Instalación de baldosas acústicas, Cobertura policarbonato, Instalación de tabiquerías de interiores y exteriores."
+              description={
+                <>
+                  <ul className="text-left pl-3">
+                    <li className="pl-2 list-disc">Desarrollo sistema drywall</li>
+                    <li className="pl-2 list-disc">Instalación de cielo raso</li>
+                    <li className="pl-2 list-disc">Instalación de baldosas acústicas</li>
+                    <li className="pl-2 list-disc">Cobertura policarbonato</li>
+                    <li className="pl-2 list-disc">Instalación de tabiquerías de interiores y exteriores</li>
+                  </ul>
+                </>
+              }
               image="/img/services/drywall.jpg"
               className="md:mt-12"
             />
@@ -178,7 +376,15 @@ export const Services = () => {
           <Group>
             <Card
               title="Sistema de climatización y aire acondicionado"
-              description="Diseño , suministro , instalación y mantenimiento."
+              description={
+                <>
+                  <ul className="text-left pl-3">
+                    <li className="pl-2 list-disc">Diseño</li>
+                    <li className="pl-2 list-disc">Suministro</li>
+                    <li className="pl-2 list-disc">Instalación y mantenimiento</li>
+                  </ul>
+                </>
+              }
               image="/img/services/climatizacion.jpg"
               className="md:mb-10"
             />
@@ -189,7 +395,13 @@ export const Services = () => {
                   Melamine
                 </>
               }
-              description="Diseño de todo tipos de muebles hogar y oficina (Melamina y Madera)."
+              description={
+                <>
+                  <ul className="text-left pl-3">
+                    <li className="pl-2 list-disc">Diseño de todo tipos de muebles hogar y oficina (Melamina y Madera)</li>
+                  </ul>
+                </>
+              }
               image="/img/services/melamine.jpg"
               className="md:mt-12"
             />

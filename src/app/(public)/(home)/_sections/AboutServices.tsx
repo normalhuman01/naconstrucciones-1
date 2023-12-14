@@ -1,9 +1,6 @@
 import {
-  ButtonBlack,
   ButtonBlackMore,
-  ButtonYellow,
 } from "@/components/custom";
-import Image from "next/image";
 import Link from "next/link";
 import { Header } from "../_components/Header";
 import { cn } from "@/lib/utils";
@@ -35,7 +32,7 @@ const Card = ({ title, description, image, link, classesIcon }: TCard) => {
         </div>
         <p
           className={cn(
-            "text-[19px] font-light text-justify leading-6",
+            "text-[16px] md:text-[19px] font-light text-justify leading-5 md:leading-6",
             calibriFont.className
           )}
         >
@@ -51,7 +48,7 @@ const Card = ({ title, description, image, link, classesIcon }: TCard) => {
 
 export const AboutServices = () => {
   return (
-    <div className="max-w-[1120px] px-8 lg:px-0 mx-auto flex flex-col items-start gap-3 mb-[124px]">
+    <div className="max-w-[1120px] px-4 lg:px-0 mx-auto flex flex-col items-start gap-3 mb-[124px]">
       <Header top="NUESTROS" main="SERVICIOS" hiddenTop className="mb-8" />
       <div className="flex flex-wrap items-stretch w-full gap-3 justify-between md:justify-between">
         <Card

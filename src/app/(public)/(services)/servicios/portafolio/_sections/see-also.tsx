@@ -14,7 +14,7 @@ export const SeeAlso = ({
   indexCoffeShop,
 }: TSeeAlsoProps) => {
   return (
-    <div className="flex flex-col gap-8 items-center text-center mt-[60px] bg-[#E9E6E5] px-8 lg:px-0">
+    <div className="flex flex-col gap-8 items-center text-center mt-[60px] bg-[#E9E6E5] px-4 lg:px-0">
       <p className="leading-6 mt-[96px]">
         <span className={cn("text-[32px]", arialBlackFont.className)}>
           ARQUITECTURA EN CAFETERÍAS

@@ -12,7 +12,7 @@ export const Header = async () => {
 
   return (
     <header className="top-0 sticky z-[9999] bg-white shadow-md">
-      <div className="max-w-[1120px] mx-auto pt-7 pb-4 px-8 xl:px-0 flex justify-between items-center">
+      <div className="max-w-[1120px] mx-auto pt-7 pb-4 px-4 xl:px-0 flex justify-between items-center">
         <Link href="/" className="cursor-pointer">
           <img
             src="/img/logo/logo-large.svg"

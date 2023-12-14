@@ -1,11 +1,19 @@
+"use client";
 import { arialBlackFont, calibriFont } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { useState } from "react";
 
 export const Benefits = () => {
+  const [showSecurity, setShowSecurity] = useState(false);
+  const [showAdvice, setShowAdvice] = useState(false);
+
   return (
-    <div className="bg-dark py-[60px] px-8 flex flex-wrap justify-center items-start gap-10 text-center text-white">
-      <div className="flex flex-col items-center w-[260px] h-[220px]">
+    <div className="bg-dark py-[60px] px-2 flex flex-wrap justify-center items-start gap-5 md:gap-10 text-center text-white">
+      <div
+        className="flex flex-col items-center w-[150px] md:w-[260px] min-h-[220px]"
+        onClick={() => setShowSecurity(!showSecurity)}
+      >
         <div className="bg-white overflow-hidden flex justify-center items-center p-3 rounded-full w-[90px] h-[90px] mb-4">
           <Image
             src="/img/icons/certificado-icon.png"
@@ -17,17 +25,25 @@ export const Benefits = () => {
         </div>
         <h3
           className={cn(
-            "font-bold text-[19px] whitespace-nowrap",
+            "font-bold text-[19px] whitespace-wrap md:whitespace-nowrap",
             calibriFont.className
           )}
         >
           Seguridad en tus Compras
         </h3>
-        <p className={cn("text-[19px]", calibriFont.className)}>
+        {showSecurity && (
+          <p className={cn("md:hidden text-[19px]", calibriFont.className)}>
+            Contamos con certificado para todas tus compras
+          </p>
+        )}
+        <p className={cn("hidden md:block text-[19px]", calibriFont.className)}>
           Contamos con certificado para todas tus compras
         </p>
       </div>
-      <div className="flex flex-col items-center w-[260px] h-[220px]">
+      <div
+        className="flex flex-col items-center w-[150px] md:w-[260px] min-h-[220px]"
+        onClick={() => setShowAdvice(!showAdvice)}
+      >
         <div className="bg-white overflow-hidden flex justify-center items-center p-3 rounded-full w-[90px] h-[90px] mb-4">
           <Image
             src="/img/icons/callcenter.png"
@@ -39,13 +55,19 @@ export const Benefits = () => {
         </div>
         <h3
           className={cn(
-            "font-bold text-[19px] whitespace-nowrap",
+            "font-bold text-[19px] whitespace-wrap md:whitespace-nowrap",
             calibriFont.className
           )}
         >
           Asesoría personalizada
         </h3>
-        <p className={cn("text-[19px]", calibriFont.className)}>
+        {showAdvice && (
+          <p className={cn("md:hidden text-[19px]", calibriFont.className)}>
+            Un ejecutivo de cuentas y un staff de cotizadores te acompañarán en
+            tu compra
+          </p>
+        )}
+        <p className={cn("hidden md:block text-[19px]", calibriFont.className)}>
           Un ejecutivo de cuentas y un staff de cotizadores te acompañarán en tu
           compra
         </p>
@@ -77,7 +99,7 @@ export const Benefits = () => {
           ventas@naconstrucciones.com
         </span>
       </div>
-      <div className="w-[260px] h-[220px] relative">
+      <div className="w-[230px] md:w-[260px] h-[220px] relative">
         <img
           src="/img/others/delivery-packages.png"
           width={1600}

@@ -45,7 +45,7 @@ export const Footer = () => {
               className="my-4"
             />
             {/* <MdOutlineEmail fontSize={44} color="#737373" /> */}
-            <span className={cn("text-[19px] font-light break-all", calibriFont.className)}>{config.email}</span>
+            <span className={cn("text-[19px] font-light", calibriFont.className)}>{config.email}</span>
           </div>
         </div>
         <img src="/img/icons/redes.png" width={180} height={60} alt="" className="mt-8 mb-3" />
