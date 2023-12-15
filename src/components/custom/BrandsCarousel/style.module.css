@@ -1,5 +1,5 @@
 .container {
-  animation: animation 50s linear infinite forwards;
+  animation: animationMobile 60s linear infinite forwards;
 }
 
 @keyframes animation {
@@ -8,5 +8,20 @@
   }
   100% {
     transform: translateX(-300%);
+  }
+}
+
+@keyframes animationMobile {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1500%);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    animation: animation 40s linear infinite forwards;
   }
 }

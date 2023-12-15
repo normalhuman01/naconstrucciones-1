@@ -7,15 +7,6 @@ import { useEffect, useRef, useState } from "react";
 export const Video = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isDragging, setIsDragging] = useState(false);
-
-  const handleDragStart = () => {
-    setIsDragging(true);
-  };
-
-  const handleDragEnd = () => {
-    setIsDragging(false);
-  };
 
   return (
     <div className="flex items-center justify-center flex-col my-10">
@@ -30,7 +21,7 @@ export const Video = () => {
       <div className="relative inline-flex cursor-pointer">
         <video
           ref={videoRef}
-          src="/video/portfolio.mp4"
+          src="/video/portfolio-new.mp4"
           width={685}
           height={385}
           controls={isPlaying}

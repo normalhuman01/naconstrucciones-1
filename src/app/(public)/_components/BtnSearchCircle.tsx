@@ -8,7 +8,7 @@ export const BtnSearchCircle = () => {
   const [search, setSearch] = useState("");
   const router = useRouter();
   return (
-    <div className="relative w-full">
+    <div className="hidden md:block relative w-full">
       <div className="absolute w-full mt-[-2px] top-0 right-0 flex justify-end">
         {open && (
           <input

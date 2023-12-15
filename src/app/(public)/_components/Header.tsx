@@ -11,9 +11,9 @@ export const Header = async () => {
   ).then((res) => res.json())) as TProductCategory[];
 
   return (
-    <header className="top-0 sticky z-[9999] bg-white shadow-md">
-      <div className="max-w-[1120px] mx-auto pt-7 pb-4 px-4 xl:px-0 flex justify-between items-center">
-        <Link href="/" className="cursor-pointer">
+    <header className="top-0 sticky z-[4000] bg-white shadow-md">
+      <div className="max-w-[1120px] mx-auto pt-7 pb-4 px-4 pl-2 xl:px-0 flex justify-between items-center">
+        <Link href="/" className="cursor-pointer w-[232px] md:w-auto">
           <img
             src="/img/logo/logo-large.svg"
             width={240}

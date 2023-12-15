@@ -12,14 +12,14 @@ export const CardCategories = ({
 }) => {
   return (
     <div
-      className="inline-flex flex-wrap justify-center gap-4 m-auto my-5 max-w-[794px]"
+      className="inline-flex flex-wrap justify-center gap-2 md:gap-4 m-auto my-5 max-w-[920px]"
       id="products"
     >
       {categories.map((_category) => (
         <Link
           href={`/productos/epp/${_category.slug}#products`}
           className={cn(
-            "w-[168px] h-[84px] text-[21px] flex justify-center items-center p-2",
+            "w-[168px] h-[56px] md:h-[84px] text-[18px] md:text-[21px] flex justify-center items-center p-2",
             "text-center border-black border-[2px] rounded-2xl cursor-pointer leading-none",
             category && _category.id === category.id && "bg-[#FEE21B] font-bold",
             calibriFont.className

@@ -45,7 +45,7 @@ export const PseudoBreadCrumbs = ({
   });
   return (
     <header
-      className={cn("bg-dark text-white p-5 sticky top-[106px] z-[100]", className)}
+      className={cn("bg-dark text-white p-5 sticky top-[104px] md:top-[106px] z-[100]", className)}
     >
       <div className="max-w-[1120px] mx-auto flex flex-wrap gap-6 items-center">
         <h1 className={cn("text-[20px] md:text-[32px] font-bold", arialBlackFont.className)}>

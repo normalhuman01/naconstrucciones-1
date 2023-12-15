@@ -15,7 +15,7 @@ export const Cards = ({
   }[];
 } & React.HTMLAttributes<HTMLDivElement>) => {
   return (
-    <div className={cn("max-w-[1120px] m-auto", className)} {...props}>
+    <div className={cn("max-w-[1120px] m-auto px-4 lg:px-0", className)} {...props}>
       <div className="flex gap-y-11 justify-evenly lg:justify-between py-10 flex-wrap">
         {cards.map((card, index) => {
           const title = load(card.title).text();

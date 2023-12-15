@@ -4,10 +4,10 @@ import { cn } from "@/lib/utils";
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#2F2F2F] text-white">
+    <footer className="bg-[#2F2F2F] text-white overflow-hidden">
       <div className="max-w-[1120px] mx-auto flex flex-col items-center py-3">
         <img
-          src="/img/logo/logo-cuadrado-gris.jpg"
+          src="/img/logo/logo-square-gray.svg"
           width={220}
           height={160}
           alt=""

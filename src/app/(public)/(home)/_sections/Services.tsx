@@ -23,7 +23,7 @@ const Card = ({
   return (
     <div
       className={cn(
-        "max-w-[155px] md:max-w-[260px] w-full mb-5 md:mb-auto",
+        "max-w-[160px] md:max-w-[260px] w-full mb-5 md:mb-auto",
         className
       )}
     >
@@ -60,7 +60,7 @@ const Card = ({
           cardStyles={{ front: { width: "100%" } }}
         >
           <div
-            className="w-[155px] max-w-[155px] md:max-w-[260px] md:w-[260px] h-[286px] md:h-[400px] flex justify-center items-center"
+            className="w-[160px] max-w-[160px] md:max-w-[260px] md:w-[260px] h-[286px] md:h-[400px] flex justify-center items-center"
             style={{
               backgroundImage: `url(${image})`,
               backgroundSize: "cover",
@@ -70,7 +70,7 @@ const Card = ({
           ></div>
           <div
             className={cn(
-              "bg-dark max-w-[155px] md:max-w-[260px] h-[286px] md:h-[400px] flex justify-center items-center px-2 md:px-5 text-center text-[15px] md:text-[18px]",
+              "bg-dark max-w-[160px] md:max-w-[260px] h-[286px] md:h-[400px] flex justify-center items-center px-2 md:px-5 text-center text-[15px] md:text-[18px]",
               calibriFont.className
             )}
           >
@@ -175,7 +175,7 @@ export const Services = () => {
     <>
       <div className="max-w-[1120px] mx-auto flex flex-col items-center md:items-start px-0 md:px-0">
         <div className="block md:hidden text-center mb-[10px]">
-          <span className="text-[12px]">NUESTROS</span>
+          <span className="hidden md:block text-[12px]">NUESTROS</span>
           <h3 className="hidden md:block text-2xl font-bold">SERVICIOS</h3>
         </div>
 

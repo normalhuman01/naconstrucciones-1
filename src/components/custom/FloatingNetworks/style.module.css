@@ -11,3 +11,21 @@
 .link:hover div {
   transform: translateX(calc(-100% - 40px + 1px));
 }
+
+.link2 span {
+  z-index: 1000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.link2 div {
+  transition: all 0.1s ease-in-out;
+  font-size: 14px;
+  padding-left: 12px;
+  padding-right: 1px;
+  color: transparent;
+  padding-right: 40px;
+  left: 0;
+}
+.link2:hover div {
+  transform: translateX(calc(-100% + 41px));
+  color: white;
+}

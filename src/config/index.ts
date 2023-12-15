@@ -10,6 +10,7 @@ export const config = {
   phoneGroupedBy3,
   email: "ventas@naconstrucciones.com",
   address: "Av. Circunvalación del Golf los Incas 206, Santiago de Surco",
+  wspLink: `https://wa.me/+51${phone}?text=`,
   networks: {
     facebook: "https://www.facebook.com/naconstrucciones/",
     instagram: "https://www.instagram.com/naconstrucciones/",

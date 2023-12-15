@@ -26,16 +26,16 @@ export const ProductCard = ({
   const strContent = load(content).text();
 
   return (
-    <div className="flex flex-1 flex-col min-w-[245px] gap-5 justify-between rounded-3xl shadow-strong overflow-hidden">
+    <div className="flex flex-1 flex-col min-w-[168px] md:min-w-[245px] gap-5 justify-between rounded-3xl shadow-strong overflow-hidden">
       <div>
-        <header className=" h-[228px] relative p-2">
+        <header className="h-auto md:h-[228px] relative p-2">
           <ImageWithFallback
             className="w-full h-full"
             src={mediaUrl}
             fallbackSrc={fallbackMediaUrl}
           />
         </header>
-        <main className={cn("px-5 text-[19px]", calibriFont.className)}>
+        <main className={cn("px-2 md:px-5 text-[18px] md:text-[19px]", calibriFont.className)}>
           <h4 className="font-bold leading-none mt-3">{title}</h4>
           <p className={cn("font-light")}>{strContent}</p>
         </main>

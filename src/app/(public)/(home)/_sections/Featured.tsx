@@ -6,6 +6,7 @@ import Image from "next/image";
 import { arialBlackFont, calibriFont } from "@/lib/fonts";
 import Link from "next/link";
 import { config } from "@/config";
+import { FeaturedModal } from "./Modal";
 
 type TBlackCircleProps = HTMLAttributes<HTMLDivElement>;
 const BlackCircle = ({ className, ...props }: TBlackCircleProps) => {
@@ -31,14 +32,15 @@ const Left = () => {
         alt="boot"
         className="absolute top-[-20px] md:top-[-60px] w-[200px] md:min-w-[320px] md:h-[320px]"
       /> */}
-      <img
+      {/* <img
         src={"/img/home/boot_featured_circle.png"}
-        width={330}
+        width={360}
         height={305}
         alt="boot"
         // className="scale-90"
         // className="absolute bottom-[20px] opacity-[.1] blur-sm filter backdrop-blur-5 dark w-[200px] md:min-w-[320px] md:h-[40px]"
-      />
+      /> */}
+      <FeaturedModal />
     </div>
   );
 };
@@ -54,9 +56,9 @@ const Bg = () => {
 
 export const Featured = () => {
   return (
-    <div className="relative py-4 px-5">
+    <div className="relative py-4 px-2 md:px-5">
       <Bg />
-      <div className="bg-white shadow-strong rounded-[40px] p-5 flex justify-center items-center gap-4 md:gap-[60px] max-w-[1120px]	m-auto">
+      <div className="bg-white shadow-strong rounded-[40px] py-5 px-2 md:p-5 flex justify-center items-center gap-2 md:gap-[60px] max-w-[1120px]	m-auto">
         <Left />
         <div className="flex flex-col justify-between h-full gap-2 items-start">
           <div className="pt-6">
@@ -82,7 +84,7 @@ export const Featured = () => {
               <br />
               <strong
                 className={cn(
-                  "text-xl md:text-[51.5px] leading-[36px] font-bold text-white",
+                  "text-xl md:text-[51.5px] leading-[0] md:leading-[36px] font-bold text-white",
                   arialBlackFont.className
                 )}
                 style={{ WebkitTextStroke: "1px black" }}

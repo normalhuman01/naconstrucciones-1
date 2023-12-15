@@ -6,6 +6,8 @@ import { FaWhatsapp } from "react-icons/fa";
 import { config } from "@/config";
 import classes from "./style.module.css";
 import { Lato } from "next/font/google";
+import Image from "next/image";
+import { HTMLAttributes } from "react";
 
 const lato = Lato({
   weight: "700",
@@ -15,15 +17,25 @@ const lato = Lato({
 type TCardProps = {
   href: string;
   children: React.ReactNode;
-  className: string;
   title: string;
-};
-const Card = ({ href, children, title, className }: TCardProps) => {
+  styleTitle?: {
+    [key: string]: string | number;
+  };
+} & HTMLAttributes<HTMLAnchorElement>;
+const Card = ({
+  href,
+  children,
+  title,
+  style,
+  className,
+  styleTitle,
+}: TCardProps) => {
   return (
     <a
       href={href}
       target="_blank"
       className={cn("relative", classes.link, className)}
+      style={style}
     >
       <div
         className={cn(
@@ -31,19 +43,54 @@ const Card = ({ href, children, title, className }: TCardProps) => {
           className,
           lato.className
         )}
+        style={styleTitle}
       >
         {title}
       </div>
       <span
-        className={cn(
-          "flex justify-center items-center w-[40px] h-[40px]",
-        )}
+        className={cn("flex justify-center items-center w-[40px] h-[40px]")}
       >
         {children}
       </span>
     </a>
   );
 };
+
+
+const Card2 = ({
+  href,
+  children,
+  title,
+  style,
+  className,
+  styleTitle,
+}: TCardProps) => {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      className={cn("relative", classes.link2, className)}
+      style={style}
+    >
+      <div
+        className={cn(
+          "absolute h-[40px] top-0 left-[100%] text-white flex justify-center items-center z-[-1]",
+          className,
+          lato.className
+        )}
+        style={styleTitle}
+      >
+        {title}
+      </div>
+      <span
+        className={cn("flex justify-center items-center w-[40px] h-[40px]")}
+      >
+        {children}
+      </span>
+    </a>
+  );
+};
+
 
 export const FloatingNetworks = () => {
   return (
@@ -55,13 +102,21 @@ export const FloatingNetworks = () => {
       >
         <FaFacebookF className="text-white" />
       </Card>
-      <Card
+      <Card2
         title="Instagram"
         href="https://facebook.com/naconstrucciones"
-        className="bg-[#ea6cca]"
+        // className="bg-[#d6249f]"
+        styleTitle={{
+          // backgroundImage: `url(/img/others/bg-instagram.png)`
+          background:
+            "radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)",
+            // "radial-gradient(circle at 107% 30%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)",
+        }}
+        // className="bg-[#ea6cca]"
       >
+        {/* <Image src="/img/logo/instagram.webp" width={25} height={25} alt="logo" /> */}
         <FaInstagram className="text-white" />
-      </Card>
+      </Card2>
       <Card
         title="Tiktok"
         href="https://facebook.com/naconstrucciones"

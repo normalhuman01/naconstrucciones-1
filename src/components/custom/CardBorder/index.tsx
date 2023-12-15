@@ -58,8 +58,8 @@ export const CardBorder = ({
           )}
         </header>
         <main className={cn("px-4", calibriFont.className)}>
-          <h4 className="font-bold text-[19px]">{title}</h4>
-          <p className="font-light text-[19px] leading-[22px]">{description}</p>
+          <h4 className="font-bold text-[19px] leading-[.9] md:leading-[1.2] my-2">{title}</h4>
+          <p className="font-light text-[19px] leading-[.9] md:leading-[1.2]">{description}</p>
         </main>
       </div>
       <footer className="px-5 pb-4">
