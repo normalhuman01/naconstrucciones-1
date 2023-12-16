@@ -58,9 +58,10 @@ const Page = async ({ ...props }: TPageProps) => {
     )) as TProductCategory[]
   ).reverse();
 
-  const products = (await fetch(
-    WP_URL + `/epp?_embed&page=${page}&per_page=${per_page}`
-  ).then((res) => {
+
+  const urlProducts = WP_URL + `/epp?_embed&page=${page}&per_page=${per_page}`
+
+  const products = (await fetch(urlProducts).then((res) => {
     metaProducts.total = Number(res.headers.get("X-Wp-Total"));
     metaProducts.totalPages = Number(res.headers.get("X-Wp-Totalpages"));
     return res.json();
@@ -83,8 +84,8 @@ const Page = async ({ ...props }: TPageProps) => {
           focusedIndex - 1 === i
           ? i
           : focusedIndex < i
-          ? "pre"
-          : "post"
+            ? "pre"
+            : "post"
         : i;
     }
   );
