@@ -56,9 +56,10 @@ const Page = async ({ params, ...props }: TPageProps) => {
 
   const category = categories.find((cat) => cat.slug === slug);
 
-  const products = (await fetch(
-    WP_URL +
-      `/epp?_embed&page=${page}&per_page=${per_page}&product_category=${category?.id}`
+  const urlProducts = WP_URL +
+    `/epp?_embed&page=${page}&per_page=${per_page}&product_category=${category?.id}`
+  
+  const products = (await fetch(urlProducts
   ).then((res) => {
     metaProducts.total = Number(res.headers.get("X-Wp-Total"));
     metaProducts.totalPages = Number(res.headers.get("X-Wp-Totalpages"));
