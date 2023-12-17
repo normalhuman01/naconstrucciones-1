@@ -37,7 +37,7 @@ export const ProductCard = ({
         </header>
         <main className={cn("px-2 md:px-5 text-[18px] md:text-[19px]", calibriFont.className)}>
           <h4 className="font-bold leading-none mt-3">{title}</h4>
-          <p className={cn("font-light")}>{strContent}</p>
+          <p className={cn("font-light leading-[1] mt-1")}>{strContent}</p>
         </main>
       </div>
       <footer className="px-5 pb-4">

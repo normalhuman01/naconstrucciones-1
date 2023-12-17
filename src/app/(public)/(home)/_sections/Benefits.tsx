@@ -25,18 +25,18 @@ export const Benefits = () => {
         </div>
         <h3
           className={cn(
-            "font-bold text-[19px] whitespace-wrap md:whitespace-nowrap",
+            "font-bold text-[19px] whitespace-wrap md:whitespace-nowrap mb-2 leading-[1]",
             calibriFont.className
           )}
         >
           Seguridad en tus Compras
         </h3>
         {showSecurity && (
-          <p className={cn("md:hidden text-[19px]", calibriFont.className)}>
+          <p className={cn("md:hidden text-[19px] leading-none", calibriFont.className)}>
             Contamos con certificado para todas tus compras
           </p>
         )}
-        <p className={cn("hidden md:block text-[19px]", calibriFont.className)}>
+        <p className={cn("hidden md:block text-[19px] leading-none", calibriFont.className)}>
           Contamos con certificado para todas tus compras
         </p>
       </div>
@@ -55,19 +55,19 @@ export const Benefits = () => {
         </div>
         <h3
           className={cn(
-            "font-bold text-[19px] whitespace-wrap md:whitespace-nowrap",
+            "font-bold text-[19px] whitespace-wrap md:whitespace-nowrap mb-2 leading-[1]",
             calibriFont.className
           )}
         >
           Asesoría personalizada
         </h3>
         {showAdvice && (
-          <p className={cn("md:hidden text-[19px]", calibriFont.className)}>
+          <p className={cn("md:hidden text-[19px] leading-none", calibriFont.className)}>
             Un ejecutivo de cuentas y un staff de cotizadores te acompañarán en
             tu compra
           </p>
         )}
-        <p className={cn("hidden md:block text-[19px]", calibriFont.className)}>
+        <p className={cn("hidden md:block text-[19px] leading-none", calibriFont.className)}>
           Un ejecutivo de cuentas y un staff de cotizadores te acompañarán en tu
           compra
         </p>

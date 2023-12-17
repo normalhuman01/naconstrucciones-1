@@ -63,39 +63,43 @@ const Page = () => {
             alt="Tornillos"
           />
         </div>
-        <h5
-          className={cn("text-center text-[29.5px]", arialBlackFont.className)}
-        >
+        <h5 className={cn("text-center text-[23px]", arialBlackFont.className)}>
           OFRECEMOS
         </h5>
         <ol
           className={cn(
-            "font-bold text-[19px] leading-9",
+            "font-bold text-[19px] leading-[1] md:leading-5",
             calibriFont.className
           )}
         >
-          <li>
-            <span className="mr-3 md:mr-10">1</span> Herramientas manuales y eléctricas
-            para cada tarea.
+          <li className="mb-[1rem] flex">
+            <span className="mr-3 md:mr-10">1.</span>
+            <p>Herramientas manuales y eléctricas para cada tarea.</p>
           </li>
-          <li>
-            <span className="mr-3 md:mr-10">2</span> Materiales de construcción
-            duraderos y confiables.
+          <li className="mb-[1rem] flex">
+            <span className="mr-3 md:mr-10">2.</span>
+            <p>Materiales de construcción duraderos y confiables.</p>
           </li>
-          <li>
-            <span className="mr-3 md:mr-10">3</span> Suministros para proyectos de
-            ingeniería y campo.
+          <li className="mb-[1rem] flex">
+            <span className="mr-3 md:mr-10">3.</span>
+            <p>Suministros para proyectos de ingeniería y campo.</p>
           </li>
-          <li>
-            <span className="mr-3 md:mr-10">4</span> Productos de plomería, electricidad
-            y saneamiento.
+          <li className="mb-[1rem] flex">
+            <span className="mr-3 md:mr-10">4.</span>
+            <p>Productos de plomería, electricidad y saneamiento.</p>
           </li>
-          <li>
-            <span className="mr-3 md:mr-10">5</span> Soluciones en ferretería para cada
-            desafío.
+          <li className="flex">
+            <span className="mr-3 md:mr-10">5.</span>
+            <p>Soluciones en ferretería para cada desafío.</p>
           </li>
         </ol>
-        <Link href={config.wspLink + "Hola, me gustaría más información sobre sus productos de Ferretería"} target="_blank">
+        <Link
+          href={
+            config.wspLink +
+            "Hola, me gustaría más información sobre sus productos de Ferretería"
+          }
+          target="_blank"
+        >
           <ButtonBlack className="mb-5">CONSÚLTANOS</ButtonBlack>
         </Link>
         <Image

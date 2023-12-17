@@ -36,7 +36,7 @@ export const Items = ({
               </div>
               <h3
                 className={cn(
-                  "text-[13px] md:text-[19px] lg:text-[26px] leading-none font-bold uppercase mb-3",
+                  "text-[11px] md:text-[19px] lg:text-[26px] leading-none font-bold uppercase mb-0 md:mb-3",
                   className,
                   arialBlackFont.className
                 )}
@@ -46,7 +46,7 @@ export const Items = ({
               ></h3>
               <p
                 className={cn(
-                  "text-[13px] md:text-[16px] lg:text-[19px] leading-5 mb-4",
+                  "text-[13px] md:text-[16px] lg:text-[19px] leading-[1] mb-4",
                   className,
                   calibriFont.className
                 )}

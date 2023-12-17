@@ -65,7 +65,7 @@ export const Featured = () => {
             <p className="mb-[12px]">
               <strong
                 className={cn(
-                  "text-xl md:text-[56px] leading-[0] font-bold text-white",
+                  "text-[29px] md:text-[56px] leading-[0] font-bold text-white",
                   arialBlackFont.className
                 )}
                 style={{ WebkitTextStroke: "1px black" }}
@@ -75,7 +75,17 @@ export const Featured = () => {
               <br />
               <strong
                 className={cn(
-                  "text-[25.25px] leading-[0] font-bold tracking-wide",
+                  "hidden md:inline-block",
+                  "text-[1.25rem] md:text-[25.25px] leading-[1] font-bold tracking-wide",
+                  arialBlackFont.className
+                )}
+              >
+                PRODUCTOS DESTACADOS
+              </strong>
+              <strong
+                className={cn(
+                  "inline-block md:hidden",
+                  "text-[23px] md:text-[25.25px] leading-[.85] font-bold tracking-wide",
                   arialBlackFont.className
                 )}
               >
@@ -84,7 +94,7 @@ export const Featured = () => {
               <br />
               <strong
                 className={cn(
-                  "text-xl md:text-[51.5px] leading-[0] md:leading-[36px] font-bold text-white",
+                  "text-[29px] md:text-[51.5px] leading-[1.1rem] md:leading-[36px] font-bold text-white",
                   arialBlackFont.className
                 )}
                 style={{ WebkitTextStroke: "1px black" }}
@@ -95,14 +105,14 @@ export const Featured = () => {
             <p className="flex flex-col">
               <strong
                 className={cn(
-                  "font-bold text-[23.2px] leading-5",
+                  "font-bold text-[19px] md:text-[23.2px] leading-5",
                   calibriFont.className
                 )}
               >
                 Zapatilla Conquest Stone High Puma
               </strong>
               <span
-                className={cn("font-light text-[23.2px]", calibriFont.className)}
+                className={cn("font-light text-[19px] md:text-[23.2px]", calibriFont.className)}
               >
                 Zapato de Seguridad
               </span>

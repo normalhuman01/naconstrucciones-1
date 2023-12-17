@@ -1,10 +1,10 @@
-import {
-  ButtonBlackMore,
-} from "@/components/custom";
+"use client";
+import { ButtonBlackMore } from "@/components/custom";
 import Link from "next/link";
 import { Header } from "../_components/Header";
 import { cn } from "@/lib/utils";
 import { calibriFont } from "@/lib/fonts";
+import { useState } from "react";
 
 type TCard = {
   title: string;
@@ -14,10 +14,11 @@ type TCard = {
   classesIcon?: string;
 };
 const Card = ({ title, description, image, link, classesIcon }: TCard) => {
+  const [open, setOpen] = useState(false);
   return (
-    <div className="flex flex-1 flex-col items-start justify-between gap-10 max-w-[250px]">
+    <div className="flex flex-1 flex-col items-start justify-between gap-10 max-w-[250px] w-full">
       <div className="flex flex-col gap-3 items-start">
-        <div className="w-full mb-3">
+        <div className="w-full mb-3 cursor-pointer" onClick={() => setOpen(!open)}>
           <img
             src={image}
             width={36}
@@ -28,11 +29,23 @@ const Card = ({ title, description, image, link, classesIcon }: TCard) => {
           <h4 className={cn("text-[21px] font-bold", calibriFont.className)}>
             {title}
           </h4>
-          <hr className="border-dark border-1" />
+          <hr className="border-dark border-1 w-full" />
         </div>
+        {open && (
+          <p
+            className={cn(
+              "block md:hidden text-[16px] md:text-[19px] font-light text-justify leading-[1]",
+              // "text-[16px] md:text-[19px] font-light text-justify leading-5 md:leading-6",
+              calibriFont.className
+            )}
+          >
+            {description}
+          </p>
+        )}
         <p
           className={cn(
-            "text-[16px] md:text-[19px] font-light text-justify leading-5 md:leading-6",
+            "hidden md:block text-[16px] md:text-[19px] font-light text-justify leading-[1]",
+            // "text-[16px] md:text-[19px] font-light text-justify leading-5 md:leading-6",
             calibriFont.className
           )}
         >

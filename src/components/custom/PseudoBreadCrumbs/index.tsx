@@ -20,7 +20,7 @@ export const PseudoBreadCrumbs = ({
   const children = actions.map((action, index) => {
     const isMatch = pathname.includes(action.link);
     return (
-      <Fragment key={index}>
+      <div key={index} className="flex items-center gap-3 md:gap-6">
         {index ? (
           <Image
             src="/img/icons/right.png"
@@ -28,7 +28,14 @@ export const PseudoBreadCrumbs = ({
             height={40}
             alt="Right"
           />
-        ) : null}
+        ) : (
+          <Image
+            src="/img/icons/double-right.png"
+            width={30}
+            height={40}
+            alt="Right"
+          />
+        )}
         <Link href={action.link}>
           <h2
             className={cn(
@@ -40,27 +47,28 @@ export const PseudoBreadCrumbs = ({
             {action.label}
           </h2>
         </Link>
-      </Fragment>
+      </div>
     );
   });
   return (
     <header
-      className={cn("bg-dark text-white p-5 sticky top-[104px] md:top-[106px] z-[100]", className)}
+      className={cn(
+        "bg-dark text-white p-5 sticky top-[104px] md:top-[106px] z-[100]",
+        className
+      )}
     >
-      <div className="max-w-[1120px] mx-auto flex flex-wrap gap-6 items-center">
-        <h1 className={cn("text-[20px] md:text-[32px] font-bold", arialBlackFont.className)}>
+      <div className="max-w-[1120px] mx-auto flex gap-3 md:gap-6 items-start md:items-center">
+        <h1
+          className={cn(
+            "text-[23px] md:text-[32px]",
+            arialBlackFont.className
+          )}
+        >
           {title}
         </h1>
-        {children.length && (
-          <Image
-            src="/img/icons/double-right.png"
-            width={30}
-            height={40}
-            alt="Right"
-          />
-        )}
 
-        {children}
+        <div className="flex md:hidden flex-wrap gap-6">{children}</div>
+        <div className="hidden md:flex flex-wrap gap-6">{children}</div>
       </div>
     </header>
   );

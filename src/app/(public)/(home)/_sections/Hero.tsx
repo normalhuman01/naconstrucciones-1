@@ -5,7 +5,7 @@ export const Hero = () => {
   return (
     <div className="text-center max-w-[1120px] mx-auto px-5 py-[124px]">
       <span className={cn("text-[#7F7F7F] text-[21px]", calibriFont.className)}>SOMOS EXPERTOS EN SERVICIOS DE:</span>
-      <h3 className={cn("mb-[50px] mt-2 text-[43px] md:text-[64px] leading-[3.5rem] font-bold", calibriFont.className)}>
+      <h3 className={cn("mb-[50px] mt-2 text-[43px] md:text-[64px] leading-[2.25rem] md:leading-[3.5rem] font-bold", calibriFont.className)}>
         INGENIERÍA, CONSTRUCCIÓN Y <br /> MANTENIMIENTO
       </h3>
 

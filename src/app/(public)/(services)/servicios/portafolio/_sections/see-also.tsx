@@ -16,11 +16,11 @@ export const SeeAlso = ({
   return (
     <div className="flex flex-col gap-8 items-center text-center mt-[60px] bg-[#E9E6E5] px-4 lg:px-0">
       <p className="leading-6 mt-[96px]">
-        <span className={cn("text-[32px]", arialBlackFont.className)}>
+        <span className={cn("text-[23px] md:text-[32px]", arialBlackFont.className)}>
           ARQUITECTURA EN CAFETERÍAS
         </span>
       </p>
-      <p className={cn("text-[19px] leading-5", calibriFont.className)}>
+      <p className={cn("text-[19px] leading-[1]", calibriFont.className)}>
         Si hay un fenómeno que ha transformado por completo la forma de entender
         <br />
         el ocio en el mundo, es precisamente el de las cafeterías.
@@ -38,10 +38,16 @@ export const SeeAlso = ({
             className="cursor-pointer text-center"
           >
             {/* <span className="mr-[2.5rem]">{index + 1}</span> */}
-            <span className={cn(indexCoffeShop === index && "underline", indexCoffeShop === index && "font-bold","leading-none")}>
-              {shop.title1}
-              <br />
-              {shop.title2}
+            <span
+              className={cn(
+                indexCoffeShop === index && "underline",
+                indexCoffeShop === index && "font-bold",
+                "leading-none"
+              )}
+            >
+              <span>{shop.title1}</span>
+              <br className="hidden md:block" />
+              <span className="ml-[.5rem] md:ml-0">{shop.title2}</span>
             </span>
           </li>
         ))}

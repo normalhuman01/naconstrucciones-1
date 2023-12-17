@@ -11,7 +11,7 @@ export const AboutUs = () => {
         <div className="flex flex-wrap gap-10">
           <div className="flex-1 min-w-[280px] bg-dark text-white text-justify px-[3rem] md:px-[6rem] pt-[40px] md:pt-[90px] pb-[116px] relative">
             <h4 className={cn("font-bold mb-6 text-[32px]", calibriFont.className)}>MISIÓN</h4>
-            <p className={cn("font-light text-[19px] leading-6", calibriFont.className)}>
+            <p className={cn("font-light text-[19px] leading-[1]", calibriFont.className)}>
               Nuestra misión es transformar ideas en realidades sólidas y
               funcionales. A través de la innovación, la calidad y la
               dedicación, construimos un futuro mejor para nuestros clientes y
@@ -27,7 +27,7 @@ export const AboutUs = () => {
           </div>
           <div className="flex-1 min-w-[280px] bg-dark text-white text-justify px-[3rem] md:px-[6rem] pt-[40px] md:pt-[90px] pb-[116px] relative">
             <h4 className={cn("font-bold mb-6 text-[32px]", calibriFont.className)}>VISIÓN</h4>
-            <p className={cn("font-light text-[19px] leading-6", calibriFont.className)}>
+            <p className={cn("font-light text-[19px] leading-[1]", calibriFont.className)}>
               Nos vemos como líderes de referencia en la industria de la
               construcción, inspirando con diseños vanguardistas y ejecución
               impecable. Nuestra visión es forjar espacios que enriquezcan vidas
