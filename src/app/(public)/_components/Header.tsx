@@ -60,14 +60,18 @@ export const Header = ({ categories }: { categories: TProductCategory[] }) => {
           </div>
         </div>
       </header>
-      {isOpen && (
-        <MenuTools
-          categories={categories}
-          isOpen={isOpen}
-          parentHeight={height}
-          setIsOpen={setIsOpen}
-        />
-      )}
+      <div className="h-0 sticky left-0 z-[10000]" style={{
+        top: `${height}px`,
+      }}>
+        {isOpen && (
+          <MenuTools
+            categories={categories}
+            isOpen={isOpen}
+            parentHeight={height}
+            setIsOpen={setIsOpen}
+          />
+        )}
+      </div>
     </>
   );
 };

@@ -110,7 +110,7 @@ export const MenuTools = ({
         <div className="relative flex gap-6 items-stretch max-h-[90vh] w-full h-full">
           <div className="flex flex-col gap-2 justify-between">
             <div className="flex flex-col gap-2 items-start">
-              <h4 className="text-md mb-4 px-3">MENÚ</h4>
+              <h4 className="text-md mb-4 w-full text-center">MENÚ</h4>
 
               {data.map((item, index) => {
                 return (
@@ -154,7 +154,7 @@ export const MenuTools = ({
           <div className="flex flex-col">
             {"links" in currentMenu && (
               <>
-                <h4 className="text-md mb-4 px-3 inline w-auto self-start">
+                <h4 className="text-md mb-4 w-full text-center inline self-start">
                   CATEGORÍAS
                 </h4>
                 <ul className="mb-4">
