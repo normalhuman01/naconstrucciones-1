@@ -190,7 +190,7 @@ export const MenuTools = ({
                                       href={link.link || ""}
                                       onClick={() => setIsOpen(false)}
                                       className={cn(
-                                        "hover:text-white",
+                                        "inline-block hover:text-white leading-none md:leading-normal",
                                         pathname === link.link.split("#")[0] &&
                                           "text-white"
                                       )}
