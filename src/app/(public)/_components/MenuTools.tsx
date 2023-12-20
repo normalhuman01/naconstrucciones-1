@@ -110,7 +110,7 @@ export const MenuTools = ({
         <div className="relative flex gap-6 items-stretch max-h-[90vh] w-full h-full">
           <div className="flex flex-col gap-2 justify-between">
             <div className="flex flex-col gap-2 items-start">
-              <h4 className="text-md mb-4 w-full text-center">MENÚ</h4>
+              <h4 className="text-md mb-4 w-full text-left font-bold text-[20px]">MENÚ</h4>
 
               {data.map((item, index) => {
                 return (
@@ -154,7 +154,7 @@ export const MenuTools = ({
           <div className="flex flex-col">
             {"links" in currentMenu && (
               <>
-                <h4 className="text-md mb-4 w-full text-center inline self-start">
+                <h4 className="text-md mb-4 w-full text-left font-bold text-[20px] inline self-start">
                   CATEGORÍAS
                 </h4>
                 <ul className="mb-4">
@@ -165,20 +165,25 @@ export const MenuTools = ({
                         key={index}
                         className={cn(
                           "ml-3 text-md mb-2 md:mb-5",
-                          index ? "text-[rgba(255,255,255,0.5)]" : ""
+                          index ? "text-white" : ""
                         )}
                       >
                         {hasLink && (
                           <Link
                             href={item.link || ""}
                             onClick={() => setIsOpen(false)}
+                            className={cn(
+                              "md:text-[16px]",
+                              pathname === item.link.split("#")[0] &&
+                                "text-white"
+                            )}
                           >
                             {item.label}
                           </Link>
                         )}
                         {!hasLink && (
                           <div>
-                            <div>{item.label}</div>
+                            <div className="md:text-[16px]">{item.label}</div>
                             <ul>
                               {item.links?.map((link, index) => (
                                 <li
@@ -190,7 +195,7 @@ export const MenuTools = ({
                                       href={link.link || ""}
                                       onClick={() => setIsOpen(false)}
                                       className={cn(
-                                        "inline-block hover:text-white leading-none md:leading-normal",
+                                        "inline-block md:text-[16px] hover:text-white leading-none md:leading-normal",
                                         pathname === link.link.split("#")[0] &&
                                           "text-white"
                                       )}
