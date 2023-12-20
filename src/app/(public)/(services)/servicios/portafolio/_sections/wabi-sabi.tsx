@@ -5,7 +5,7 @@ export const WabiSabi = () => {
   return (
     <div className={cn("h-[500px] flex flex-col items-center justify-center text-center", calibriFont.className)}>
       <span className="text-[21px] font-light">WABI SABI</span>
-      <h3 className={cn("text-[40px] md:text-[64px] mt-2 mb-[50px] leading-[3.5rem] font-bold", calibriFont.className)}>
+      <h3 className={cn("text-[43px] md:text-[64px] mt-2 mb-[50px] leading-[2.5rem] md:leading-[3.5rem] font-bold", calibriFont.className)}>
         LA BELLEZA DE LA IMPERFECCIÓN,
         <br />
         SIMPLICIDAD Y NATURALIDAD

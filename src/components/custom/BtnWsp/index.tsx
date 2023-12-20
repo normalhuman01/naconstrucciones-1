@@ -27,7 +27,6 @@ export const BtnWsp = () => {
         phoneNumber={"51" + config.phone}
         accountName="N&A Ingeniería y Construcciones"
         chatMessage="Hola, cómo te puedo ayudar?"
-        notificationDelay={0}
         chatboxHeight={256}
       />
     </div>

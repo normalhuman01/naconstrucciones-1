@@ -31,8 +31,10 @@ type TLinkData = {
 
 export const BtnTools = ({
   categories,
+  parentHeight,
 }: {
   categories: TProductCategory[];
+  parentHeight?: number | null;
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [menu, setMenu] = useState(0);
@@ -122,9 +124,12 @@ export const BtnTools = ({
         <div className="w-[12px] h-[12px] bg-[black]"></div>
       </div>
       {isOpen && (
-        <div className="bottom-0 right-0 z-[10000] fixed p-3 md:px-6 md:pr-5 flex justify-center items-center w-full md:w-auto bg-[rgba(38,38,38,0.98)] text-white" style={{
-          height: "calc(100vh - 106px)",
-        }}>
+        <div
+          className="bottom-0 right-0 z-[10000] fixed p-3 md:px-6 md:pr-5 flex justify-center items-center w-full md:w-auto bg-[rgba(38,38,38,0.98)] text-white"
+          style={{
+            height: `calc(100vh - ${parentHeight || 106}px)`,
+          }}
+        >
           <div className="max-w-[1120px] mx-auto h-full relative flex justify-center items-center w-full">
             <div className="relative flex gap-6 items-stretch max-h-[90vh] w-full h-full">
               <div className="flex flex-col gap-2 justify-between">
@@ -151,10 +156,7 @@ export const BtnTools = ({
                               setIsOpen(false);
                             }}
                           >
-                            <BtnPrimary
-                              key={index}
-                              className="text-md"
-                            >
+                            <BtnPrimary key={index} className="text-md">
                               {item.label}
                             </BtnPrimary>
                           </Link>
@@ -176,7 +178,9 @@ export const BtnTools = ({
               <div className="flex flex-col">
                 {"links" in currentMenu && (
                   <>
-                    <h4 className="text-md mb-4 px-3 inline w-auto self-start">CATEGORÍAS</h4>
+                    <h4 className="text-md mb-4 px-3 inline w-auto self-start">
+                      CATEGORÍAS
+                    </h4>
                     <ul className="mb-4">
                       {currentMenu?.links?.map((item, index) => {
                         const hasLink = "link" in item;
@@ -184,7 +188,7 @@ export const BtnTools = ({
                           <li
                             key={index}
                             className={cn(
-                              "ml-3 text-md mb-5",
+                              "ml-3 text-md mb-2 md:mb-5",
                               index ? "text-[rgba(255,255,255,0.5)]" : ""
                             )}
                           >
@@ -203,7 +207,7 @@ export const BtnTools = ({
                                   {item.links?.map((link, index) => (
                                     <li
                                       key={index}
-                                      className="ml-3 text-md mb-2 text-[rgba(255,255,255,0.5)]"
+                                      className="ml-3 text-md mb-1 md:mb-2 text-[rgba(255,255,255,0.5)]"
                                     >
                                       {"link" in link && (
                                         <Link
@@ -230,36 +234,6 @@ export const BtnTools = ({
                     </ul>
                   </>
                 )}
-              </div>
-              <div className="flex gap-2 absolute bottom-0 right-3 md:right-[80px]">
-                <img
-                  src="/img/icons/networks/twitter.png"
-                  width={30}
-                  height={30}
-                  alt=""
-                  className="cursor-pointer w-[30px] h-[30px] object-contain"
-                />
-                <img
-                  src="/img/icons/networks/tiktok.png"
-                  width={30}
-                  height={30}
-                  alt=""
-                  className="cursor-pointer w-[30px] h-[30px] object-contain"
-                />
-                <img
-                  src="/img/icons/networks/facebook.png"
-                  width={30}
-                  height={30}
-                  alt=""
-                  className="cursor-pointer w-[30px] h-[30px] object-contain"
-                />
-                <img
-                  src="/img/icons/networks/instagram.png"
-                  width={30}
-                  height={30}
-                  alt=""
-                  className="cursor-pointer w-[30px] h-[30px] object-contain"
-                />
               </div>
               <IoClose
                 onClick={() => setIsOpen(false)}

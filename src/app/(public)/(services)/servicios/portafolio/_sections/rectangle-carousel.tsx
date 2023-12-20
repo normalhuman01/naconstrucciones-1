@@ -138,7 +138,7 @@ export const RectangleCarousel = ({
                     <span className="leading-5 md:leading-8 w-full mr-10">
                       {coffeeShop?.sub1}
                     </span>
-                    <span className="w-full text-right pl-4 leading-5 md:leading-8">
+                    <span className="w-full text-right pl-4 leading-6">
                       {coffeeShop?.sub2}
                     </span>
                   </div>
@@ -164,7 +164,7 @@ export const RectangleCarousel = ({
                     </span>
                   </div>
                 </div>
-                <div className="grid grid-cols-4 gap-2 mt-10 px-[1px]">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mt-10 px-2">
                   {coffeeShop.images.slice(1).map((image, _index) => (
                     <img src={image} alt={image} key={image} />
                   ))}

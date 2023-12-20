@@ -49,7 +49,7 @@ export const GilardiOld = () => {
 
 export const Gilardi = () => {
   return (
-    <div className="my-8 w-full relative">
+    <div className="my-8 w-full relative mt-[96px]">
       <img
         src="/img/portfolio/gilardi/Fachada.jpg"
         className="mt-[40px] w-full"
