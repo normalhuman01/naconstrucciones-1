@@ -41,7 +41,7 @@ export const ContactSection = ({ hiddeTop }: { hiddeTop?: boolean }) => {
             </Link>
           </div> */}
         </div>
-        <div className="flex flex-wrap justify-between w-full">
+        <div className="flex flex-wrap justify-between w-full mb-3">
           <p className={cn("flex flex-col font-light text-[19px]", calibriFont.className)}>
             <strong className="leading-3 font-bold">TELÉFONO</strong>
             <span>{config.phoneGroupedBy3}</span>
@@ -52,7 +52,7 @@ export const ContactSection = ({ hiddeTop }: { hiddeTop?: boolean }) => {
           </p>
           <p className={cn("flex flex-col font-light text-[19px]", calibriFont.className)}>
             <strong className="leading-3 font-bold">OFICINAS</strong>
-            <span>{config.address}</span>
+            <span className="leading-none mt-1">{config.address}</span>
           </p>
         </div>
         <iframe

@@ -173,7 +173,7 @@ const Group = ({ children }: { children: ReactNode }) => {
 export const Services = () => {
   return (
     <>
-      <div className="max-w-[1120px] mx-auto flex flex-col items-center md:items-start px-0 md:px-0">
+      <div className="max-w-[1120px] mx-auto flex flex-col items-center md:items-start px-0 md:px-0 mb-[124px]">
         <div className="block md:hidden text-center mb-[10px]">
           <span className="hidden md:block text-[12px]">NUESTROS</span>
           <h3 className="hidden md:block text-2xl font-bold">SERVICIOS</h3>
@@ -190,21 +190,20 @@ export const Services = () => {
           <TextWhite className="relative top-[100%]">GENERALES</TextWhite>
         </div>
 
-        <div className="flex md:hidden flex-wrap gap-2 md:gap-5 items-start justify-center">
+        <div className="flex md:hidden flex-wrap gap-2 gap-y-0 md:gap-5 items-start justify-center">
           <Card
             title="Electricidad"
             description={
               <>
                 <ul className="text-left pl-3">
-                  <li className="pl-2 list-disc">Sistemas electricos integrales</li>
-                  <li className="pl-2 list-disc">Diseño de proyecto y ejecución</li>
-                  <li className="pl-2 list-disc">Sistemas de puesta a tierra</li>
-                  <li className="pl-2 list-disc">Servicios de mantenimiento</li>
+                  <li className="pl-2 list-disc leading-none mb-2">Sistemas electricos integrales</li>
+                  <li className="pl-2 list-disc leading-none mb-2">Diseño de proyecto y ejecución</li>
+                  <li className="pl-2 list-disc leading-none mb-2">Sistemas de puesta a tierra</li>
+                  <li className="pl-2 list-disc leading-none mb-2">Servicios de mantenimiento</li>
                 </ul>
               </>
             }
             image="/img/services/electricidad.jpg"
-            className="md:mb-10"
           />
           <Card
             title="Gasfitería"
@@ -212,18 +211,18 @@ export const Services = () => {
               <>
                 {/* "Instalación de griferías, Instalación de Equipos sanitarios, Desatoros en red de desagüe, Mantenimiento y Limpieza de cisternas y tanques elevados, Mantenimiento de bombas." */}
                 <ul className="text-left pl-3">
-                  <li className="pl-2 list-disc">Instalación de griferías</li>
-                  <li className="pl-2 list-disc">Instalación de Equipos sanitarios</li>
-                  <li className="pl-2 list-disc">Desatoros en red de desagüe</li>
-                  <li className="pl-2 list-disc">
+                  <li className="pl-2 list-disc leading-none mb-2">Instalación de griferías</li>
+                  <li className="pl-2 list-disc leading-none mb-2">Instalación de Equipos sanitarios</li>
+                  <li className="pl-2 list-disc leading-none mb-2">Desatoros en red de desagüe</li>
+                  <li className="pl-2 list-disc leading-none mb-2">
                     Mantenimiento y Limpieza de cisternas y tanques elevados
                   </li>
-                  <li className="pl-2 list-disc">Mantenimiento de bombas</li>
+                  <li className="pl-2 list-disc leading-none mb-2">Mantenimiento de bombas</li>
                 </ul>
               </>
             }
             image="/img/services/gasfiteria.jpg"
-            className="mt-12"
+            className="mt-12 mb-0"
           />
           <Card
             title="Pintura"
@@ -231,19 +230,17 @@ export const Services = () => {
             description={
               <>
                 <ul className="text-left pl-3">
-                  <li className="pl-2 list-disc">
-                    Pintado de viviendas, empresas , residencias ,departamentos
-                    y oficinas
+                  <li className="pl-2 list-disc leading-none mb-2">
+                    Pintado de viviendas, empresas, residencias, departamentos y oficinas
                   </li>
-                  <li className="pl-2 list-disc">Empastado de paredes en Casco gris</li>
-                  <li className="pl-2 list-disc">
+                  <li className="pl-2 list-disc leading-none mb-2">Empastado de paredes en Casco gris</li>
+                  <li className="pl-2 list-disc leading-none mb-2">
                     Mantenimiento de paredes salitres e impermeabilización
                   </li>
                 </ul>
               </>
             }
             image="/img/services/pintura.jpg"
-            className="md:mb-10"
           />
           <Card
             title="Drywall"
@@ -251,16 +248,16 @@ export const Services = () => {
             description={
               <>
                 <ul className="text-left pl-3">
-                  <li className="pl-2 list-disc">Desarrollo sistema drywall</li>
-                  <li className="pl-2 list-disc">Instalación de cielo raso</li>
-                  <li className="pl-2 list-disc">Instalación de baldosas acústicas</li>
-                  <li className="pl-2 list-disc">Cobertura policarbonato</li>
-                  <li className="pl-2 list-disc">Instalación de tabiquerías de interiores y exteriores</li>
+                  <li className="pl-2 list-disc leading-none mb-2">Desarrollo sistema drywall</li>
+                  <li className="pl-2 list-disc leading-none mb-2">Instalación de cielo raso</li>
+                  <li className="pl-2 list-disc leading-none mb-2">Instalación de baldosas acústicas</li>
+                  <li className="pl-2 list-disc leading-none mb-2">Cobertura policarbonato</li>
+                  <li className="pl-2 list-disc leading-none mb-2">Instalación de tabiquerías de interiores y exteriores</li>
                 </ul>
               </>
             }
             image="/img/services/drywall.jpg"
-            className="mt-12"
+            className="mt-12 mb-0"
           />
 
           <Card
@@ -269,14 +266,13 @@ export const Services = () => {
             description={
               <>
                 <ul className="text-left pl-3">
-                  <li className="pl-2 list-disc">Diseño</li>
-                  <li className="pl-2 list-disc">Suministro</li>
-                  <li className="pl-2 list-disc">Instalación y mantenimiento</li>
+                  <li className="pl-2 list-disc leading-none mb-2">Diseño</li>
+                  <li className="pl-2 list-disc leading-none mb-2">Suministro</li>
+                  <li className="pl-2 list-disc leading-none mb-2">Instalación y mantenimiento</li>
                 </ul>
               </>
             }
             image="/img/services/climatizacion.webp"
-            className="md:mb-10"
           />
           <Card
             title={
@@ -288,12 +284,12 @@ export const Services = () => {
             description={
               <>
                 <ul className="text-left pl-3">
-                  <li className="pl-2 list-disc">Diseño de todo tipos de muebles hogar y oficina (Melamina y Madera)</li>
+                  <li className="pl-2 list-disc leading-none mb-2">Diseño de todo tipos de muebles hogar y oficina (Melamina y Madera)</li>
                 </ul>
               </>
             }
             image="/img/services/carpinteria.jpg"
-            className="mt-12"
+            className="mt-12 mb-0"
           />
         </div>
 
@@ -304,10 +300,10 @@ export const Services = () => {
               description={
                 <>
                   <ul className="text-left pl-3">
-                    <li className="pl-2 list-disc">Sistemas electricos integrales</li>
-                    <li className="pl-2 list-disc">Diseño de proyecto y ejecución</li>
-                    <li className="pl-2 list-disc">Sistemas de puesta a tierra</li>
-                    <li className="pl-2 list-disc">Servicios de mantenimiento</li>
+                    <li className="pl-2 list-disc leading-none mb-2">Sistemas electricos integrales</li>
+                    <li className="pl-2 list-disc leading-none mb-2">Diseño de proyecto y ejecución</li>
+                    <li className="pl-2 list-disc leading-none mb-2">Sistemas de puesta a tierra</li>
+                    <li className="pl-2 list-disc leading-none mb-2">Servicios de mantenimiento</li>
                   </ul>
                 </>
               }
@@ -320,13 +316,13 @@ export const Services = () => {
                 <>
                   {/* "Instalación de griferías, Instalación de Equipos sanitarios, Desatoros en red de desagüe, Mantenimiento y Limpieza de cisternas y tanques elevados, Mantenimiento de bombas." */}
                   <ul className="text-left pl-3">
-                    <li className="pl-2 list-disc">Instalación de griferías</li>
-                    <li className="pl-2 list-disc">Instalación de Equipos sanitarios</li>
-                    <li className="pl-2 list-disc">Desatoros en red de desagüe</li>
-                    <li className="pl-2 list-disc">
+                    <li className="pl-2 list-disc leading-none mb-2">Instalación de griferías</li>
+                    <li className="pl-2 list-disc leading-none mb-2">Instalación de Equipos sanitarios</li>
+                    <li className="pl-2 list-disc leading-none mb-2">Desatoros en red de desagüe</li>
+                    <li className="pl-2 list-disc leading-none mb-2">
                       Mantenimiento y Limpieza de cisternas y tanques elevados
                     </li>
-                    <li className="pl-2 list-disc">Mantenimiento de bombas</li>
+                    <li className="pl-2 list-disc leading-none mb-2">Mantenimiento de bombas</li>
                   </ul>
                 </>
               }
@@ -341,12 +337,11 @@ export const Services = () => {
               description={
                 <>
                   <ul className="text-left pl-3">
-                    <li className="pl-2 list-disc">
-                      Pintado de viviendas, empresas , residencias ,departamentos
-                      y oficinas
+                    <li className="pl-2 list-disc leading-none mb-2">
+                      Pintado de viviendas, empresas, residencias, departamentos y oficinas
                     </li>
-                    <li className="pl-2 list-disc">Empastado de paredes en Casco gris</li>
-                    <li className="pl-2 list-disc">
+                    <li className="pl-2 list-disc leading-none mb-2">Empastado de paredes en Casco gris</li>
+                    <li className="pl-2 list-disc leading-none mb-2">
                       Mantenimiento de paredes salitres e impermeabilización
                     </li>
                   </ul>
@@ -360,11 +355,11 @@ export const Services = () => {
               description={
                 <>
                   <ul className="text-left pl-3">
-                    <li className="pl-2 list-disc">Desarrollo sistema drywall</li>
-                    <li className="pl-2 list-disc">Instalación de cielo raso</li>
-                    <li className="pl-2 list-disc">Instalación de baldosas acústicas</li>
-                    <li className="pl-2 list-disc">Cobertura policarbonato</li>
-                    <li className="pl-2 list-disc">Instalación de tabiquerías de interiores y exteriores</li>
+                    <li className="pl-2 list-disc leading-none mb-2">Desarrollo sistema drywall</li>
+                    <li className="pl-2 list-disc leading-none mb-2">Instalación de cielo raso</li>
+                    <li className="pl-2 list-disc leading-none mb-2">Instalación de baldosas acústicas</li>
+                    <li className="pl-2 list-disc leading-none mb-2">Cobertura policarbonato</li>
+                    <li className="pl-2 list-disc leading-none mb-2">Instalación de tabiquerías de interiores y exteriores</li>
                   </ul>
                 </>
               }
@@ -379,9 +374,9 @@ export const Services = () => {
               description={
                 <>
                   <ul className="text-left pl-3">
-                    <li className="pl-2 list-disc">Diseño</li>
-                    <li className="pl-2 list-disc">Suministro</li>
-                    <li className="pl-2 list-disc">Instalación y mantenimiento</li>
+                    <li className="pl-2 list-disc leading-none mb-2">Diseño</li>
+                    <li className="pl-2 list-disc leading-none mb-2">Suministro</li>
+                    <li className="pl-2 list-disc leading-none mb-2">Instalación y mantenimiento</li>
                   </ul>
                 </>
               }
@@ -398,7 +393,7 @@ export const Services = () => {
               description={
                 <>
                   <ul className="text-left pl-3">
-                    <li className="pl-2 list-disc">Diseño de todo tipos de muebles hogar y oficina (Melamina y Madera)</li>
+                    <li className="pl-2 list-disc leading-none mb-2">Diseño de todo tipos de muebles hogar y oficina (Melamina y Madera)</li>
                   </ul>
                 </>
               }

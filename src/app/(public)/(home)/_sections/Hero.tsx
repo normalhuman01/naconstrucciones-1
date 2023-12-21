@@ -9,12 +9,12 @@ export const Hero = () => {
         INGENIERÍA, CONSTRUCCIÓN Y <br /> MANTENIMIENTO
       </h3>
 
-      <p className={cn("text-justify md:text-center text-[18px] md:text-[19px] leading-5 mb-2", calibriFont.className)}>
+      <p className={cn("text-justify md:text-center text-[18px] md:text-[19px] leading-[.8] md:leading-5 mb-2", calibriFont.className)}>
         En <strong>N&A INGENIERÍA Y CONSTRUCCIONES</strong> contamos con amplia
         experiencia en desarrollar y gestionar proyectos de diseño, arquitectura
         y construcción.
       </p>
-      <p className={cn("text-justify md:text-center text-[18px] md:text-[19px] leading-5", calibriFont.className)}>
+      <p className={cn("text-justify md:text-center text-[18px] md:text-[19px] leading-[.8] md:leading-5", calibriFont.className)}>
         La conformamos un <strong>equipo de profesionales</strong> y{" "}
         <strong>especialistas</strong> en diversas áreas que comprometidos con
         cada <strong>proyecto</strong>, buscamos ofrecer permanentemente ideas y soluciones

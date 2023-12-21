@@ -56,16 +56,16 @@ const Bg = () => {
 
 export const Featured = () => {
   return (
-    <div className="relative py-4 px-2 md:px-5">
+    <div className="relative pt-4 px-2 md:px-5">
       <Bg />
       <div className="bg-white shadow-strong rounded-[40px] py-5 px-2 md:p-5 flex justify-center items-center gap-2 md:gap-[60px] max-w-[1120px]	m-auto">
         <Left />
-        <div className="flex flex-col justify-between h-full gap-2 items-start">
+        <div className="flex flex-col justify-between h-full gap-2 items-start min-w-[200px]">
           <div className="pt-6">
             <p className="mb-[12px]">
               <strong
                 className={cn(
-                  "text-[29px] md:text-[56px] leading-[0] font-bold text-white",
+                  "text-[28px] md:text-[56px] leading-[0] font-bold text-white",
                   arialBlackFont.className
                 )}
                 style={{ WebkitTextStroke: "1px black" }}
@@ -85,16 +85,18 @@ export const Featured = () => {
               <strong
                 className={cn(
                   "inline-block md:hidden",
-                  "text-[23px] md:text-[25.25px] leading-[.85] font-bold tracking-wide",
+                  "text-[25px] md:text-[25.25px] leading-[.85] font-bold tracking-wide",
                   arialBlackFont.className
                 )}
               >
-                PRODUCTOS DESTACADOS
+                <span className="text-[27.2px]">PRODUCTOS</span>
+                <br />
+                <span>DESTACADOS</span>
               </strong>
               <br />
               <strong
                 className={cn(
-                  "text-[29px] md:text-[51.5px] leading-[1.1rem] md:leading-[36px] font-bold text-white",
+                  "text-[25.5px] md:text-[51.5px] leading-[1.1rem] md:leading-[36px] font-bold text-white",
                   arialBlackFont.className
                 )}
                 style={{ WebkitTextStroke: "1px black" }}

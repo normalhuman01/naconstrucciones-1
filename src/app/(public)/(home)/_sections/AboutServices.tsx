@@ -63,7 +63,7 @@ export const AboutServices = () => {
   return (
     <div className="max-w-[1120px] px-4 lg:px-0 mx-auto flex flex-col items-start gap-3 mb-[124px]">
       <Header top="NUESTROS" main="SERVICIOS" hiddenTop className="mb-8" />
-      <div className="flex flex-wrap items-stretch w-full gap-3 justify-between md:justify-between">
+      <div className="flex flex-wrap items-stretch w-full gap-3 gap-y-9 md:gap-y-3 justify-between md:justify-between">
         <Card
           title="INGENIERÍA"
           description="Somos reconocidos por brindar soluciones prácticas y rentables que

@@ -11,7 +11,7 @@ type TProductsProps = {
 
 export const Products = ({ products }: TProductsProps) => {
   return (
-    <div className="bg-cgray p-1 md:p-5 pb-[64px]">
+    <div className="bg-cgray p-1 md:p-5 py-4 md:py-4">
       <div className="max-w-[1120px] mx-auto w-full flex justify-between flex-wrap gap-2 gap-y-4 md:gap-4">
         {products.map((product) => (
           <CardProduct
