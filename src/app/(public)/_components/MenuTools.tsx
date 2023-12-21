@@ -13,6 +13,7 @@ import {
   useState,
 } from "react";
 import { IoClose } from "react-icons/io5";
+import { NetworksTools } from "./NetworksTools";
 
 const BtnPrimary = ({
   children,
@@ -240,16 +241,17 @@ export const MenuTools = ({
         className={cn(
           "hidden md:flex justify-center items-center bg-[rgba(38,38,38,0.98)] text-white",
           "left-0 z-[10000] top-0 fixed p-3 h-[100vh] w-[100vw] md:px-6 md:pr-5",
-          "text-[18px]"
+          "text-[20px]"
         )}
       >
         <div className="max-w-[1120px] mx-auto h-full relative flex justify-center items-center w-full">
           <div className="relative flex gap-10 items-stretch max-h-[90vh] w-full h-full">
             <X
-              size={32}
+              size={36}
               onClick={() => setIsOpen(false)}
               className="cursor-pointer absolute top-0 right-5 text-white"
             />
+            <NetworksTools className="absolute bottom-0 right-5" />
             <div className="flex flex-col gap-2 justify-between">
               <div className="flex flex-col gap-2 items-start">
                 {data.map((item, index) => {
@@ -290,7 +292,7 @@ export const MenuTools = ({
                       <hr
                         className={cn(
                           index + 1 === data.length && "hidden",
-                          "w-full",
+                          "w-full my-2",
                           index === menu ? "border-white" : "border-[#7F7F7F]"
                         )}
                       />
@@ -301,13 +303,12 @@ export const MenuTools = ({
               <div>
                 <img
                   src="/img/logo/large-logo-dark.png"
-                  width={215}
+                  width={240}
                   alt=""
-                  className="max-w-[160px] md:max-w-[220px]"
                 />
               </div>
             </div>
-            <div className="h-[90%] w-[1px] bg-[#7F7F7F]"></div>
+            <div className="h-[100%] w-[1px] bg-[#7F7F7F]"></div>
             <div className="flex flex-col">
               {"links" in currentMenu && (
                 <>
@@ -335,19 +336,19 @@ export const MenuTools = ({
                           )}
                           {!hasLink && (
                             <div>
-                              <div className="text-[#7F7F7F] font-bold">{item.label}</div>
-                              <ul>
+                              <div className="text-[#7F7F7F] font-bold mb-3">{item.label}</div>
+                              <ul className="leading-none ml-5">
                                 {item.links?.map((link, index) => (
                                   <li
                                     key={index}
-                                    className="ml-3 text-md mb-1 md:mb-2 text-[rgba(255,255,255,0.5)]"
+                                    className="ml-3 text-[rgba(255,255,255,0.5)]"
                                   >
                                     {"link" in link && (
                                       <Link
                                         href={link.link || ""}
                                         onClick={() => setIsOpen(false)}
                                         className={cn(
-                                          "inline-block hover:text-white leading-none md:leading-normal",
+                                          "inline-block hover:text-white leading-[.8] md:leading-normal",
                                           pathname ===
                                             link.link.split("#")[0] &&
                                             "text-white"
