@@ -9,35 +9,7 @@ import { cn } from "@/lib/utils";
 import { ProductsCard } from "@/components/custom/ProductsCard";
 import { Fragment } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
-
-const BtnPage = ({
-  page,
-  currentPage,
-  slugCategory,
-}: {
-  page: number;
-  currentPage: number;
-  slugCategory?: string;
-}) => {
-  return (
-    <Link
-      href={
-        slugCategory
-          ? `/productos/epp/${slugCategory}?page=${page}#products`
-          : `/productos/epp?page=${page}#products`
-      }
-    >
-      <div
-        className={cn(
-          "w-[33px] h-[33px] flex justify-center items-center border-black border-[1px] cursor-pointer",
-          currentPage === page ? "bg-black text-white" : "bg-white"
-        )}
-      >
-        {page}
-      </div>
-    </Link>
-  );
-};
+import { BtnPage } from "./_components/BtnPage";
 
 type TPageProps = {
   searchParams?: {
@@ -58,8 +30,7 @@ const Page = async ({ ...props }: TPageProps) => {
     )) as TProductCategory[]
   ).reverse();
 
-
-  const urlProducts = WP_URL + `/epp?_embed&page=${page}&per_page=${per_page}`
+  const urlProducts = WP_URL + `/epp?_embed&page=${page}&per_page=${per_page}`;
 
   const products = (await fetch(urlProducts).then((res) => {
     metaProducts.total = Number(res.headers.get("X-Wp-Total"));
@@ -84,8 +55,8 @@ const Page = async ({ ...props }: TPageProps) => {
           focusedIndex - 1 === i
           ? i
           : focusedIndex < i
-            ? "pre"
-            : "post"
+          ? "pre"
+          : "post"
         : i;
     }
   );
