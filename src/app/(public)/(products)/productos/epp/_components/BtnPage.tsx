@@ -17,6 +17,7 @@ export const BtnPage = ({
         search: `?page=${page}`,
         hash: "#products",
       }}
+      as={`/productos/epp/${slugCategory || ""}?page=${page}#products`}
     >
       <div
         className={cn(
