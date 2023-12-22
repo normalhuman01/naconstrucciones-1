@@ -33,7 +33,7 @@ export const Form = () => {
       <Input placeholder="Asunto" required name="subject" />
       <textarea
         className={cn(
-          "w-full border-b-2 border-black font-light outline-none text-[19px] placeholder:font-light placeholder:text-[19px] placeholder:text-black",
+          "w-full border-b-2 border-black font-light outline-none text-[19px] placeholder:font-light placeholder:text-[19px] placeholder:text-[#757575]",
           calibriFont.className
         )}
         placeholder="Mensaje"

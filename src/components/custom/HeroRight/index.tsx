@@ -44,7 +44,7 @@ export const HeroRight = ({
       {...props}
     >
       <div className="max-w-[1120px] px-4 xl:px-0 mx-auto flex flex-col items-end justify-center h-full">
-        <h2 className="flex flex-col items-end leading-none">
+        <h2 className="flex flex-col items-end mb-2 md:mb-0 leading-none">
           <span className={cn("text-[24px] mb-3", impactFont.className)}>
             {top}
           </span>
@@ -59,7 +59,7 @@ export const HeroRight = ({
           </span>
           <span
             className={cn(
-              "text-white leading-none text-[40px] md:text-[75px] top-[-1rem] md:top-[-25px] font-light relative",
+              "text-white mb-2 md:mb-1 leading-none text-[40px] md:text-[75px] top-[-1rem] md:top-[-25px] font-light relative",
               abadiFont.className
             )}
             style={{ textShadow: "0px 4px 3px rgba(0, 0, 0, 0.7)" }}
@@ -70,7 +70,7 @@ export const HeroRight = ({
         <p
           {...descriptionProps}
           className={cn(
-            "max-w-[310px] text-right text-[19px] relative top-[-25px]",
+            "max-w-[310px] text-right text-[19px] leading-[.9] relative top-[-25px]",
             calibriFont.className,
             descriptionProps?.className,
             descriptionClassName

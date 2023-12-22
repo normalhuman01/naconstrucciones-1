@@ -9,7 +9,7 @@ export const BtnSearchCircle = () => {
   const router = useRouter();
   return (
     <div className="hidden md:block relative w-full">
-      <div className="absolute w-full mt-[-2px] top-0 right-0 flex justify-end">
+      <div className="absolute w-full mt-[-2px] top-[-16px] right-0 flex justify-end">
         {open && (
           <input
             className="text-lg absolute top-0 right-0 rounded-[1rem] bg-[#F3F2F3] outline-none px-4 w-[200px] md:w-[540px] h-[28px] border-[1px] border-[#727272]"

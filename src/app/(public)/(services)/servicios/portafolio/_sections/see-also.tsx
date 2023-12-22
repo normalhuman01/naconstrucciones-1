@@ -16,7 +16,7 @@ export const SeeAlso = ({
   return (
     <div className="flex flex-col gap-8 items-center text-center mt-[60px] bg-[#E9E6E5] px-4 lg:px-0">
       <p className="leading-6 mt-[96px]">
-        <span className={cn("text-[23px] md:text-[32px]", arialBlackFont.className)}>
+        <span className={cn("text-[24px] md:text-[32px]", arialBlackFont.className)}>
           ARQUITECTURA EN CAFETERÍAS
         </span>
       </p>

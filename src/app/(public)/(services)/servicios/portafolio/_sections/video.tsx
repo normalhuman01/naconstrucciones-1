@@ -12,7 +12,7 @@ export const Video = () => {
     <div className="flex items-center justify-center flex-col my-10 md:mt-10 md:mb-[116px]">
       <h3
         className={cn(
-          "text-[32px] font-bold mb-[6px]",
+          "text-[24px] font-bold mb-[6px]",
           arialBlackFont.className
         )}
       >

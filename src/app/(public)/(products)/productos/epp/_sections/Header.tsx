@@ -65,7 +65,7 @@ export const Header = () => {
       {/* <div className="absolute bottom-1 right-1 border-black border-[1px] rounded-full h-[28px] w-[28px] flex justify-center items-center bg-[#FEE21B]">
         <IoSearch className="text-lg" />
       </div> */}
-      <BtnSearchCircle></BtnSearchCircle>
+      <BtnSearchCircle />
     </div>
   );
 };

@@ -50,16 +50,26 @@ export const GilardiOld = () => {
 export const Gilardi = () => {
   return (
     <div className="my-8 w-full relative mt-[96px]">
+      <div className="block md:hidden mt-[40px] px-4 leading-none">
+        <h3 className={cn("text-[24px] font-bold", arialBlackFont.className)}>
+          CASA GILARDI
+        </h3>
+        <h4
+          className={cn("text-[19px] tracking-[0.2rem]", calibriFont.className)}
+        >
+          Luis Barragán
+        </h4>
+      </div>
       <img
         src="/img/portfolio/gilardi/Fachada.jpg"
-        className="mt-[40px] w-full"
+        className="w-full"
         alt=""
       />
-      <div className="w-full max-w-[1120px] px-4 xl:px-0 absolute flex justify-end mt-[1rem] text-left top-0 left-[50%] translate-x-[-50%]">
+      <div className="hidden md:flex w-full max-w-[1120px] px-4 xl:px-0 absolute justify-end mt-[1rem] text-left top-0 left-[50%] translate-x-[-50%]">
         <div className="leading-none m-auto w-full text-right">
           <div>
             <h3
-              className={cn("text-[32px] font-bold", arialBlackFont.className)}
+              className={cn("text-[24px] font-bold", arialBlackFont.className)}
             >
               CASA GILARDI
             </h3>

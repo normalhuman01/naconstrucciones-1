@@ -119,7 +119,7 @@ export const SquareCarousel = () => {
     <div className="flex items-center justify-center flex-col mt-[60px]">
       <h3
         className={cn(
-          "text-[32px] font-bold mb-[6px]",
+          "text-[24px] font-bold mb-[6px]",
           arialBlackFont.className
         )}
       >
@@ -150,7 +150,9 @@ export const SquareCarousel = () => {
       </div>
       <div
         className={cn(
-          "flex flex-wrap justify-center md:justify-between gap-[20px] md:gap-[48px] my-3 text-[19px]",
+          "flex flex-wrap justify-center md:justify-between",
+          "gap-[20px] gap-y-[10px] md:gap-x-[48px] md:gap-y-[48px] my-3",
+           "text-[19px] leading-none",
           calibriFont.className
         )}
       >

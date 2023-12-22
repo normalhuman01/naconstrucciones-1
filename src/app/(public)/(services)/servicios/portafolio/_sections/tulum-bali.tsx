@@ -49,7 +49,7 @@ export const TulumBali = () => {
         alt={"Tulum Bali"}
         className="w-full"
       />
-      <div className="w-full absolute flex flex-col items-center mt-[1rem] md:mt-[2rem] text-center top-0 left-0">
+      <div className="w-full absolute flex flex-col items-center mt-[.5rem] md:mt-[2rem] text-center top-0 left-0">
         <h3 className={cn("text-[24px] md:text-[32px] leading-none font-bold", arialBlackFont.className)}>
           TULUM
         </h3>
