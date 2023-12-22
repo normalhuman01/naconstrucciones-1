@@ -4,32 +4,8 @@ import { CardCategories } from "../_components/CardCategories";
 import { Header } from "../_sections/Header";
 import { Brands } from "../_sections/Brands";
 import { HeroRight } from "@/components/custom/HeroRight";
-import Link from "next/link";
-import { cn } from "@/lib/utils";
 import { ProductsCard } from "@/components/custom/ProductsCard";
-
-const BtnPage = ({
-  page,
-  currentPage,
-  slugCategory,
-}: {
-  page: number;
-  currentPage: number;
-  slugCategory: string;
-}) => {
-  return (
-    <Link href={`/productos/epp/${slugCategory}?page=${page}#products`}>
-      <div
-        className={cn(
-          "w-[33px] h-[33px] flex justify-center items-center border-black border-[1px] cursor-pointer",
-          currentPage === page ? "bg-black text-white" : "bg-white"
-        )}
-      >
-        {page}
-      </div>
-    </Link>
-  );
-};
+import { BtnPage } from "../_components/BtnPage";
 
 type TPageProps = {
   params: {
@@ -56,11 +32,11 @@ const Page = async ({ params, ...props }: TPageProps) => {
 
   const category = categories.find((cat) => cat.slug === slug);
 
-  const urlProducts = WP_URL +
-    `/epp?_embed&page=${page}&per_page=${per_page}&product_category=${category?.id}`
-  
-  const products = (await fetch(urlProducts
-  ).then((res) => {
+  const urlProducts =
+    WP_URL +
+    `/epp?_embed&page=${page}&per_page=${per_page}&product_category=${category?.id}`;
+
+  const products = (await fetch(urlProducts).then((res) => {
     metaProducts.total = Number(res.headers.get("X-Wp-Total"));
     metaProducts.totalPages = Number(res.headers.get("X-Wp-Totalpages"));
     return res.json();
