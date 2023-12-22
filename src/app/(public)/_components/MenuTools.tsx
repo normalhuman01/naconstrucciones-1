@@ -121,10 +121,6 @@ export const MenuTools = ({
           <div className="relative flex gap-6 items-stretch max-h-[90vh] w-full h-full">
             <div className="flex flex-col gap-2 justify-between">
               <div className="flex flex-col gap-2 items-start">
-                <h4 className="text-md mb-4 w-full text-left font-bold text-[20px]">
-                  MENÚ
-                </h4>
-
                 {data.map((item, index) => {
                   return (
                     <Fragment key={index}>
@@ -154,22 +150,11 @@ export const MenuTools = ({
                   );
                 })}
               </div>
-              <div>
-                <img
-                  src="/img/logo/large-logo-dark.png"
-                  width={215}
-                  alt=""
-                  className="max-w-[160px] md:max-w-[220px]"
-                />
-              </div>
             </div>
             <div className="h-[90%] w-[1px] bg-white"></div>
             <div className="flex flex-col">
               {"links" in currentMenu && (
                 <>
-                  <h4 className="text-md mb-4 w-full text-left font-bold text-[20px] inline self-start">
-                    CATEGORÍAS
-                  </h4>
                   <ul className="mb-4">
                     {currentMenu?.links?.map((item, index) => {
                       const hasLink = "link" in item;
@@ -301,11 +286,7 @@ export const MenuTools = ({
                 })}
               </div>
               <div>
-                <img
-                  src="/img/logo/large-logo-dark.png"
-                  width={240}
-                  alt=""
-                />
+                <img src="/img/logo/large-logo-dark.png" width={240} alt="" />
               </div>
             </div>
             <div className="h-[100%] w-[1px] bg-[#7F7F7F]"></div>
@@ -336,7 +317,9 @@ export const MenuTools = ({
                           )}
                           {!hasLink && (
                             <div>
-                              <div className="text-[#7F7F7F] font-bold mb-3">{item.label}</div>
+                              <div className="text-[#7F7F7F] font-bold mb-3">
+                                {item.label}
+                              </div>
                               <ul className="leading-none ml-5">
                                 {item.links?.map((link, index) => (
                                   <li

@@ -9,7 +9,7 @@ export const config = {
   phone,
   phoneGroupedBy3,
   email: "ventas@naconstrucciones.com",
-  address: "Av. Circunvalación del Golf los Incas 206, Santiago de Surco",
+  address: "Psje.Juana Castro KM. 25 Mz. B Lt. 6 . San Gabriel Alto - VMT",
   wspLink: `https://wa.me/+51${phone}?text=`,
   networks: {
     facebook: "https://www.facebook.com/naconstrucciones/",
