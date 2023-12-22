@@ -32,7 +32,7 @@ export const CardCategories = ({
           {_category.name}
         </Link>
       ))}
-      <Link href="/productos/epp" className="absolute top-[-36px] right-[18px] md:top-0 md:right-[-0px] lg:right-[-40px]">
+      <Link href="/productos/epp" className="absolute top-[-36px] right-[18px] md:top-0 md:right-[-0px] lg:right-[-58px]">
         <X size={36} className="text-black" />
       </Link>
     </div>

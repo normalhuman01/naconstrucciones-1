@@ -129,7 +129,10 @@ export const MenuTools = ({
                         <BtnPrimary
                           onClick={() => setMenu(index)}
                           key={index}
-                          className="text-md"
+                          className={cn(
+                            "hover:text-white",
+                            index === menu ? "text-white" : "text-[#7F7F7F]"
+                          )}
                         >
                           {item.label}
                         </BtnPrimary>
@@ -141,7 +144,13 @@ export const MenuTools = ({
                             setIsOpen(false);
                           }}
                         >
-                          <BtnPrimary key={index} className="text-md">
+                          <BtnPrimary
+                            key={index}
+                            className={cn(
+                              "hover:text-white",
+                              index === menu ? "text-white" : "text-[#7F7F7F]"
+                            )}
+                          >
                             {item.label}
                           </BtnPrimary>
                         </Link>
