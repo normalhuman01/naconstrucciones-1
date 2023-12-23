@@ -1,5 +1,4 @@
 import { cn } from "@/lib/utils";
-import Link from "next/link";
 
 export const BtnPage = ({
   page,
@@ -11,10 +10,7 @@ export const BtnPage = ({
   slugCategory?: string;
 }) => {
   return (
-    <Link
-      replace
-      href={`/productos/epp/${slugCategory || ""}?page=${page}#products`}
-    >
+    <a href={`/productos/epp/${slugCategory || ""}?page=${page}#products`}>
       <div
         className={cn(
           "w-[33px] h-[33px] flex justify-center items-center border-black border-[1px] cursor-pointer",
@@ -23,6 +19,6 @@ export const BtnPage = ({
       >
         {page}
       </div>
-    </Link>
+    </a>
   );
 };
