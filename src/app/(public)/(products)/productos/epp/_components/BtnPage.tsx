@@ -11,7 +11,10 @@ export const BtnPage = ({
   slugCategory?: string;
 }) => {
   return (
-    <Link href={`/productos/epp/${slugCategory || ""}?page=${page}#products`}>
+    <Link
+      replace
+      href={`/productos/epp/${slugCategory || ""}?page=${page}#products`}
+    >
       <div
         className={cn(
           "w-[33px] h-[33px] flex justify-center items-center border-black border-[1px] cursor-pointer",
