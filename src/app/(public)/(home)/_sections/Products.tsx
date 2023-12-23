@@ -6,6 +6,7 @@ type TProductsProps = {
     title: string;
     description: string;
     image: string;
+    slug?: string;
   }[];
 };
 
@@ -18,6 +19,7 @@ export const Products = ({ products }: TProductsProps) => {
             key={product.title}
             title={product.title}
             description={product.description}
+            slug={product.slug}
             link={`https://wa.me/+51${config.phone}?text=Hola,%20me%20interesa%20el%20siguiente%20producto:%20${product.title}`}
             image={product.image}
           />

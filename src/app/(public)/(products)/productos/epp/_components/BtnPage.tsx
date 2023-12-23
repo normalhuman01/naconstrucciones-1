@@ -13,9 +13,12 @@ export const BtnPage = ({
   return (
     <Link
       href={{
-        pathname: `/productos/epp/${slugCategory || ""}`,
+        pathname: `/productos/epp/[slug-category]`,
         search: `?page=${page}`,
         hash: "#products",
+        query: {
+          slugCategory: slugCategory || "",
+        },
       }}
       as={`/productos/epp/${slugCategory || ""}?page=${page}#products`}
     >

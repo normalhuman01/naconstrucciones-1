@@ -104,7 +104,11 @@ export const Featured = () => {
                 DESTACADOS
               </strong>
             </p>
-            <p className="flex flex-col">
+            <Link
+              href="/producto/[slug]"
+              as={`/producto/zapatilla-de-seguridad-conquest-stone-high-puma`}
+              className="flex flex-col"
+            >
               <strong
                 className={cn(
                   "font-bold text-[19px] md:text-[23.2px] leading-5",
@@ -114,13 +118,19 @@ export const Featured = () => {
                 Zapatilla Conquest Stone High Puma
               </strong>
               <span
-                className={cn("font-light text-[19px] md:text-[23.2px]", calibriFont.className)}
+                className={cn(
+                  "font-light text-[19px] md:text-[23.2px]",
+                  calibriFont.className
+                )}
               >
                 Zapato de Seguridad
               </span>
-            </p>
+            </Link>
           </div>
-          <Link target="_blank" href={`https://wa.me/+51${config.phone}?text=Hola, me gustaría más información sobre su Zapatilla Conquest Stone High Puma`}>
+          <Link
+            target="_blank"
+            href={`https://wa.me/+51${config.phone}?text=Hola, me gustaría más información sobre su Zapatilla Conquest Stone High Puma`}
+          >
             <ButtonYellow className="mt-6">CONSEGUIR</ButtonYellow>
           </Link>
         </div>

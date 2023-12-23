@@ -36,6 +36,7 @@ const Page = async () => {
           title: product.title.rendered,
           description: load(product.content.rendered).text(),
           image: product._embedded["wp:featuredmedia"][0].source_url,
+          slug: product.slug,
         }))}
       />
       <Benefits />

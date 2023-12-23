@@ -14,6 +14,7 @@ export const ProductCard = ({
     content: { rendered: content },
     title: { rendered: title },
     _embedded,
+    slug,
   },
 }: {
   product: TProductEmbedded;
@@ -27,7 +28,7 @@ export const ProductCard = ({
 
   return (
     <div className="flex flex-1 flex-col min-w-[168px] md:min-w-[245px] gap-5 justify-between rounded-3xl shadow-strong overflow-hidden">
-      <div>
+      <Link href="/producto/[slug]" as={`/producto/${slug}`} className="w-full">
         <header className="h-auto md:h-[228px] relative p-2">
           <ImageWithFallback
             className="w-full h-full"
@@ -35,11 +36,16 @@ export const ProductCard = ({
             fallbackSrc={fallbackMediaUrl}
           />
         </header>
-        <main className={cn("px-2 md:px-5 text-[18px] md:text-[19px]", calibriFont.className)}>
+        <main
+          className={cn(
+            "px-2 md:px-5 text-[18px] md:text-[19px]",
+            calibriFont.className
+          )}
+        >
           <h4 className="font-bold leading-[.9] mt-3">{title}</h4>
           <p className={cn("font-light leading-[1] mt-1")}>{strContent}</p>
         </main>
-      </div>
+      </Link>
       <footer className="px-5 pb-4">
         <Link
           target="_blank"
