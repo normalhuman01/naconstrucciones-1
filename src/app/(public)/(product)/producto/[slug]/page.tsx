@@ -4,6 +4,7 @@ import { ProductCard } from "@/components/custom/ProductsCard/ProductCard";
 import { config } from "@/config";
 import { WP_URL } from "@/data";
 import { TProductEmbedded } from "@/types";
+import { Metadata, ResolvingMetadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -64,5 +65,32 @@ const Product = async ({ params: { slug } }: { params: { slug: string } }) => {
     </div>
   );
 };
+// type Props = {
+//   params: { slug: string }
+// }
+// export async function generateMetadata(
+//   { params }: Props,
+//   parent: ResolvingMetadata
+// ): Promise<Metadata> {
+//   // read route params
+//   const slug = params.slug;
+
+//   const data = (await fetch(`${WP_URL}/epp?_embed&slug=${slug}`).then((res) =>
+//     res.json()
+//   )) as TProductEmbedded[];
+
+//   // fetch data
+//   const product = await fetch(`https://.../${id}`).then((res) => res.json());
+
+//   // optionally access and extend (rather than replace) parent metadata
+//   const previousImages = (await parent).openGraph?.images || [];
+
+//   return {
+//     title: product.title,
+//     openGraph: {
+//       images: ["/some-specific-page-image.jpg", ...previousImages],
+//     },
+//   };
+// }
 
 export default Product;

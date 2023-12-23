@@ -11,17 +11,7 @@ export const BtnPage = ({
   slugCategory?: string;
 }) => {
   return (
-    <Link
-      href={{
-        pathname: `/productos/epp/[slug-category]`,
-        search: `?page=${page}`,
-        hash: "#products",
-        query: {
-          slugCategory: slugCategory || "",
-        },
-      }}
-      as={`/productos/epp/${slugCategory || ""}?page=${page}#products`}
-    >
+    <Link href={`/productos/epp/${slugCategory || ""}?page=${page}#products`}>
       <div
         className={cn(
           "w-[33px] h-[33px] flex justify-center items-center border-black border-[1px] cursor-pointer",
