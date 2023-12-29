@@ -1,7 +1,6 @@
 import { ProductsCard } from "@/components/custom/ProductsCard";
 import { WP_URL } from "@/data";
 import { redirect } from "next/navigation";
-import React from "react";
 
 type TResultsProps = {
   searchParams: {
@@ -18,7 +17,11 @@ const Page = async ({ searchParams: { search } }: TResultsProps) => {
   );
   return (
     <div className="mt-5 mb-12">
-      <h1 className="text-3xl text-center my-10">Resultados para {'"'}{search}{'"'}</h1>
+      <h1 className="text-3xl text-center my-10">
+        Resultados para {'"'}
+        {search}
+        {'"'}
+      </h1>
       <div>
         <div className="max-w-[1120px] mx-auto">
           <ProductsCard products={products} />
@@ -27,6 +30,8 @@ const Page = async ({ searchParams: { search } }: TResultsProps) => {
     </div>
   );
 };
+
+export const dynamic = "force-dynamic";
 
 export default Page;
 

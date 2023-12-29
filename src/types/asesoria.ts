@@ -1,4 +1,4 @@
-import { Content, Embedded, GUID, TProductLinks, WhatsappLink } from "./other";
+import { Content, Embedded, GUID, TProductLinks } from "./other";
 
 export interface TAdvisoryEmbedded {
   id: number;
@@ -17,7 +17,6 @@ export interface TAdvisoryEmbedded {
   template: string;
   product_category: number[];
   product_tag: number[];
-  whatsapp_link: WhatsappLink;
   _links: TProductLinks;
   _embedded: Embedded;
 }

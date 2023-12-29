@@ -140,6 +140,8 @@ const Page = () => {
 
 export default Page;
 
+export const dynamic = "force-dynamic";
+
 export const metadata = {
   title: "Ferreteria | N&A Construcciones",
   description:

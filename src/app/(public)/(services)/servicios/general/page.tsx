@@ -36,6 +36,8 @@ const Page = async () => {
 
 export default Page;
 
+export const dynamic = "force-dynamic";
+
 export const metadata = {
   title: "Servicios de construcción y mantenimiento | N&A Construcciones",
   description:
