@@ -7,6 +7,13 @@ import { TProductEmbedded } from "@/types";
 import { Metadata, ResolvingMetadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { load } from "cheerio";
+import { BtnSizes } from "./BtnSizes";
+
+function getRandomEntries(array: any[], n: number) {
+  const shuffled = array.sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, n);
+}
 
 const Product = async ({ params: { slug } }: { params: { slug: string } }) => {
   const data = (await fetch(`${WP_URL}/epp?_embed&slug=${slug}`).then((res) =>
@@ -19,11 +26,14 @@ const Product = async ({ params: { slug } }: { params: { slug: string } }) => {
   const category = product.product_category[0];
 
   const urlProducts =
-    WP_URL + `/epp?_embed&page=${1}&per_page=${4}&product_category=${category}`;
+    WP_URL +
+    `/epp?_embed&page=${1}&per_page=${40}&product_category=${category}`;
 
-  const products = (await fetch(urlProducts).then((res) =>
+  const allProducts = (await fetch(urlProducts).then((res) =>
     res.json()
   )) as TProductEmbedded[];
+
+  const products = getRandomEntries(allProducts, 4);
 
   return (
     <div className="max-w-[1120px] mx-auto">
@@ -32,18 +42,25 @@ const Product = async ({ params: { slug } }: { params: { slug: string } }) => {
           <h1 className="md:hidden text-3xl font-bold">{title}</h1>
           <Image src={image} alt={title} width={600} height={600} />
         </div>
-        <div className="p-4">
-          <h1 className="hidden md:block text-3xl font-bold">{title}</h1>
-          <div
-            className="my-5 text-lg"
-            dangerouslySetInnerHTML={{ __html: product.content.rendered }}
-          />
-          <Link
-            target="_blank"
-            href={`https://wa.me/+51${config.phone}?text=Hola, me gustaría más información sobre el producto ${title}`}
-          >
-            <ButtonBlack>CONSEGUIR</ButtonBlack>
-          </Link>
+        <div className="p-4 flex flex-col gap-4">
+          <div>
+            <h1 className="hidden md:block text-3xl font-bold">{title}</h1>
+            <div
+              className="text-lg"
+              dangerouslySetInnerHTML={{ __html: product.content.rendered }}
+            />
+          </div>
+          {product.features.value.length > 0 && (
+            <section>
+              <h3 className="font-bold">Características:</h3>
+              <ul className="list-disc list-inside">
+                {product.features.value?.map((feature, index) => {
+                  return <li key={`${feature}_${index}`}>{feature}</li>;
+                })}
+              </ul>
+            </section>
+          )}
+          <BtnSizes product={product} />
         </div>
       </section>
       <section className="mb-[116px]">
@@ -65,32 +82,34 @@ const Product = async ({ params: { slug } }: { params: { slug: string } }) => {
     </div>
   );
 };
-// type Props = {
-//   params: { slug: string }
-// }
-// export async function generateMetadata(
-//   { params }: Props,
-//   parent: ResolvingMetadata
-// ): Promise<Metadata> {
-//   // read route params
-//   const slug = params.slug;
+type Props = {
+  params: { slug: string };
+};
+export async function generateMetadata(
+  { params }: Props,
+  _parent: ResolvingMetadata
+): Promise<Metadata> {
+  // read route params
+  const slug = params.slug;
 
-//   const data = (await fetch(`${WP_URL}/epp?_embed&slug=${slug}`).then((res) =>
-//     res.json()
-//   )) as TProductEmbedded[];
+  const products = (await fetch(`${WP_URL}/epp?_embed&slug=${slug}`).then(
+    (res) => res.json()
+  )) as TProductEmbedded[];
 
-//   // fetch data
-//   const product = await fetch(`https://.../${id}`).then((res) => res.json());
+  const product = products[0];
+  const title = "EPP: " + product.title.rendered;
+  const description =
+    load(product.content.rendered).text() +
+    "Características: " +
+    product.features.rendered;
 
-//   // optionally access and extend (rather than replace) parent metadata
-//   const previousImages = (await parent).openGraph?.images || [];
-
-//   return {
-//     title: product.title,
-//     openGraph: {
-//       images: ["/some-specific-page-image.jpg", ...previousImages],
-//     },
-//   };
-// }
+  return {
+    title,
+    description,
+    // openGraph: {
+    //   images: ["/some-specific-page-image.jpg", ...previousImages],
+    // },
+  };
+}
 
 export default Product;

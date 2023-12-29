@@ -144,7 +144,12 @@ export interface Content {
   protected: boolean;
 }
 
-export interface WhatsappLink {
-  value: string;
+export interface TProductFeatures {
+  value: string[];
+  rendered: string;
+}
+
+export interface TProductSizes {
+  value: string[];
   rendered: string;
 }

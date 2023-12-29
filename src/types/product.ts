@@ -1,4 +1,11 @@
-import { Content, Embedded, GUID, TProductLinks, WhatsappLink } from "./other";
+import {
+  Content,
+  Embedded,
+  GUID,
+  TProductFeatures,
+  TProductLinks,
+  TProductSizes,
+} from "./other";
 
 export interface TProductEmbedded {
   id: number;
@@ -17,7 +24,8 @@ export interface TProductEmbedded {
   template: string;
   product_category: number[];
   product_tag: number[];
-  whatsapp_link: WhatsappLink;
+  features: TProductFeatures;
+  sizes: TProductSizes;
   _links: TProductLinks;
   _embedded: Embedded;
 }
