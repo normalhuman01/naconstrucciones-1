@@ -13,8 +13,8 @@ export const config = {
   wspLink: `https://wa.me/+51${phone}?text=`,
   networks: {
     facebook: "https://www.facebook.com/na.ingenieria.construcciones/",
-    instagram: "https://www.instagram.com/naconstrucciones/",
-    twitter: "https://twitter.com/naconstrucciones",
-    tiktok: "https://www.tiktok.com/@naconstrucciones",
+    instagram: "#", // "https://www.instagram.com/naconstrucciones/",
+    twitter: "#", // "https://twitter.com/naconstrucciones",
+    tiktok: "#", // "https://www.tiktok.com/@naconstrucciones",
   },
 };
