@@ -56,7 +56,6 @@ const Card = ({
   );
 };
 
-
 const Card2 = ({
   href,
   children,
@@ -91,37 +90,32 @@ const Card2 = ({
   );
 };
 
-
 export const FloatingNetworks = () => {
   return (
     <ul className="hidden md:flex flex-col fixed right-0 top-[50%] translate-y-[-50%] z-100">
       <Card
         title="Facebook"
-        href="https://facebook.com/naconstrucciones"
+        href={config.networks.facebook}
         className="bg-[#365493]"
       >
         <FaFacebookF className="text-white" />
       </Card>
       <Card2
         title="Instagram"
-        href="https://facebook.com/naconstrucciones"
+        href={config.networks.instagram}
         // className="bg-[#d6249f]"
         styleTitle={{
           // backgroundImage: `url(/img/others/bg-instagram.png)`
           background:
             "radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)",
-            // "radial-gradient(circle at 107% 30%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)",
+          // "radial-gradient(circle at 107% 30%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)",
         }}
         // className="bg-[#ea6cca]"
       >
         {/* <Image src="/img/logo/instagram.webp" width={25} height={25} alt="logo" /> */}
         <FaInstagram className="text-white" />
       </Card2>
-      <Card
-        title="Tiktok"
-        href="https://facebook.com/naconstrucciones"
-        className="bg-black"
-      >
+      <Card title="Tiktok" href={config.networks.tiktok} className="bg-black">
         <FaTiktok className="text-white" />
       </Card>
       <Card
