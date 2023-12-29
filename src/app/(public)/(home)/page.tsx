@@ -55,4 +55,15 @@ export const metadata = {
   title: "Inicio | N&A Construcciones",
   description:
     "Nuestra misión es transformar ideas en realidades colores y funcionalidad. A de la innovación, la riqueza y la dedicación, construimos un futuro mejor para nuestros clientes y comunidades.",
+  // open graph facebook metadata:
+  openGraph: {
+    title: "Inicio | N&A Construcciones",
+    description:
+      "Nuestra misión es transformar ideas en realidades colores y funcionalidad. A de la innovación, la riqueza y la dedicación, construimos un futuro mejor para nuestros clientes y comunidades.",
+    url: "https://www.naconstrucciones.com/",
+    siteName: "N&A Construcciones",
+    images: ["https://www.naconstrucciones.com/img/seo/naconstrucciones.png"],
+    locale: "es_PE",
+    type: "website",
+  },
 };
