@@ -1,8 +1,10 @@
+"use client";
 import { calibriFont } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import { TProductCategory } from "@/types";
 import { X } from "lucide-react";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 
 export const CardCategories = ({
   categories,
@@ -11,6 +13,7 @@ export const CardCategories = ({
   categories: TProductCategory[];
   category?: TProductCategory;
 }) => {
+  const params = useParams();
   return (
     <div
       className="inline-flex flex-wrap justify-center gap-2 md:gap-4 m-auto my-5 max-w-[920px] relative"
@@ -32,9 +35,14 @@ export const CardCategories = ({
           {_category.name}
         </Link>
       ))}
-      <Link href="/productos/epp" className="absolute top-[-36px] right-[18px] md:top-0 md:right-[-0px] lg:right-[-58px]">
-        <X size={36} className="text-black" />
-      </Link>
+      {params?.["slug-category"] && (
+        <Link
+          href="/productos/epp"
+          className="absolute top-[-36px] right-[18px] md:top-0 md:right-[-0px] lg:right-[-58px]"
+        >
+          <X size={36} className="text-black" />
+        </Link>
+      )}
     </div>
   );
 };
