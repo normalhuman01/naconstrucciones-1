@@ -46,7 +46,7 @@ const Product = async ({ params: { slug } }: { params: { slug: string } }) => {
       >
         <div>
           <div className="flex md:hidden justify-between items-start gap-2">
-            <h1 className={cn("text-3xl font-bold", arialBlackFont.className)}>
+            <h1 className={cn("text-3xl leading-[1.7rem] mb-2 font-bold", arialBlackFont.className)}>
               {title}
             </h1>
             <BackLink />
@@ -82,7 +82,8 @@ const Product = async ({ params: { slug } }: { params: { slug: string } }) => {
         </div>
       </section>
       <section className="mb-[116px]">
-        <TitleFeatured title="PRODUCTOS RELACIONADOS" />
+        <TitleFeatured title="PRODUCTOS" subTitle="RELACIONADOS" className={"block md:hidden"} />
+        <TitleFeatured title="PRODUCTOS RELACIONADOS" className={"hidden md:block"} />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-x-2 md:gap-x-5 gap-y-8 my-5 px-2 md:px-0">
           {products.map((product) => {
             return <ProductCard key={product.id} product={product} />;
