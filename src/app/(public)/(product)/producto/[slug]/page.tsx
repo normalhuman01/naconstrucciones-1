@@ -38,63 +38,77 @@ const Product = async ({ params: { slug } }: { params: { slug: string } }) => {
   const products = getRandomEntries(allProducts, 4);
 
   return (
-    <div className="max-w-[1120px] mx-auto">
-      <section
-        className={cn(
-          "grid grid-cols-1 md:grid-cols-2 p-4 gap-4 mb-[56px]",
-          calibriFont.className
-        )}
-      >
-        <div>
-          <div className="flex md:hidden justify-between items-start gap-2">
-            <h1 className={cn("text-3xl leading-[1.7rem] mb-2 font-bold", arialBlackFont.className)}>
-              {title}
-            </h1>
-            <BackLink />
-          </div>
-          <Image src={image} alt={title} width={600} height={600} />
-        </div>
-        <div className={cn("p-4 flex flex-col gap-4 text-[19px]")}>
+    <>
+      <div className="max-w-[1120px] mx-auto">
+        <section
+          className={cn(
+            "grid grid-cols-1 md:grid-cols-2 p-4 gap-4 mb-[56px]",
+            calibriFont.className
+          )}
+        >
           <div>
-            <div className="hidden md:flex justify-between items-start gap-2">
+            <div className="flex md:hidden justify-between items-start gap-2">
               <h1
-                className={cn("text-3xl font-bold", arialBlackFont.className)}
+                className={cn(
+                  "text-3xl leading-[1.7rem] mb-2 font-bold",
+                  arialBlackFont.className
+                )}
               >
                 {title}
               </h1>
               <BackLink />
             </div>
-            <div
-              className="text-lg"
-              dangerouslySetInnerHTML={{ __html: product.content.rendered }}
-            />
+            <Image src={image} alt={title} width={600} height={600} />
           </div>
-          {product.features?.value.length > 0 && (
-            <section>
-              <h3 className="font-bold">Características:</h3>
-              <ul className="list-disc list-inside text-[#767171]">
-                {product.features.value?.map((feature, index) => {
-                  return <li key={`${feature}_${index}`}>{feature}</li>;
-                })}
-              </ul>
-            </section>
-          )}
-          <BtnSizes product={product} />
-        </div>
-      </section>
-      <section className="my-10 flex flex-col gap-10 items-stretch mb-[116px]">
-        <TitleFeatured title="PRODUCTOS" subTitle="RELACIONADOS" className={"block md:hidden"} />
-        <TitleFeatured title="PRODUCTOS RELACIONADOS" className={"hidden md:block"} />
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-x-2 md:gap-x-5 gap-y-8 my-10 px-2 md:px-0">
-          {products.map((product) => {
-            return <ProductCard key={product.id} product={product} />;
-          })}
-        </div>
-      </section>
+          <div className={cn("p-4 flex flex-col gap-4 text-[19px]")}>
+            <div>
+              <div className="hidden md:flex justify-between items-start gap-2">
+                <h1
+                  className={cn("text-3xl font-bold", arialBlackFont.className)}
+                >
+                  {title}
+                </h1>
+                <BackLink />
+              </div>
+              <div
+                className="text-lg"
+                dangerouslySetInnerHTML={{ __html: product.content.rendered }}
+              />
+            </div>
+            {product.features?.value.length > 0 && (
+              <section>
+                <h3 className="font-bold">Características:</h3>
+                <ul className="list-disc list-inside text-[#767171]">
+                  {product.features.value?.map((feature, index) => {
+                    return <li key={`${feature}_${index}`}>{feature}</li>;
+                  })}
+                </ul>
+              </section>
+            )}
+            <BtnSizes product={product} />
+          </div>
+        </section>
+        <section className="my-10 flex flex-col gap-10 items-stretch mb-[116px]">
+          <TitleFeatured
+            title="PRODUCTOS"
+            subTitle="RELACIONADOS"
+            className={"block md:hidden"}
+          />
+          <TitleFeatured
+            title="PRODUCTOS RELACIONADOS"
+            className={"hidden md:block"}
+          />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-2 md:gap-x-5 gap-y-8 my-10 px-2 md:px-0">
+            {products.map((product) => {
+              return <ProductCard key={product.id} product={product} />;
+            })}
+          </div>
+        </section>
+      </div>
       <section className="mb-[116px]">
         <Brands className="my-10 flex flex-col gap-10 items-stretch" />
       </section>
-    </div>
+    </>
   );
 };
 type Props = {
