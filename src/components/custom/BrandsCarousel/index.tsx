@@ -33,9 +33,9 @@ const base = [
 ];
 const array = [...base, ...base];
 
-export const BrandsCarousel = () => {
+export const BrandsCarousel = ({ className }: { className?: string }) => {
   return (
-    <div className="my-8 w-full overflow-hidden">
+    <div className={cn("my-8 w-full overflow-hidden", className)}>
       <div className={cn("flex gap-5 items-center", classes.container)}>
         {array.map((i, index) => (
           <div

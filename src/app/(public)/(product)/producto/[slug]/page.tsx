@@ -10,6 +10,7 @@ import { BackLink } from "./BackLink";
 import { cn } from "@/lib/utils";
 import { arialBlackFont, calibriFont } from "@/lib/fonts";
 import { TitleFeatured } from "@/components/custom/TitleFeatured";
+import { Brands } from "@/app/(public)/(products)/productos/epp/_sections/Brands";
 
 function getRandomEntries(array: any[], n: number) {
   const shuffled = array.sort(() => 0.5 - Math.random());
@@ -81,18 +82,17 @@ const Product = async ({ params: { slug } }: { params: { slug: string } }) => {
           <BtnSizes product={product} />
         </div>
       </section>
-      <section className="mb-[116px]">
+      <section className="my-10 flex flex-col gap-10 items-stretch mb-[116px]">
         <TitleFeatured title="PRODUCTOS" subTitle="RELACIONADOS" className={"block md:hidden"} />
         <TitleFeatured title="PRODUCTOS RELACIONADOS" className={"hidden md:block"} />
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-x-2 md:gap-x-5 gap-y-8 my-5 px-2 md:px-0">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-x-2 md:gap-x-5 gap-y-8 my-10 px-2 md:px-0">
           {products.map((product) => {
             return <ProductCard key={product.id} product={product} />;
           })}
         </div>
       </section>
       <section className="mb-[116px]">
-        <TitleFeatured title="PRINCIPALES MARCAS" />
-        <BrandsCarousel />
+        <Brands className="my-10 flex flex-col gap-10 items-stretch" />
       </section>
     </div>
   );
