@@ -71,7 +71,7 @@ const Product = async ({ params: { slug } }: { params: { slug: string } }) => {
                 <BackLink />
               </div>
               <div
-                className="text-lg"
+                className="text-2xl"
                 dangerouslySetInnerHTML={{ __html: product.content.rendered }}
               />
             </div>
@@ -88,7 +88,7 @@ const Product = async ({ params: { slug } }: { params: { slug: string } }) => {
             <BtnSizes product={product} />
           </div>
         </section>
-        <section className="my-10 flex flex-col gap-10 items-stretch mb-[116px]">
+        <section className="my-10 flex flex-col gap-10 items-stretch mb-[64px]">
           <TitleFeatured
             title="PRODUCTOS"
             subTitle="RELACIONADOS"
